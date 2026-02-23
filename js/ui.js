@@ -82,16 +82,16 @@ const UI = (function() {
         return elements;
     }
 
-    // Показать уведомление (всплывающее окно)
+    // Показать уведомление (уменьшенное всплывающее окно)
     function showNotification(message, type = 'info') {
         // Проверяем, не открыто ли уже модальное окно
-        const existingModal = document.querySelector('.modal-overlay');
+        const existingModal = document.querySelector('.notification-modal');
         if (existingModal) {
             existingModal.remove();
         }
 
         const modal = document.createElement('div');
-        modal.className = 'modal-overlay';
+        modal.className = 'modal-overlay notification-modal';
         
         // Определяем цвет и заголовок в зависимости от типа
         let headerColor = '#1e3a5f';
@@ -109,15 +109,15 @@ const UI = (function() {
         }
         
         modal.innerHTML = `
-            <div class="modal-container" style="max-width: 400px;">
-                <div class="modal-header" style="background: ${headerColor}; color: white;">
-                    <h3 style="color: white; margin: 0;">${title}</h3>
-                    <button class="modal-close" style="color: white;">&times;</button>
+            <div class="modal-container notification-container" style="max-width: 350px;">
+                <div class="modal-header notification-header" style="background: ${headerColor}; color: white; padding: 8px 16px;">
+                    <h3 style="color: white; margin: 0; font-size: 1rem;">${title}</h3>
+                    <button class="modal-close" style="color: white; font-size: 18px;">&times;</button>
                 </div>
-                <div class="modal-content">
-                    <p style="margin: 20px 0; font-size: 1.1rem;">${message}</p>
-                    <div class="flex-row" style="justify-content: flex-end;">
-                        <button id="closeNotificationBtn" class="secondary" style="padding: 8px 24px;">OK</button>
+                <div class="modal-content" style="padding: 12px 16px;">
+                    <p style="margin: 0 0 12px 0; font-size: 0.95rem;">${message}</p>
+                    <div class="flex-row" style="justify-content: flex-end; margin-top: 0;">
+                        <button id="closeNotificationBtn" class="small secondary" style="padding: 4px 16px; font-size: 0.85rem;">OK</button>
                     </div>
                 </div>
             </div>

@@ -112,26 +112,87 @@ const Admin = (function() {
                 return;
             }
 
-            const updateData = { nickname, rank, department, category };
-            if (password) {
-                updateData.password = password;
+            try {
+                // Сохраняем текущую сессию администратора для восстановления
+                const { data: { session: adminSession } } = await supabaseClient.auth.getSession();
+                
+                if (!adminSession) {
+                    throw new Error('Сессия администратора не найдена');
+                }
+
+                // 1. Если меняется пароль
+                if (password) {
+                    try {
+                        await SupabaseAdmin.updateUserPassword(employee.auth_user_id, password);
+                        UI.showNotification('Пароль успешно изменен', 'success');
+                    } catch (error) {
+                        console.error('Password update error:', error);
+                        throw new Error('Ошибка при обновлении пароля: ' + error.message);
+                    }
+                }
+
+                // 2. Если меняется никнейм
+                if (nickname !== employee.nickname) {
+                    try {
+                        await SupabaseAdmin.updateUserMetadata(employee.auth_user_id, {
+                            nickname: nickname,
+                            rank: rank,
+                            department: department,
+                            category: category
+                        });
+                    } catch (error) {
+                        console.error('Metadata update error:', error);
+                        throw new Error('Ошибка при обновлении логина: ' + error.message);
+                    }
+                }
+
+                // 3. Восстанавливаем сессию администратора
+                await supabaseClient.auth.setSession({
+                    access_token: adminSession.access_token,
+                    refresh_token: adminSession.refresh_token
+                });
+
+                // 4. Обновляем данные в таблице employees
+                const updateData = { 
+                    nickname, 
+                    rank, 
+                    department, 
+                    category 
+                };
+                
+                const { error: dbError } = await supabaseClient
+                    .from('employees')
+                    .update(updateData)
+                    .eq('id', id);
+
+                if (dbError) {
+                    throw new Error('Ошибка при обновлении данных: ' + dbError.message);
+                }
+
+                UI.showNotification('Данные сотрудника обновлены', 'success');
+                modal.remove();
+                await loadEmployeesList();
+                renderEmployeesManagementList();
+                renderEmployeesCreateList();
+                
+            } catch (error) {
+                console.error('Update error:', error);
+                UI.showNotification(error.message, 'error');
+                
+                // Пытаемся восстановить сессию в случае ошибки
+                try {
+                    const { data: { session } } = await supabaseClient.auth.getSession();
+                    if (!session) {
+                        const currentUser = Auth.getCurrentUser();
+                        if (currentUser) {
+                            window.location.hash = '';
+                            UI.showAuthMode();
+                        }
+                    }
+                } catch (e) {
+                    console.error('Session recovery error:', e);
+                }
             }
-
-            const { error } = await supabaseClient
-                .from('employees')
-                .update(updateData)
-                .eq('id', id);
-
-            if (error) {
-                UI.showNotification('Ошибка при обновлении: ' + error.message, 'error');
-                return;
-            }
-
-            UI.showNotification('Данные сотрудника обновлены', 'success');
-            modal.remove();
-            await loadEmployeesList();
-            renderEmployeesManagementList();
-            renderEmployeesCreateList();
         };
     }
 
@@ -162,32 +223,65 @@ const Admin = (function() {
 
         document.body.appendChild(confirmModal);
 
-        confirmModal.querySelector('.modal-close').onclick = () => confirmModal.remove();
+        // Обработчики
+        const closeBtn = confirmModal.querySelector('.modal-close');
+        const cancelBtn = document.getElementById('cancelDeleteBtn');
+        const confirmBtn = document.getElementById('confirmDeleteBtn');
+        
+        closeBtn.onclick = () => confirmModal.remove();
+        
         confirmModal.onclick = (e) => {
             if (e.target === confirmModal) confirmModal.remove();
         };
-        document.getElementById('cancelDeleteBtn').onclick = () => confirmModal.remove();
+        
+        if (cancelBtn) {
+            cancelBtn.onclick = () => confirmModal.remove();
+        }
+        
+        if (confirmBtn) {
+            confirmBtn.onclick = async () => {
+                Auth.ping(); // Сбрасываем таймер при подтверждении
+                
+                try {
+                    // Сохраняем текущую сессию администратора
+                    const { data: { session: adminSession } } = await supabaseClient.auth.getSession();
+                    
+                    if (!adminSession) {
+                        throw new Error('Сессия администратора не найдена');
+                    }
+                    
+                    // 1. Удаляем пользователя из Auth через Edge Function
+                    await SupabaseAdmin.deleteUser(employee.auth_user_id);
+                    
+                    // 2. Восстанавливаем сессию администратора
+                    await supabaseClient.auth.setSession({
+                        access_token: adminSession.access_token,
+                        refresh_token: adminSession.refresh_token
+                    });
+                    
+                    // 3. Удаляем из базы данных
+                    const { error } = await supabaseClient
+                        .from('employees')
+                        .delete()
+                        .eq('id', id);
 
-        document.getElementById('confirmDeleteBtn').onclick = async () => {
-            Auth.ping(); // Сбрасываем таймер при подтверждении
-            
-            const { error } = await supabaseClient
-                .from('employees')
-                .delete()
-                .eq('id', id);
+                    if (error) {
+                        throw new Error('Ошибка при удалении из базы: ' + error.message);
+                    }
 
-            if (error) {
-                UI.showNotification('Ошибка при удалении: ' + error.message, 'error');
-                confirmModal.remove();
-                return;
-            }
-
-            UI.showNotification('Сотрудник удалён', 'success');
-            confirmModal.remove();
-            await loadEmployeesList();
-            renderEmployeesManagementList();
-            renderEmployeesCreateList();
-        };
+                    UI.showNotification('Сотрудник удалён', 'success');
+                    confirmModal.remove();
+                    await loadEmployeesList();
+                    renderEmployeesManagementList();
+                    renderEmployeesCreateList();
+                    
+                } catch (error) {
+                    console.error('Delete error:', error);
+                    UI.showNotification('Ошибка при удалении: ' + error.message, 'error');
+                    confirmModal.remove();
+                }
+            };
+        }
     }
 
     // Отображение списка сотрудников для создания
@@ -216,7 +310,7 @@ const Admin = (function() {
     async function createEmployee() {
         Auth.ping(); // Сбрасываем таймер
         
-        if (!Auth.isAdmin()) return;
+        if (!Auth.isAdmin()) return false;
 
         const nickname = document.getElementById('nickname')?.value.trim();
         const password = document.getElementById('newPassword')?.value.trim();
@@ -229,48 +323,96 @@ const Admin = (function() {
             return false;
         }
 
-        const { error } = await supabaseClient
-            .from('employees')
-            .insert([{ nickname, password, rank, department, category }]);
+        try {
+            // Сохраняем текущую сессию администратора
+            const { data: { session: adminSession } } = await supabaseClient.auth.getSession();
+            
+            if (!adminSession) {
+                throw new Error('Сессия администратора не найдена');
+            }
 
-        if (error) {
-            UI.showNotification(error.message, 'error');
+            // 1. Создаем пользователя через Edge Function
+            const authData = await SupabaseAdmin.createUser({
+                email: `${nickname}@app.local`,
+                password: password,
+                metadata: {
+                    nickname: nickname,
+                    rank: rank,
+                    department: department,
+                    category: category
+                }
+            });
+
+            console.log('Пользователь создан в Auth:', authData.user.id);
+            
+            // 2. Восстанавливаем сессию администратора
+            await supabaseClient.auth.setSession({
+                access_token: adminSession.access_token,
+                refresh_token: adminSession.refresh_token
+            });
+
+            // 3. Создаем запись в employees
+            const { error: insertError, data: insertData } = await supabaseClient
+                .from('employees')
+                .insert([{
+                    nickname: nickname,
+                    rank: rank,
+                    department: department,
+                    category: category,
+                    auth_user_id: authData.user.id
+                }])
+                .select();
+
+            if (insertError) {
+                console.error('Insert error:', insertError);
+                throw new Error(insertError.message);
+            }
+
+            console.log('Сотрудник создан:', insertData);
+            UI.showNotification('Сотрудник успешно создан', 'success');
+            
+            // Очищаем форму
+            document.getElementById('nickname').value = '';
+            document.getElementById('newPassword').value = '';
+            document.getElementById('rank').value = '';
+            document.getElementById('department').value = '';
+            document.getElementById('category').value = 'Руководство';
+            
+            // Обновляем списки
+            await loadEmployeesList();
+            renderEmployeesManagementList();
+            renderEmployeesCreateList();
+            
+            return true;
+            
+        } catch (error) {
+            console.error('Create employee error:', error);
+            UI.showNotification('Ошибка при создании: ' + error.message, 'error');
             return false;
         }
-
-        UI.showNotification('Сотрудник добавлен', 'success');
-        
-        document.getElementById('nickname').value = '';
-        document.getElementById('newPassword').value = '';
-        document.getElementById('rank').value = '';
-        document.getElementById('department').value = '';
-        document.getElementById('category').value = 'Руководство';
-        
-        await loadEmployeesList();
-        renderEmployeesManagementList();
-        renderEmployeesCreateList();
-        
-        return true;
     }
 
     // Переключение между вкладками управления
     function switchManagementTab(tab) {
-        Auth.ping(); // Сбрасываем таймер при переключении вкладок
-        
         const manageSection = document.getElementById('manageAccountsSection');
         const createSection = document.getElementById('createAccountSection');
         const manageBtn = document.getElementById('manageTabBtn');
         const createBtn = document.getElementById('createTabBtn');
 
+        if (!manageSection || !createSection || !manageBtn || !createBtn) return;
+
         if (tab === 'manage') {
             manageSection.classList.remove('hidden');
             createSection.classList.add('hidden');
+            
             manageBtn.classList.add('active');
             createBtn.classList.remove('active');
+            
             renderEmployeesManagementList();
         } else {
             manageSection.classList.add('hidden');
             createSection.classList.remove('hidden');
+            
             createBtn.classList.add('active');
             manageBtn.classList.remove('active');
         }
@@ -279,24 +421,55 @@ const Admin = (function() {
     // Инициализация панели администратора
     async function initAdminPanel() {
         Auth.ping(); // Сбрасываем таймер при входе в админку
-        
+
+        // Загружаем шаблон админки
         const clone = UI.loadTemplate('admin');
         UI.clearMain();
         document.getElementById('mainApp').appendChild(clone);
-        
+
+        // Загружаем список сотрудников
         await loadEmployeesList();
-        
+
         const title = document.querySelector('#mainApp h2');
         if (title) title.textContent = 'Управление сотрудниками';
-        
-        renderEmployeesManagementList();
-        renderEmployeesCreateList();
-        
-        document.getElementById('manageTabBtn').onclick = () => switchManagementTab('manage');
-        document.getElementById('createTabBtn').onclick = () => switchManagementTab('create');
-        
+
+        const manageBtn = document.getElementById('manageTabBtn');
+        const createBtn = document.getElementById('createTabBtn');
+        const manageSection = document.getElementById('manageAccountsSection');
+        const createSection = document.getElementById('createAccountSection');
+
+        if (!manageBtn || !createBtn || !manageSection || !createSection) return;
+
+        // Локальная функция для безопасного переключения вкладок
+        function switchTab(tab) {
+            if (tab === 'manage') {
+                manageSection.classList.remove('hidden');
+                createSection.classList.add('hidden');
+                manageBtn.classList.add('active');
+                createBtn.classList.remove('active');
+                renderEmployeesManagementList();
+            } else {
+                manageSection.classList.add('hidden');
+                createSection.classList.remove('hidden');
+                createBtn.classList.add('active');
+                manageBtn.classList.remove('active');
+            }
+        }
+
+        // Ставим «Управление» по умолчанию
+        switchTab('manage');
+
+        // Обработчики для кнопок вкладок
+        manageBtn.onclick = () => switchTab('manage');
+        createBtn.onclick = () => switchTab('create');
+
+        // Обработчик кнопки создания сотрудника
         document.getElementById('createUserBtn').onclick = createEmployee;
-        
+
+        // Рендер списка создания (для быстрого переключения)
+        renderEmployeesCreateList();
+
+        // Подсвечиваем кнопку "Управление" в главной навигации
         UI.setActiveTab(UI.getElements().navAdmin);
     }
 
