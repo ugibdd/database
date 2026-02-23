@@ -1,0 +1,518 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: #eef2f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Полноэкранное приложение */
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5f7fa;
+}
+
+/* Верхняя панель — минимальная, как в госсистемах */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #dce3ec;
+    box-shadow: 0 2px 6px rgba(0, 40, 80, 0.05);
+}
+
+.system-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1e3a5f;
+    letter-spacing: 0.3px;
+}
+
+.system-title span {
+    color: #6b7f99;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.user-badge {
+    background: #eef3f9;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    color: #1e3a5f;
+    font-weight: 500;
+    border: 1px solid #cddae9;
+}
+
+/* Навигация — чистая, без лишнего */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #e1e8f0;
+}
+
+.nav-group {
+    display: flex;
+    gap: 4px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #3b4f66;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.nav-btn:hover {
+    background: #f0f5fe;
+    color: #1e3a5f;
+}
+
+.nav-btn.active {
+    background: #1e3a5f;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 50, 100, 0.2);
+}
+
+.nav-btn.logout {
+    color: #b33a4a;
+}
+.nav-btn.logout:hover {
+    background: #feeef0;
+}
+
+/* Основная область — на всю ширину */
+.main-stage {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f5f7fa;
+}
+
+/* Контент на всю доступную область */
+.content-card {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 20, 40, 0.06);
+    padding: 24px;
+    border: 1px solid #e5eef7;
+    overflow-y: auto;
+}
+
+/* Типографика */
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #0a253b;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaf0f8;
+    letter-spacing: -0.3px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #163a5c;
+    margin-bottom: 16px;
+}
+
+/* Поля форм */
+input, select, textarea {
+    width: 100%;
+    padding: 10px 16px;
+    margin: 6px 0 16px;
+    border: 1.5px solid #d8e2ed;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    background: #ffffff;
+    transition: 0.15s;
+    color: #0e2b42;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #1e5a9b;
+    box-shadow: 0 0 0 3px rgba(25, 95, 166, 0.15);
+}
+
+/* Кнопки */
+button {
+    background: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    background: #254f7a;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 45, 90, 0.15);
+}
+
+button.secondary {
+    background: #eef3fa;
+    color: #1e3a5f;
+    border: 1px solid #cbd9ec;
+}
+button.secondary:hover {
+    background: #e1eaf5;
+}
+
+button.small {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+}
+
+.flex-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Список - занимает всё оставшееся место */
+.list-panel {
+    flex: 1;
+    background: #f9fbfe;
+    border-radius: 16px;
+    border: 1px solid #e5edf5;
+    padding: 8px;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.list-item {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e3eef9;
+    transition: 0.1s;
+}
+.list-item:hover {
+    border-color: #9bb7d4;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: #0f2b44;
+}
+
+.item-meta {
+    font-size: 0.85rem;
+    color: #5d7186;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.badge-new {
+    background: #e4f0fa;
+    color: #075e9c;
+}
+.badge-progress {
+    background: #fff3da;
+    color: #a66019;
+}
+.badge-closed {
+    background: #e1f3ea;
+    color: #1a6e4a;
+}
+
+.info-row {
+    display: flex;
+    margin: 10px 0;
+    border-bottom: 1px dotted #dae3ed;
+    padding-bottom: 6px;
+}
+.info-label {
+    width: 110px;
+    font-weight: 600;
+    color: #1e3f62;
+    font-size: 0.9rem;
+}
+.info-value {
+    flex: 1;
+    color: #113753;
+    font-size: 0.95rem;
+}
+
+.history-log {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    border: 1px solid #e0eaf3;
+    max-height: 250px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+}
+
+/* Профиль на всю высоту */
+#mainApp > div:not(.kusp-grid) {
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Админка */
+#mainApp > div:has(h2:contains("Управление персоналом")) {
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#employeesList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* ===== АВТОРИЗАЦИЯ ===== */
+#authSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+}
+
+.auth-box {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 20, 40, 0.1);
+    border: 1px solid #dfe8f2;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Режим авторизации */
+.auth-mode .main-stage {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-mode .content-card {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.auth-mode #workPanel {
+    background: transparent;
+    width: 100%;
+}
+
+.auth-mode #authSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+}
+
+/* Скрываем навигацию и верхнюю панель при неавторизованном доступе */
+.auth-mode .top-bar,
+.auth-mode .nav-bar {
+    display: none;
+}
+
+/* Дополнительные улучшения для главной */
+#greetingMessage {
+    font-size: 1.2rem;
+    background: #f2f7ff;
+    padding: 16px 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+/* ===== МОДАЛЬНЫЕ ОКНА ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 20, 40, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: modalFadeIn 0.2s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-container {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 20, 40, 0.3);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.3s ease;
+}
+
+.modal-container.modal-large {
+    max-width: 1000px;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5eef7;
+    background: #f9fcff;
+    border-radius: 24px 24px 0 0;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #6b7f99;
+    cursor: pointer;
+    padding: 0 8px;
+    line-height: 1;
+    border-radius: 8px;
+}
+
+.modal-close:hover {
+    background: #eef3fa;
+    color: #1e3a5f;
+    transform: none;
+    box-shadow: none;
+}
+
+.modal-content {
+    padding: 24px;
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+}
+
+/* Стили для форм внутри модалок */
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    margin: 4px 0 12px;
+}
+
+/* Адаптивность для модалок */
+@media (max-width: 768px) {
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-container.modal-large {
+        max-width: 90%;
+    }
+}
+
+/* Стили для вкладок управления */
+#manageTabBtn, #createTabBtn {
+    background: transparent;
+    border: 1px solid #d8e2ed;
+    padding: 8px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+#manageTabBtn.active, #createTabBtn.active {
+    background: #1e3a5f;
+    color: white;
+    border-color: #1e3a5f;
+}
+
+/* Улучшение для списка управления */
+#employeesManageList .list-item {
+    margin-bottom: 8px;
+}
+
+#employeesManageList .list-item:hover {
+    background: #f0f7ff;
+}
+
+/* Стили для кнопок удаления */
+button[data-action="delete"]:hover {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
