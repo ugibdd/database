@@ -8,15 +8,15 @@
 </head>
 <body>
     <div class="app" id="appRoot">
-        <!-- Верхняя полоса (будет скрыта до входа) -->
+        <!-- Верхняя полоса -->
         <div class="top-bar hidden" id="topBar">
             <div class="system-title">
-                УГИБДД · <span>Единая информационная система</span>
+                УГИБДД · <span id="systemTitleSpan">Единая информационная система</span>
             </div>
             <div class="user-badge" id="userInfo"></div>
         </div>
 
-        <!-- Навигация (будет скрыта до входа) -->
+        <!-- Навигация для сотрудников -->
         <div class="nav-bar hidden" id="navBar">
             <div class="nav-group">
                 <button class="nav-btn" id="navHome">Главная</button>
@@ -29,16 +29,63 @@
             </div>
         </div>
 
+        <!-- Навигация для гостей -->
+        <div class="nav-bar hidden" id="guestNavBar">
+            <div class="nav-group">
+                <button class="nav-btn" id="guestNavHome">Главная</button>
+                <button class="nav-btn" id="guestNavTrafficFines">Проверка штрафов</button>
+                <button class="nav-btn" id="guestNavAppeals">Мои обращения</button>
+                <button class="nav-btn" id="guestNavInfo">Информация</button>
+            </div>
+            <div class="nav-group">
+                <button class="nav-btn" id="guestNavToEmployee">👮‍♂️ Вход для сотрудников</button>
+            </div>
+        </div>
+
         <!-- Центральная часть -->
         <div class="main-stage" id="centerStage">
             <div class="content-card" id="workPanel">
                 <!-- Авторизация -->
                 <div id="authSection">
-                    <div class="auth-box">
-                        <h2 style="border:none; text-align:center;">Вход в систему</h2>
-                        <input id="login" type="text" placeholder="Логин">
-                        <input id="password" type="password" placeholder="Пароль">
-                        <button id="loginBtn" style="width:100%;">Войти</button>
+                    <div class="system-badge">
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <img src="img/emblem.png" alt="Эмблема" style="width: 300px; height: auto;">
+                        </div>
+                        <div class="system-title">УГИБДД МВД по Республике Провинция</div>
+                        <div class="system-subtitle">Единая информационная система</div>
+                    </div>
+                    
+                    <div class="auth-container">
+                        <!-- Карточка для граждан -->
+                        <div class="auth-card">
+                            <h2>Вход для граждан</h2>
+                            <button class="guest-button" id="guestAccessBtn">Перейти к гостевому доступу</button>
+                            <p>Просмотр информации, проверка штрафов, отслеживание обращений без регистрации.</p>
+                            <div style="flex:1"></div>
+                        </div>
+
+                        <!-- Карточка для сотрудников -->
+                        <div class="auth-card">
+                            <h2>Вход для сотрудников</h2>
+                            
+                            <div class="form-group">
+                                <label for="login">Логин</label>
+                                <input type="text" id="login" name="login" placeholder="Введите логин">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Пароль</label>
+                                <input type="password" id="password" name="password" placeholder="Введите пароль">
+                            </div>
+                            
+                            <button class="login-btn" id="loginBtn">Войти в систему</button>
+                            
+                            <div style="flex:1"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-footer">
+                        © УГИБДД МВД по Республике Провинция, 2026. Все права защищены.
                     </div>
                 </div>
 
@@ -48,7 +95,7 @@
         </div>
     </div>
 
-    <!-- Шаблоны -->
+    <!-- Шаблоны для сотрудников -->
     <template id="homeTemplate">
         <div>
             <h2>Главный экран</h2>
@@ -69,90 +116,171 @@
     </template>
 
     <template id="adminTemplate">
-		<div style="height: 100%; display: flex; flex-direction: column;">
-			<h2>Управление сотрудниками</h2>
-			
-			<!-- Вкладки -->
-			<div style="display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 2px solid #eaf0f8; padding-bottom: 8px;">
-				<button id="manageTabBtn" class="nav-btn active" style="border-radius: 30px;">👥 Управление аккаунтами</button>
-				<button id="createTabBtn" class="nav-btn" style="border-radius: 30px;">➕ Создание аккаунтов</button>
-			</div>
+        <div style="height: 100%; display: flex; flex-direction: column;">
+            <h2>Управление сотрудниками</h2>
+            
+            <!-- Вкладки -->
+            <div style="display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 2px solid #eaf0f8; padding-bottom: 8px;">
+                <button id="manageTabBtn" class="nav-btn active" style="border-radius: 30px;">👥 Управление аккаунтами</button>
+                <button id="createTabBtn" class="nav-btn" style="border-radius: 30px;">➕ Создание аккаунтов</button>
+            </div>
 
-			<!-- Секция управления аккаунтами -->
-			<div id="manageAccountsSection" style="flex: 1; display: flex; flex-direction: column;">
-				<h3>Редактирование и удаление</h3>
-				<div style="background: #f5f9ff; border-radius: 24px; padding: 16px; flex: 1; overflow-y: auto;">
-					<div id="employeesManageList" style="list-style: none; padding: 0;"></div>
-				</div>
-			</div>
+            <!-- Секция управления аккаунтами -->
+            <div id="manageAccountsSection" style="flex: 1; display: flex; flex-direction: column;">
+                <h3>Редактирование и удаление</h3>
+                <div style="background: #f5f9ff; border-radius: 24px; padding: 16px; flex: 1; overflow-y: auto;">
+                    <div id="employeesManageList" style="list-style: none; padding: 0;"></div>
+                </div>
+            </div>
 
-			<!-- Секция создания аккаунтов (изначально скрыта) -->
-			<div id="createAccountSection" class="hidden" style="flex: 1; display: flex; flex-direction: column;">
-				<h3>Регистрация нового сотрудника</h3>
-				<div style="background: #f5f9ff; border-radius: 24px; padding: 20px; margin-bottom: 20px;">
-					<input id="nickname" placeholder="Логин *">
-					<input id="newPassword" type="password" placeholder="Пароль *">
-					<input id="rank" placeholder="Звание *">
-					<input id="department" placeholder="Подразделение *">
-					<select id="category">
-						<option value="Руководство">Руководство</option>
-						<option value="Оперативный">Оперативный</option>
-						<option value="Администратор">Администратор</option>
-					</select>
-					<button id="createUserBtn">➕ Создать учётную запись</button>
-				</div>
-
-			</div>
-		</div>
-	</template>
+            <!-- Секция создания аккаунтов -->
+            <div id="createAccountSection" class="hidden" style="flex: 1; display: flex; flex-direction: column;">
+                <h3>Регистрация нового сотрудника</h3>
+                <div style="background: #f5f9ff; border-radius: 24px; padding: 24px; margin-bottom: 20px;">
+                    <div class="form-group">
+                        <label for="nickname">Логин <span class="required">*</span></label>
+                        <input id="nickname" type="text" placeholder="Введите логин для входа">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="newPassword">Пароль <span class="required">*</span></label>
+                        <input id="newPassword" type="text" placeholder="Введите пароль">
+                        <small class="field-hint">Минимальная длина: 6 символов</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rank">Звание <span class="required">*</span></label>
+                        <input id="rank" placeholder="Например: старший лейтенант">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="department">Отдел <span class="required">*</span></label>
+                        <input id="department" placeholder="Например: ОБ">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Категория <span class="required">*</span></label>
+                        <select id="category">
+                            <option value="МС">Младший состав (МС)</option>
+                            <option value="РС">Руководящий состав (РС)</option>
+                            <option value="ВРС">Высший руководящий состав (ВРС)</option>
+                            <option value="Администратор">Администрация</option>
+                        </select>
+                    </div>
+                    
+                    <button id="createUserBtn" style="margin-top: 16px;">➕ Создать учётную запись</button>
+                </div>
+            </div>
+        </div>
+    </template>
 
     <template id="kuspListTemplate">
-		<div style="height: 100%; display: flex; flex-direction: column;">
-			<div style="display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-shrink: 0;">
-				<h2 style="margin:0; border:none;">КУСП</h2>
-				<input type="text" id="kuspSearch" placeholder="Поиск по номеру или заявителю..." style="flex:1;">
-				<select id="kuspFilterStatus" style="width:150px;">
-					<option value="">Все статусы</option>
-					<option value="new">Новые</option>
-					<option value="in_progress">В работе</option>
-					<option value="closed">Закрытые</option>
-				</select>
-				<button id="kuspCreateOpen" class="secondary">+ Создать</button>
-			</div>
-			<div class="list-panel" id="kuspList" style="flex:1;"></div>
-		</div>
-	</template>
+        <div style="height: 100%; display: flex; flex-direction: column;">
+            <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-shrink: 0;">
+                <h2 style="margin:0; border:none;">КУСП</h2>
+                <input type="text" id="kuspSearch" placeholder="Поиск по номеру или заявителю..." style="flex:1;">
+                <select id="kuspFilterStatus" style="width:150px;">
+                    <option value="">Все статусы</option>
+                    <option value="new">Новые</option>
+                    <option value="in_progress">В работе</option>
+                    <option value="closed">Закрытые</option>
+                </select>
+                <button id="kuspCreateOpen" class="secondary">+ Создать</button>
+            </div>
+            <div class="list-panel" id="kuspList" style="flex:1;"></div>
+        </div>
+    </template>
 
     <template id="kuspCreateTemplate">
-		<div>
-			<input id="new_reporter" placeholder="Заявитель *" required>
-			<input id="new_contact" placeholder="Контакт">
-			<select id="new_type">
-				<option value="звонок">Звонок</option>
-				<option value="заявление">Заявление</option>
-				<option value="очевидец">Очевидец</option>
-				<option value="инцидент">Инцидент</option>
-			</select>
-			<input id="new_location" placeholder="Место">
-			<select id="new_priority">
-				<option value="low">Низкий приоритет</option>
-				<option value="normal" selected>Средний приоритет</option>
-				<option value="high">Высокий приоритет</option>
-			</select>
-			<textarea id="new_description" placeholder="Описание *" rows="4" required></textarea>
-			<div class="flex-row" style="justify-content: flex-end; margin-top: 16px;">
-				<button id="cancelCreateBtn" class="secondary">Отмена</button>
-				<button id="createKuspBtn">Создать</button>
-			</div>
-		</div>
-	</template>
+        <div>
+            <input id="new_reporter" placeholder="Заявитель *" required>
+            <input id="new_contact" placeholder="Контакт">
+            <select id="new_type">
+                <option value="звонок">Звонок</option>
+                <option value="заявление">Заявление</option>
+                <option value="очевидец">Очевидец</option>
+                <option value="инцидент">Инцидент</option>
+            </select>
+            <input id="new_location" placeholder="Место">
+            <select id="new_priority">
+                <option value="low">Низкий приоритет</option>
+                <option value="normal" selected>Средний приоритет</option>
+                <option value="high">Высокий приоритет</option>
+            </select>
+            <textarea id="new_description" placeholder="Описание *" rows="4" required></textarea>
+            <div class="flex-row" style="justify-content: flex-end; margin-top: 16px;">
+                <button id="cancelCreateBtn" class="secondary">Отмена</button>
+                <button id="createKuspBtn">Создать</button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Шаблоны для гостей -->
+    <template id="guestHomeTemplate">
+        <div>
+            <h2>Портал гражданина</h2>
+            <div style="background:#f2f7ff; padding:20px; border-radius:20px; margin-bottom:20px;">
+                <p>Добро пожаловать на портал гражданина УГИБДД.</p>
+                <p>Здесь вы можете:</p>
+                <ul style="margin-top:10px; list-style:disc; padding-left:20px;">
+                    <li>Проверить штрафы по номеру постановления</li>
+                    <li>Отследить статус обращения</li>
+                    <li>Получить информацию о работе ГИБДД</li>
+                </ul>
+            </div>
+        </div>
+    </template>
+
+    <template id="guestFinesTemplate">
+        <div>
+            <h2>Проверка штрафов</h2>
+            <div style="background:#f5f9ff; padding:20px; border-radius:20px;">
+                <div class="form-group">
+                    <label for="decreeNumber">Номер постановления</label>
+                    <input type="text" id="decreeNumber" placeholder="Введите номер постановления">
+                </div>
+                <button id="checkFineBtn" class="login-btn">Проверить</button>
+                <div id="fineResult" style="margin-top:20px;"></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="guestAppealsTemplate">
+        <div>
+            <h2>Мои обращения</h2>
+            <div style="background:#f5f9ff; padding:20px; border-radius:20px;">
+                <p>Для отслеживания обращений введите номер:</p>
+                <div class="form-group">
+                    <input type="text" id="appealNumber" placeholder="Номер обращения">
+                </div>
+                <button id="findAppealBtn" class="secondary">Найти</button>
+                <div id="appealResult" style="margin-top:20px;"></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="guestInfoTemplate">
+        <div>
+            <h2>Информация</h2>
+            <div style="background:#f5f9ff; padding:20px; border-radius:20px;">
+                <h3>Контакты</h3>
+                <p>📞 Дежурная часть: 8 (800) 123-45-67</p>
+                <p>📧 Email: info@gibdd.gov</p>
+                <p>📍 Адрес: г. Москва, ул. Примерная, д. 1</p>
+                
+                <h3 style="margin-top:20px;">Часы работы</h3>
+                <p>Пн-Пт: 09:00 - 18:00</p>
+                <p>Сб-Вс: Выходной</p>
+            </div>
+        </div>
+    </template>
 
     <!-- Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <!-- Модули приложения -->
     <script src="js/config.js"></script>
     <script src="js/auth.js"></script>
-	<script src="js/supabase-admin-client.js"></script>
+    <script src="js/supabase-admin-client.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/admin.js"></script>
     <script src="js/kusp.js"></script>

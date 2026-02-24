@@ -65,28 +65,50 @@ const Admin = (function() {
         modal.id = 'editEmployeeModal';
         
         modal.innerHTML = `
-            <div class="modal-container">
-                <div class="modal-header">
-                    <h3>Редактирование сотрудника</h3>
-                    <button class="modal-close">&times;</button>
-                </div>
-                <div class="modal-content">
-                    <input id="edit_nickname" type="text" placeholder="Логин" value="${employee.nickname}">
-                    <input id="edit_password" type="password" placeholder="Новый пароль (оставьте пустым, если не меняете)">
-                    <input id="edit_rank" placeholder="Звание" value="${employee.rank || ''}">
-                    <input id="edit_department" placeholder="Подразделение" value="${employee.department || ''}">
-                    <select id="edit_category">
-                        <option value="Руководство" ${employee.category === 'Руководство' ? 'selected' : ''}>Руководство</option>
-                        <option value="Оперативный" ${employee.category === 'Оперативный' ? 'selected' : ''}>Оперативный</option>
-                        <option value="Администратор" ${employee.category === 'Администратор' ? 'selected' : ''}>Администратор</option>
-                    </select>
-                    <div class="flex-row" style="justify-content: flex-end; margin-top: 20px;">
-                        <button id="cancelEditBtn" class="secondary">Отмена</button>
-                        <button id="saveEditBtn">Сохранить</button>
-                    </div>
-                </div>
-            </div>
-        `;
+		<div class="modal-container">
+			<div class="modal-header">
+				<h3>Редактирование сотрудника</h3>
+				<button class="modal-close">&times;</button>
+			</div>
+			<div class="modal-content">
+				<div class="form-group">
+					<label for="edit_nickname">Логин <span class="required">*</span></label>
+					<input id="edit_nickname" type="text" placeholder="Введите логин" value="${employee.nickname}">
+				</div>
+				
+				<div class="form-group">
+					<label for="edit_password">Новый пароль</label>
+					<input id="edit_password" type="text" placeholder="Оставьте пустым, если не меняете"> 
+					<small class="field-hint">Минимальная длина: 6 символов</small>
+				</div>
+				
+				<div class="form-group">
+					<label for="edit_rank">Звание <span class="required">*</span></label>
+					<input id="edit_rank" placeholder="Например: старший лейтенант" value="${employee.rank || ''}">
+				</div>
+				
+				<div class="form-group">
+					<label for="edit_department">Подразделение <span class="required">*</span></label>
+					<input id="edit_department" placeholder="Например: ОБ" value="${employee.department || ''}">
+				</div>
+				
+				<div class="form-group">
+					<label for="edit_category">Категория <span class="required">*</span></label>
+					<select id="edit_category">
+						<option value="МС" ${employee.category === 'МС' ? 'selected' : ''}>Младший состав (МС)</option>
+						<option value="РС" ${employee.category === 'РС' ? 'selected' : ''}>Руководящий состав (РС)</option>
+						<option value="ВРС" ${employee.category === 'ВРС' ? 'selected' : ''}>Высший руководящий состав (ВРС)</option>
+						<option value="Администратор" ${employee.category === 'Администратор' ? 'selected' : ''}>Администрация</option>
+					</select>
+				</div>
+				
+				<div class="flex-row" style="justify-content: flex-end; margin-top: 24px;">
+					<button id="cancelEditBtn" class="secondary">Отмена</button>
+					<button id="saveEditBtn">Сохранить изменения</button>
+				</div>
+			</div>
+		</div>
+	`;
 
         document.body.appendChild(modal);
 
@@ -298,9 +320,19 @@ const Admin = (function() {
             li.style.justifyContent = 'space-between';
             li.style.alignItems = 'center';
             
+            // Определяем класс бейджа в зависимости от роли
+            let badgeClass = 'badge-new';
+            if (emp.category === 'Администратор') {
+                badgeClass = 'badge-progress';
+            } else if (emp.category === 'ВРС') {
+                badgeClass = 'badge-vrs';
+            } else if (emp.category === 'РС') {
+                badgeClass = 'badge-rs';
+            }
+            
             li.innerHTML = `
                 <span>${emp.nickname} · ${emp.rank} · ${emp.department}</span>
-                <span class="badge ${emp.category === 'Администратор' ? 'badge-progress' : 'badge-new'}">${emp.category}</span>
+                <span class="badge ${badgeClass}">${emp.category}</span>
             `;
             ul.appendChild(li);
         });
@@ -376,7 +408,7 @@ const Admin = (function() {
             document.getElementById('newPassword').value = '';
             document.getElementById('rank').value = '';
             document.getElementById('department').value = '';
-            document.getElementById('category').value = 'Руководство';
+            document.getElementById('category').value = 'МС';
             
             // Обновляем списки
             await loadEmployeesList();

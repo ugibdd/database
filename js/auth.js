@@ -1,8 +1,9 @@
-// Модуль аутентификации с регистрацией
+// Модуль аутентификации с поддержкой гостевого режима
 const Auth = (function() {
     let currentUser = null;
+    let currentMode = 'auth'; // 'auth', 'guest', 'employee'
     let inactivityTimer = null;
-    const INACTIVITY_TIMEOUT = 15 * 60 * 1000;
+    const INACTIVITY_TIMEOUT = 15 * 60 * 1000; // 15 минут
     const LAST_ACTIVITY_KEY = 'lastActivityTime';
 
     // -------------------- Utility --------------------
@@ -41,9 +42,15 @@ const Auth = (function() {
 
     function handleInactivityLogout() {
         if (!currentUser) return;
-        UI.showNotification('Сессия завершена из-за длительного бездействия', 'warning');
+        
+        const message = isGuest() 
+            ? 'Гостевой сеанс завершён из-за бездействия' 
+            : 'Сессия завершена из-за длительного бездействия';
+        
+        UI.showNotification(message, 'warning');
         logout();
         UI.showAuthMode();
+        
         const elements = UI.getElements();
         if (elements.loginInput) elements.loginInput.value = '';
         if (elements.passwordInput) elements.passwordInput.value = '';
@@ -52,38 +59,48 @@ const Auth = (function() {
 
     function saveSession(user) {
         currentUser = user;
+        currentMode = 'employee';
         localStorage.setItem('user', JSON.stringify(user));
         updateLastActivity();
         setupActivityListeners();
         resetInactivityTimer();
     }
 
-    function restoreSession() {
-        const saved = localStorage.getItem('user');
-        if (!saved) return null;
-        if (checkInactivityOnLoad()) {
-            logout();
-            return null;
-        }
-        try {
-            const user = JSON.parse(saved);
-            currentUser = user;
-            if (currentUser) {
-                setupActivityListeners();
-                resetInactivityTimer();
-            }
-            return currentUser;
-        } catch {
-            return null;
-        }
+    // -------------------- Гостевой режим --------------------
+    function startGuestSession() {
+        // Завершаем предыдущую сессию если была
+        logout();
+        
+        currentMode = 'guest';
+        currentUser = {
+            id: 'guest',
+            nickname: 'Гость',
+            rank: 'Гостевой доступ',
+            department: 'Портал гражданина',
+            category: 'Гость',
+            isGuest: true
+        };
+        
+        // Не сохраняем гостя в localStorage, только в памяти
+        localStorage.removeItem('user'); // Удаляем возможную старую сессию
+        updateLastActivity();
+        setupActivityListeners();
+        resetInactivityTimer();
+        
+        return currentUser;
     }
 
-    // -------------------- Auth --------------------
+    function isGuest() {
+        return currentMode === 'guest';
+    }
+
+    // -------------------- Режим сотрудника --------------------
     async function login(nickname, password) {
         const email = `${nickname}@app.local`;
         const { data: authData, error: authError } = await supabaseClient.auth.signInWithPassword({
             email, password
         });
+        
         if (authError || !authData.user) throw new Error('Неверные данные для входа');
 
         const userId = authData.user.id;
@@ -123,6 +140,11 @@ const Auth = (function() {
 
     // -------------------- Secure Requests --------------------
     async function secureRequest(table, operation, data = null, id = null) {
+        // Гости не имеют доступа к защищённым запросам
+        if (isGuest()) {
+            throw new Error('Гостевой режим не имеет доступа к этой функции');
+        }
+        
         const user = getCurrentUser();
         if (!user) throw new Error('Не авторизован');
 
@@ -142,15 +164,46 @@ const Auth = (function() {
     // -------------------- Helpers --------------------
     function logout() {
         currentUser = null;
+        currentMode = 'auth';
         localStorage.removeItem('user');
         localStorage.removeItem(LAST_ACTIVITY_KEY);
         if (inactivityTimer) { clearTimeout(inactivityTimer); inactivityTimer = null; }
         removeActivityListeners();
     }
 
+    function restoreSession() {
+        // Проверяем, не гость ли мы (гости не сохраняются)
+        if (currentMode === 'guest') {
+            return currentUser;
+        }
+        
+        const saved = localStorage.getItem('user');
+        if (!saved) return null;
+        
+        if (checkInactivityOnLoad()) {
+            logout();
+            return null;
+        }
+        
+        try {
+            const user = JSON.parse(saved);
+            currentUser = user;
+            currentMode = 'employee';
+            
+            if (currentUser) {
+                setupActivityListeners();
+                resetInactivityTimer();
+            }
+            return currentUser;
+        } catch {
+            return null;
+        }
+    }
+
     function getCurrentUser() { return currentUser; }
-    function isAdmin() { return currentUser?.category === 'Администратор'; }
+    function isAdmin() { return currentMode === 'employee' && currentUser?.category === 'Администратор'; }
     function ping() { resetInactivityTimer(); }
+    function getCurrentMode() { return currentMode; }
 
     return {
         restoreSession,
@@ -160,7 +213,10 @@ const Auth = (function() {
         getCurrentUser,
         isAdmin,
         ping,
-        secureRequest
+        secureRequest,
+        startGuestSession,
+        isGuest,
+        getCurrentMode
     };
 })();
 
