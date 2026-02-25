@@ -1,4 +1,4 @@
-// Модуль КУСП (ПОЛНОСТЬЮ ПЕРЕРАБОТАНАЯ ВЕРСИЯ)
+// Модуль КУСП
 const KUSP = (function() {
     let kuspListCache = [];
 
@@ -35,47 +35,47 @@ const KUSP = (function() {
         }
     }
 
-    // Генерация номера КУСП (порядковый номер за день)
+    // Генерация номера КУСП
     async function generateKuspNumber() {
-        const today = new Date();
-        const dateStr = today.toISOString().split('T')[0]; // YYYY-MM-DD
-        
-        // Получаем все записи за сегодня
-        const { data } = await supabaseClient
-            .from('kusps')
-            .select('kusp_number')
-            .gte('created_at', `${dateStr}T00:00:00`)
-            .lte('created_at', `${dateStr}T23:59:59`);
-        
-        let maxNumber = 0;
-        if (data && data.length > 0) {
-            data.forEach(item => {
-                if (item.kusp_number) {
-                    // Предполагаем формат: ГГГГ-ММ-ДД-XXX
-                    const parts = item.kusp_number.split('-');
-                    if (parts.length === 4) {
-                        const num = parseInt(parts[3]);
-                        if (!isNaN(num) && num > maxNumber) maxNumber = num;
-                    }
-                }
-            });
-        }
-        
-        const nextNumber = (maxNumber + 1).toString().padStart(3, '0');
-        return `${today.getFullYear()}-${(today.getMonth()+1).toString().padStart(2,'0')}-${today.getDate().toString().padStart(2,'0')}-${nextNumber}`;
-    }
+		const today = new Date();
+		const currentYear = today.getFullYear();
+		
+		// Получаем все записи КУСП за текущий год
+		const startOfYear = `${currentYear}-01-01T00:00:00`;
+		const endOfYear = `${currentYear}-12-31T23:59:59`;
+		
+		const { data } = await supabaseClient
+			.from('kusps')
+			.select('kusp_number')
+			.gte('created_at', startOfYear)
+			.lte('created_at', endOfYear);
+		
+		let maxNumber = 0;
+		if (data && data.length > 0) {
+			data.forEach(item => {
+				if (item.kusp_number) {
+					const parts = item.kusp_number.split('-');
+					if (parts.length === 4) {
+						const num = parseInt(parts[3]);
+						if (!isNaN(num) && num > maxNumber) maxNumber = num;
+					}
+				}
+			});
+		}
+		
+		const nextNumber = (maxNumber + 1).toString().padStart(3, '0');
+		return `${currentYear}-${(today.getMonth()+1).toString().padStart(2,'0')}-${today.getDate().toString().padStart(2,'0')}-${nextNumber}`;
+	}
 
     // Проверка прав на редактирование КУСП
     function canEditKusp(kusp) {
         const user = Auth.getCurrentUser();
         if (!user) return false;
         
-        // РС и выше могут редактировать любые записи
         if (user.category === 'РС' || user.category === 'ВРС' || user.category === 'Администратор') {
             return true;
         }
         
-        // Создатель может редактировать свою запись
         return kusp.created_by_id === user.id;
     }
 
@@ -84,7 +84,6 @@ const KUSP = (function() {
         const user = Auth.getCurrentUser();
         if (!user) return false;
         
-        // РС и выше могут удалять записи
         return user.category === 'РС' || user.category === 'ВРС' || user.category === 'Администратор';
     }
 
@@ -138,7 +137,6 @@ const KUSP = (function() {
             container.appendChild(div);
         });
 
-        // Обработчики
         container.querySelectorAll('button[data-action="view"]').forEach(btn => {
             btn.onclick = () => openKuspModal(btn.dataset.id, 'view');
         });
@@ -152,12 +150,11 @@ const KUSP = (function() {
         });
     }
 
-    // Функция для сохранения талона как PNG
+    // Сохранение талона как PNG
     async function saveTicketAsPNG(kuspId, ticketType) {
         const kusp = kuspListCache.find(k => k.id == kuspId);
         if (!kusp) return;
         
-        // Создаем временный контейнер для талона
         const ticketContainer = document.createElement('div');
         ticketContainer.style.position = 'fixed';
         ticketContainer.style.left = '-9999px';
@@ -172,7 +169,6 @@ const KUSP = (function() {
         const now = new Date().toLocaleString();
         
         if (ticketType === 'notification') {
-            // Талон-уведомление (для заявителя)
             ticketContainer.innerHTML = `
                 <div style="border: 3px solid #28a745; padding: 25px;">
                     <h2 style="text-align: center; color: #28a745; margin-bottom: 20px;">УГИБДД МВД по Республике Провинция</h2>
@@ -198,7 +194,6 @@ const KUSP = (function() {
                 </div>
             `;
         } else {
-            // Талон-корешок (для органа)
             ticketContainer.innerHTML = `
                 <div style="border: 3px solid #dc3545; padding: 25px;">
                     <h2 style="text-align: center; color: #dc3545; margin-bottom: 20px;">УГИБДД МВД по Республике Провинция</h2>
@@ -222,7 +217,6 @@ const KUSP = (function() {
         document.body.appendChild(ticketContainer);
         
         try {
-            // Используем html2canvas для преобразования в PNG
             const canvas = await html2canvas(ticketContainer, {
                 scale: 2,
                 backgroundColor: '#ffffff',
@@ -231,7 +225,6 @@ const KUSP = (function() {
                 useCORS: true
             });
             
-            // Создаем ссылку для скачивания
             const link = document.createElement('a');
             link.download = `talon-${ticketType === 'notification' ? 'uvedomlenie' : 'koreshok'}-${kusp.kusp_number}.png`;
             link.href = canvas.toDataURL('image/png');
@@ -246,47 +239,43 @@ const KUSP = (function() {
         }
     }
 
-	// Открыть модальное окно создания/редактирования/просмотра
-// Открыть модальное окно создания/редактирования/просмотра
-async function openKuspModal(id = null, mode = 'create') {
-    Auth.ping();
-    
-    const user = Auth.getCurrentUser();
-    let kusp = null;
-    let employees = [];
-    
-    if (id) {
-        kusp = kuspListCache.find(k => k.id == id);
-        if (!kusp) return;
+    // Открыть модальное окно
+    async function openKuspModal(id = null, mode = 'create') {
+        Auth.ping();
         
-        // Проверка прав на редактирование
-        if (mode === 'edit' && !canEditKusp(kusp)) {
-            UI.showNotification('У вас нет прав на редактирование этой записи', 'error');
-            return;
+        const user = Auth.getCurrentUser();
+        let kusp = null;
+        let employees = [];
+        
+        if (id) {
+            kusp = kuspListCache.find(k => k.id == id);
+            if (!kusp) return;
+            
+            if (mode === 'edit' && !canEditKusp(kusp)) {
+                UI.showNotification('У вас нет прав на редактирование этой записи', 'error');
+                return;
+            }
         }
-    }
-    
-    // Загружаем список сотрудников - используем id (первичный ключ) для VALUE,
-    // но также получаем auth_user_id для отладки
-    const { data: empData } = await supabaseClient
-        .from('employees')
-        .select('id, auth_user_id, nickname, rank')
-        .order('nickname');
-    employees = empData || [];
-    
-    console.log('Employees loaded:', employees); // Для отладки
+        
+        const { data: empData } = await supabaseClient
+            .from('employees')
+            .select('id, auth_user_id, nickname, rank')
+            .order('nickname');
+        employees = empData || [];
+        
+        console.log('Employees loaded:', employees);
 
-    const modal = document.createElement('div');
-    modal.className = 'modal-overlay';
-    modal.id = 'kuspModal';
-    
-    const title = mode === 'create' ? 'Новая запись КУСП' : 
-                 (mode === 'edit' ? `Редактирование КУСП №${kusp.kusp_number}` : 
-                  `Просмотр КУСП №${kusp.kusp_number}`);
-    
-    const isReadOnly = mode === 'view';
-    
-    modal.innerHTML = `
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay';
+        modal.id = 'kuspModal';
+        
+        const title = mode === 'create' ? 'Новая запись КУСП' : 
+                     (mode === 'edit' ? `Редактирование КУСП №${kusp.kusp_number}` : 
+                      `Просмотр КУСП №${kusp.kusp_number}`);
+        
+        const isReadOnly = mode === 'view';
+        
+        modal.innerHTML = `
         <div class="modal-container modal-large">
             <div class="modal-header">
                 <h3>${escapeHtml(title)}</h3>
@@ -295,7 +284,6 @@ async function openKuspModal(id = null, mode = 'create') {
             <div class="modal-content">
                 <form id="kuspForm" style="max-height: 70vh; overflow-y: auto; padding-right: 10px;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                        <!-- Левая колонка -->
                         <div>
                             <h4>Основная информация</h4>
                             
@@ -334,7 +322,6 @@ async function openKuspModal(id = null, mode = 'create') {
                                     `<select id="received_by_id" required>
                                         <option value="">Выберите сотрудника</option>
                                         ${employees.map(emp => 
-                                            // ВАЖНО: Используем auth_user_id для value
                                             `<option value="${emp.auth_user_id}" ${kusp?.received_by_id === emp.auth_user_id ? 'selected' : ''}>
                                                 ${escapeHtml(emp.rank || '')} ${escapeHtml(emp.nickname)}
                                             </option>`
@@ -344,7 +331,6 @@ async function openKuspModal(id = null, mode = 'create') {
                             </div>
                         </div>
                         
-                        <!-- Правая колонка -->
                         <div>
                             <h4>Содержание</h4>
                             
@@ -419,7 +405,6 @@ async function openKuspModal(id = null, mode = 'create') {
                                     `<select id="assigned_by_id">
                                         <option value="">Не выбран</option>
                                         ${employees.map(emp => 
-                                            // ВАЖНО: Используем auth_user_id для value
                                             `<option value="${emp.auth_user_id}" ${kusp?.assigned_by_id === emp.auth_user_id ? 'selected' : ''}>
                                                 ${escapeHtml(emp.rank || '')} ${escapeHtml(emp.nickname)}
                                             </option>`
@@ -435,7 +420,6 @@ async function openKuspModal(id = null, mode = 'create') {
                                     `<select id="assigned_to_id">
                                         <option value="">Не выбран</option>
                                         ${employees.map(emp => 
-                                            // ВАЖНО: Используем auth_user_id для value
                                             `<option value="${emp.auth_user_id}" ${kusp?.assigned_to_id === emp.auth_user_id ? 'selected' : ''}>
                                                 ${escapeHtml(emp.rank || '')} ${escapeHtml(emp.nickname)}
                                             </option>`
@@ -494,7 +478,7 @@ async function openKuspModal(id = null, mode = 'create') {
                             </select>
                         </div>
                         
-                        <<div class="form-group" style="grid-column: span 2;">
+                        <div class="form-group" style="grid-column: span 2;">
 							<label>Дополнительные заметки</label>
 							<textarea id="notes" rows="2" style="resize: vertical;" ${isReadOnly ? 'readonly' : ''}>${kusp ? escapeHtml(kusp.notes || '') : ''}</textarea>
 						</div>
@@ -512,7 +496,6 @@ async function openKuspModal(id = null, mode = 'create') {
                     `}
                 </form>
                 
-                <!-- Талон-уведомление (для заявителя) -->
                 ${kusp && mode !== 'create' ? `
                     <div style="margin-top: 30px; border-top: 2px dashed #28a745; padding-top: 20px;">
                         <h4 style="color: #28a745;">🎫 Талон-уведомление (для заявителя)</h4>
@@ -536,7 +519,6 @@ async function openKuspModal(id = null, mode = 'create') {
                     </div>
                 ` : ''}
                 
-                <!-- Талон-корешок (остается в органе) -->
                 ${kusp && mode !== 'create' ? `
                     <div style="margin-top: 30px; border-top: 2px dashed #dc3545; padding-top: 20px;">
                         <h4 style="color: #dc3545;">📋 Талон-корешок (остается в деле)</h4>
@@ -561,306 +543,418 @@ async function openKuspModal(id = null, mode = 'create') {
         </div>
     `;
 
-    document.body.appendChild(modal);
+        document.body.appendChild(modal);
 
-    // Обработчики
-    modal.querySelector('.modal-close').onclick = () => modal.remove();
-    modal.onclick = (e) => {
-        if (e.target === modal) modal.remove();
-    };
-
-    if (mode === 'create' || mode === 'edit') {
-        const cancelBtn = document.getElementById('cancelKuspBtn');
-        if (cancelBtn) {
-            cancelBtn.onclick = () => modal.remove();
-        }
-        
-        document.getElementById('kuspForm').onsubmit = async (e) => {
-            e.preventDefault();
-            
-            if (mode === 'create') {
-                await createKusp();
-            } else {
-                await updateKusp(kusp.id);
-            }
-            modal.remove();
+        modal.querySelector('.modal-close').onclick = () => modal.remove();
+        modal.onclick = (e) => {
+            if (e.target === modal) modal.remove();
         };
-    } else {
-        const closeBtn = document.getElementById('closeKuspBtn');
-        if (closeBtn) closeBtn.onclick = () => modal.remove();
-    }
-}
-    // Создание новой записи КУСП
-// Создание новой записи КУСП
-async function createKusp() {
-    Auth.ping();
-    
-    // Генерируем номер КУСП
-    const kuspNumber = await generateKuspNumber();
-    
-    // Получаем auth_user_id выбранного сотрудника из формы
-    const receivedByAuthId = document.getElementById('received_by_id')?.value;
-    
-    console.log('Selected received_by auth_user_id:', receivedByAuthId); // Отладка
-    
-    if (!receivedByAuthId) {
-        UI.showNotification('Выберите сотрудника, принявшего заявление', 'error');
-        return false;
-    }
-    
-    // Ищем сотрудника по auth_user_id, а не по id
-    const { data: employee, error: empError } = await supabaseClient
-        .from('employees')
-        .select('id, auth_user_id, nickname, rank')
-        .eq('auth_user_id', receivedByAuthId)
-        .single();
-    
-    console.log('Found employee:', employee); // Отладка
-    
-    if (empError || !employee) {
-        console.error('Employee fetch error:', empError);
-        UI.showNotification('Выбранный сотрудник не найден в базе', 'error');
-        return false;
-    }
-    
-    // Формируем имя сотрудника для отображения
-    const receivedByName = `${employee.rank || ''} ${employee.nickname}`.trim();
-    
-    // Получаем данные для assigned_by и assigned_to (тоже по auth_user_id)
-    const assignedByAuthId = document.getElementById('assigned_by_id')?.value || null;
-    const assignedToAuthId = document.getElementById('assigned_to_id')?.value || null;
-    
-    let assignedByName = null;
-    let assignedToName = null;
-    let assignedById = null;
-    let assignedToId = null;
-    
-    // Если выбран руководитель, получаем его данные
-    if (assignedByAuthId) {
-        const { data: assignedByData } = await supabaseClient
-            .from('employees')
-            .select('id, nickname, rank')
-            .eq('auth_user_id', assignedByAuthId)
-            .single();
-        
-        if (assignedByData) {
-            assignedById = assignedByData.id;
-            assignedByName = `${assignedByData.rank || ''} ${assignedByData.nickname}`.trim();
-        }
-    }
-    
-    // Если выбран исполнитель, получаем его данные
-    if (assignedToAuthId) {
-        const { data: assignedToData } = await supabaseClient
-            .from('employees')
-            .select('id, nickname, rank')
-            .eq('auth_user_id', assignedToAuthId)
-            .single();
-        
-        if (assignedToData) {
-            assignedToId = assignedToData.id;
-            assignedToName = `${assignedToData.rank || ''} ${assignedToData.nickname}`.trim();
-        }
-    }
-    
-    // Собираем данные из формы
-    const formData = {
-        kusp_number: kuspNumber,
-        ticket_number: document.getElementById('ticket_number')?.value.trim() || kuspNumber,
-        received_datetime: document.getElementById('received_datetime')?.value,
-        received_form: document.getElementById('received_form')?.value,
-        received_by_id: receivedByAuthId, // Сохраняем auth_user_id
-        received_by_name: receivedByName,
-        reporter_name: document.getElementById('reporter_name')?.value.trim(),
-        reporter_birth_date: document.getElementById('reporter_birth_date')?.value || null,
-        reporter_address: document.getElementById('reporter_address')?.value.trim() || null,
-        reporter_passport: document.getElementById('reporter_passport')?.value.trim() || null,
-        reporter_contact_link: document.getElementById('reporter_contact_link')?.value.trim() || null,
-        short_content: document.getElementById('short_content')?.value.trim(),
-        team_results: document.getElementById('team_results')?.value.trim() || null,
-        assigned_by_id: assignedByAuthId, // Сохраняем auth_user_id
-        assigned_by_name: assignedByName,
-        assigned_to_id: assignedToAuthId, // Сохраняем auth_user_id
-        assigned_to_name: assignedToName,
-        review_deadline: document.getElementById('review_deadline')?.value || null,
-        review_completed_date: document.getElementById('review_completed_date')?.value || null,
-        extended_by: document.getElementById('extended_by')?.value.trim() || null,
-        review_result: document.getElementById('review_result')?.value || null,
-        status: document.getElementById('status')?.value || 'new',
-        notes: document.getElementById('notes')?.value.trim() || null
-    };
 
-    console.log('Form data to insert:', formData); // Отладка
-
-    // Валидация обязательных полей
-    if (!formData.received_datetime || !formData.received_form || !formData.received_by_id || 
-        !formData.reporter_name || !formData.short_content) {
-        UI.showNotification('Заполните все обязательные поля', 'error');
-        return false;
-    }
-
-    try {
-        const { error } = await supabaseClient
-            .from('kusps')
-            .insert([formData]);
-
-        if (error) {
-            console.error('Insert error:', error);
-            if (error.code === '42501') {
-                UI.showNotification('Ошибка прав доступа: вы не можете создавать записи', 'error');
-            } else if (error.code === '23503') {
-                UI.showNotification(`Ошибка внешнего ключа: сотрудник с auth_user_id ${receivedByAuthId} не существует`, 'error');
-            } else {
-                UI.showNotification('Ошибка при создании записи: ' + error.message, 'error');
+        if (mode === 'create' || mode === 'edit') {
+            const cancelBtn = document.getElementById('cancelKuspBtn');
+            if (cancelBtn) {
+                cancelBtn.onclick = () => modal.remove();
             }
+            
+            document.getElementById('kuspForm').onsubmit = async (e) => {
+                e.preventDefault();
+                
+                if (mode === 'create') {
+                    await createKusp();
+                } else {
+                    await updateKusp(kusp.id);
+                }
+                modal.remove();
+            };
+        } else {
+            const closeBtn = document.getElementById('closeKuspBtn');
+            if (closeBtn) closeBtn.onclick = () => modal.remove();
+        }
+    }
+    
+    // Создание новой записи КУСП
+    async function createKusp() {
+        Auth.ping();
+        
+        const kuspNumber = await generateKuspNumber();
+        
+        const receivedByAuthId = document.getElementById('received_by_id')?.value;
+        
+        console.log('Selected received_by auth_user_id:', receivedByAuthId);
+        
+        if (!receivedByAuthId) {
+            UI.showNotification('Выберите сотрудника, принявшего заявление', 'error');
+            return false;
+        }
+        
+        const { data: employee, error: empError } = await supabaseClient
+            .from('employees')
+            .select('id, auth_user_id, nickname, rank')
+            .eq('auth_user_id', receivedByAuthId)
+            .single();
+        
+        console.log('Found employee:', employee);
+        
+        if (empError || !employee) {
+            console.error('Employee fetch error:', empError);
+            UI.showNotification('Выбранный сотрудник не найден в базе', 'error');
+            return false;
+        }
+        
+        const receivedByName = `${employee.rank || ''} ${employee.nickname}`.trim();
+        
+        const assignedByAuthId = document.getElementById('assigned_by_id')?.value || null;
+        const assignedToAuthId = document.getElementById('assigned_to_id')?.value || null;
+        
+        let assignedByName = null;
+        let assignedToName = null;
+        let assignedById = null;
+        let assignedToId = null;
+        
+        if (assignedByAuthId) {
+            const { data: assignedByData } = await supabaseClient
+                .from('employees')
+                .select('id, nickname, rank')
+                .eq('auth_user_id', assignedByAuthId)
+                .single();
+            
+            if (assignedByData) {
+                assignedById = assignedByData.id;
+                assignedByName = `${assignedByData.rank || ''} ${assignedByData.nickname}`.trim();
+            }
+        }
+        
+        if (assignedToAuthId) {
+            const { data: assignedToData } = await supabaseClient
+                .from('employees')
+                .select('id, nickname, rank')
+                .eq('auth_user_id', assignedToAuthId)
+                .single();
+            
+            if (assignedToData) {
+                assignedToId = assignedToData.id;
+                assignedToName = `${assignedToData.rank || ''} ${assignedToData.nickname}`.trim();
+            }
+        }
+        
+        const formData = {
+            kusp_number: kuspNumber,
+            ticket_number: document.getElementById('ticket_number')?.value.trim() || kuspNumber,
+            received_datetime: document.getElementById('received_datetime')?.value,
+            received_form: document.getElementById('received_form')?.value,
+            received_by_id: receivedByAuthId,
+            received_by_name: receivedByName,
+            reporter_name: document.getElementById('reporter_name')?.value.trim(),
+            reporter_birth_date: document.getElementById('reporter_birth_date')?.value || null,
+            reporter_address: document.getElementById('reporter_address')?.value.trim() || null,
+            reporter_passport: document.getElementById('reporter_passport')?.value.trim() || null,
+            reporter_contact_link: document.getElementById('reporter_contact_link')?.value.trim() || null,
+            short_content: document.getElementById('short_content')?.value.trim(),
+            team_results: document.getElementById('team_results')?.value.trim() || null,
+            assigned_by_id: assignedByAuthId,
+            assigned_by_name: assignedByName,
+            assigned_to_id: assignedToAuthId,
+            assigned_to_name: assignedToName,
+            review_deadline: document.getElementById('review_deadline')?.value || null,
+            review_completed_date: document.getElementById('review_completed_date')?.value || null,
+            extended_by: document.getElementById('extended_by')?.value.trim() || null,
+            review_result: document.getElementById('review_result')?.value || null,
+            status: document.getElementById('status')?.value || 'new',
+            notes: document.getElementById('notes')?.value.trim() || null
+        };
+
+        console.log('Form data to insert:', formData);
+
+        if (!formData.received_datetime || !formData.received_form || !formData.received_by_id || 
+            !formData.reporter_name || !formData.short_content) {
+            UI.showNotification('Заполните все обязательные поля', 'error');
             return false;
         }
 
-        UI.showNotification('Запись КУСП создана', 'success');
-        await loadKuspList();
-        filterAndRenderKusp();
-        
-        return true;
-    } catch (error) {
-        console.error('Error in createKusp:', error);
-        UI.showNotification('Ошибка при создании записи: ' + error.message, 'error');
-        return false;
+        try {
+            const { error } = await supabaseClient
+                .from('kusps')
+                .insert([formData]);
+
+            if (error) {
+                console.error('Insert error:', error);
+                if (error.code === '42501') {
+                    UI.showNotification('Ошибка прав доступа: вы не можете создавать записи', 'error');
+                } else if (error.code === '23503') {
+                    UI.showNotification(`Ошибка внешнего ключа: сотрудник с auth_user_id ${receivedByAuthId} не существует`, 'error');
+                } else {
+                    UI.showNotification('Ошибка при создании записи: ' + error.message, 'error');
+                }
+                return false;
+            }
+
+            // Логируем создание записи КУСП
+            Logger.log(Logger.ACTION_TYPES.KUSP_CREATE, {
+				kusp_number: kuspNumber,
+				reporter_name: formData.reporter_name,
+				received_by_name: receivedByName
+			}, 'kusp', kuspNumber);
+
+            UI.showNotification('Запись КУСП создана', 'success');
+            await loadKuspList();
+            filterAndRenderKusp();
+            
+            return true;
+        } catch (error) {
+            console.error('Error in createKusp:', error);
+            UI.showNotification('Ошибка при создании записи: ' + error.message, 'error');
+            return false;
+        }
     }
-}
 
     // Обновление записи КУСП
-// Обновление записи КУСП
-async function updateKusp(id) {
-    Auth.ping();
-    
-    const kusp = kuspListCache.find(k => k.id == id);
-    if (!kusp) return false;
+	async function updateKusp(id) {
+		Auth.ping();
+		
+		const kusp = kuspListCache.find(k => k.id == id);
+		if (!kusp) return false;
 
-    // Получаем auth_user_id выбранного сотрудника из формы
-    const receivedByAuthId = document.getElementById('received_by_id')?.value;
-    
-    if (!receivedByAuthId) {
-        UI.showNotification('Выберите сотрудника, принявшего заявление', 'error');
-        return false;
-    }
-    
-    // Ищем сотрудника по auth_user_id
-    const { data: employee, error: empError } = await supabaseClient
-        .from('employees')
-        .select('id, auth_user_id, nickname, rank')
-        .eq('auth_user_id', receivedByAuthId)
-        .single();
-    
-    if (empError || !employee) {
-        console.error('Employee fetch error:', empError);
-        UI.showNotification('Выбранный сотрудник не найден в базе', 'error');
-        return false;
-    }
-    
-    // Формируем имя сотрудника
-    const receivedByName = `${employee.rank || ''} ${employee.nickname}`.trim();
-    
-    // Получаем данные для assigned_by и assigned_to
-    const assignedByAuthId = document.getElementById('assigned_by_id')?.value || null;
-    const assignedToAuthId = document.getElementById('assigned_to_id')?.value || null;
-    
-    let assignedByName = null;
-    let assignedToName = null;
-    
-    // Если выбран руководитель, получаем его имя
-    if (assignedByAuthId) {
-        const { data: assignedByData } = await supabaseClient
-            .from('employees')
-            .select('nickname, rank')
-            .eq('auth_user_id', assignedByAuthId)
-            .single();
-        
-        if (assignedByData) {
-            assignedByName = `${assignedByData.rank || ''} ${assignedByData.nickname}`.trim();
-        }
-    }
-    
-    // Если выбран исполнитель, получаем его имя
-    if (assignedToAuthId) {
-        const { data: assignedToData } = await supabaseClient
-            .from('employees')
-            .select('nickname, rank')
-            .eq('auth_user_id', assignedToAuthId)
-            .single();
-        
-        if (assignedToData) {
-            assignedToName = `${assignedToData.rank || ''} ${assignedToData.nickname}`.trim();
-        }
-    }
+		// Сохраняем старые значения для сравнения
+		const oldKusp = {...kusp};
 
-    // Собираем данные из формы
-    const formData = {
-        ticket_number: document.getElementById('ticket_number')?.value.trim() || kusp.kusp_number,
-        received_datetime: document.getElementById('received_datetime')?.value,
-        received_form: document.getElementById('received_form')?.value,
-        received_by_id: receivedByAuthId,
-        received_by_name: receivedByName,
-        reporter_name: document.getElementById('reporter_name')?.value.trim(),
-        reporter_birth_date: document.getElementById('reporter_birth_date')?.value || null,
-        reporter_address: document.getElementById('reporter_address')?.value.trim() || null,
-        reporter_passport: document.getElementById('reporter_passport')?.value.trim() || null,
-        reporter_contact_link: document.getElementById('reporter_contact_link')?.value.trim() || null,
-        short_content: document.getElementById('short_content')?.value.trim(),
-        team_results: document.getElementById('team_results')?.value.trim() || null,
-        assigned_by_id: assignedByAuthId,
-        assigned_by_name: assignedByName,
-        assigned_to_id: assignedToAuthId,
-        assigned_to_name: assignedToName,
-        review_deadline: document.getElementById('review_deadline')?.value || null,
-        review_completed_date: document.getElementById('review_completed_date')?.value || null,
-        extended_by: document.getElementById('extended_by')?.value.trim() || null,
-        review_result: document.getElementById('review_result')?.value || null,
-        status: document.getElementById('status')?.value || 'new',
-        notes: document.getElementById('notes')?.value.trim() || null
-    };
+		const receivedByAuthId = document.getElementById('received_by_id')?.value;
+		
+		if (!receivedByAuthId) {
+			UI.showNotification('Выберите сотрудника, принявшего заявление', 'error');
+			return false;
+		}
+		
+		const { data: employee, error: empError } = await supabaseClient
+			.from('employees')
+			.select('id, auth_user_id, nickname, rank')
+			.eq('auth_user_id', receivedByAuthId)
+			.single();
+		
+		if (empError || !employee) {
+			console.error('Employee fetch error:', empError);
+			UI.showNotification('Выбранный сотрудник не найден в базе', 'error');
+			return false;
+		}
+		
+		const receivedByName = `${employee.rank || ''} ${employee.nickname}`.trim();
+		
+		const assignedByAuthId = document.getElementById('assigned_by_id')?.value || null;
+		const assignedToAuthId = document.getElementById('assigned_to_id')?.value || null;
+		
+		let assignedByName = null;
+		let assignedToName = null;
+		
+		if (assignedByAuthId) {
+			const { data: assignedByData } = await supabaseClient
+				.from('employees')
+				.select('nickname, rank')
+				.eq('auth_user_id', assignedByAuthId)
+				.single();
+			
+			if (assignedByData) {
+				assignedByName = `${assignedByData.rank || ''} ${assignedByData.nickname}`.trim();
+			}
+		}
+		
+		if (assignedToAuthId) {
+			const { data: assignedToData } = await supabaseClient
+				.from('employees')
+				.select('nickname, rank')
+				.eq('auth_user_id', assignedToAuthId)
+				.single();
+			
+			if (assignedToData) {
+				assignedToName = `${assignedToData.rank || ''} ${assignedToData.nickname}`.trim();
+			}
+		}
 
-    // Валидация
-    if (!formData.received_datetime || !formData.received_form || !formData.received_by_id || 
-        !formData.reporter_name || !formData.short_content) {
-        UI.showNotification('Заполните все обязательные поля', 'error');
-        return false;
-    }
+		const formData = {
+			ticket_number: document.getElementById('ticket_number')?.value.trim() || kusp.kusp_number,
+			received_datetime: document.getElementById('received_datetime')?.value,
+			received_form: document.getElementById('received_form')?.value,
+			received_by_id: receivedByAuthId,
+			received_by_name: receivedByName,
+			reporter_name: document.getElementById('reporter_name')?.value.trim(),
+			reporter_birth_date: document.getElementById('reporter_birth_date')?.value || null,
+			reporter_address: document.getElementById('reporter_address')?.value.trim() || null,
+			reporter_passport: document.getElementById('reporter_passport')?.value.trim() || null,
+			reporter_contact_link: document.getElementById('reporter_contact_link')?.value.trim() || null,
+			short_content: document.getElementById('short_content')?.value.trim(),
+			team_results: document.getElementById('team_results')?.value.trim() || null,
+			assigned_by_id: assignedByAuthId,
+			assigned_by_name: assignedByName,
+			assigned_to_id: assignedToAuthId,
+			assigned_to_name: assignedToName,
+			review_deadline: document.getElementById('review_deadline')?.value || null,
+			review_completed_date: document.getElementById('review_completed_date')?.value || null,
+			extended_by: document.getElementById('extended_by')?.value.trim() || null,
+			review_result: document.getElementById('review_result')?.value || null,
+			status: document.getElementById('status')?.value || 'new',
+			notes: document.getElementById('notes')?.value.trim() || null
+		};
 
-    try {
-        const { error } = await supabaseClient
-            .from('kusps')
-            .update(formData)
-            .eq('id', id);
+		if (!formData.received_datetime || !formData.received_form || !formData.received_by_id || 
+			!formData.reporter_name || !formData.short_content) {
+			UI.showNotification('Заполните все обязательные поля', 'error');
+			return false;
+		}
 
-        if (error) {
-            console.error('Update error:', error);
-            if (error.code === '42501') {
-                UI.showNotification('Ошибка прав доступа: вы не можете редактировать эту запись', 'error');
-            } else if (error.code === '23503') {
-                UI.showNotification('Ошибка внешнего ключа: выбранный сотрудник не существует', 'error');
-            } else {
-                UI.showNotification('Ошибка при обновлении записи: ' + error.message, 'error');
-            }
-            return false;
-        }
+		try {
+			const { error } = await supabaseClient
+				.from('kusps')
+				.update(formData)
+				.eq('id', id);
 
-        UI.showNotification('Запись КУСП обновлена', 'success');
-        await loadKuspList();
-        filterAndRenderKusp();
-        
-        return true;
-    } catch (error) {
-        console.error('Error in updateKusp:', error);
-        UI.showNotification('Ошибка при обновлении записи: ' + error.message, 'error');
-        return false;
-    }
-}
+			if (error) {
+				console.error('Update error:', error);
+				if (error.code === '42501') {
+					UI.showNotification('Ошибка прав доступа: вы не можете редактировать эту запись', 'error');
+				} else if (error.code === '23503') {
+					UI.showNotification('Ошибка внешнего ключа: выбранный сотрудник не существует', 'error');
+				} else {
+					UI.showNotification('Ошибка при обновлении записи: ' + error.message, 'error');
+				}
+				return false;
+			}
+
+			// ДЕТАЛЬНОЕ ЛОГИРОВАНИЕ ВСЕХ ИЗМЕНЕНИЙ
+			// Полный список всех полей КУСП с человеко-читаемыми названиями
+			const allFields = {
+				// Основная информация
+				kusp_number: 'Номер КУСП',
+				ticket_number: 'Номер талона-уведомления',
+				received_datetime: 'Дата и время поступления',
+				received_form: 'Форма поступления',
+				received_by_id: 'Принявший сотрудник (ID)',
+				received_by_name: 'Принявший сотрудник (ФИО)',
+				
+				// Данные о заявителе
+				reporter_name: 'ФИО заявителя',
+				reporter_birth_date: 'Дата рождения заявителя',
+				reporter_address: 'Адрес заявителя',
+				reporter_passport: 'Паспортные данные',
+				reporter_contact_link: 'Способ связи',
+				
+				// Содержание
+				short_content: 'Содержание заявления',
+				
+				// Результаты работы
+				team_results: 'Результаты расследования',
+				assigned_by_id: 'Поручивший руководитель (ID)',
+				assigned_by_name: 'Поручивший руководитель (ФИО)',
+				assigned_to_id: 'Исполнитель (ID)',
+				assigned_to_name: 'Исполнитель (ФИО)',
+				review_deadline: 'Срок проверки',
+				review_completed_date: 'Дата завершения',
+				extended_by: 'Продлившие срок',
+				
+				// Статус и результаты
+				review_result: 'Результат рассмотрения',
+				status: 'Статус',
+				notes: 'Дополнительные заметки'
+			};
+
+			const changes = {};
+			
+			// Сравниваем все поля из списка allFields
+			Object.entries(allFields).forEach(([field, label]) => {
+				// Пропускаем поля, которые не должны меняться или являются служебными
+				if (field === 'kusp_number') return; // Номер КУСП не должен меняться
+				
+				const oldValue = oldKusp[field];
+				const newValue = formData[field];
+				
+				// Функция для форматирования значения для отображения
+				const formatValue = (value) => {
+					if (value === null || value === undefined || value === '') return 'Не указано';
+					
+					// Для дат форматируем красиво
+					if (field.includes('date') || field.includes('datetime')) {
+						if (field === 'received_datetime' && value) {
+							return new Date(value).toLocaleString('ru-RU');
+						}
+						if (value && value.includes('T')) {
+							return value.split('T')[0];
+						}
+					}
+					
+					// Для ID полей добавляем пояснение
+					if (field.includes('_id')) {
+						return 'ID: ' + value;
+					}
+					
+					return String(value);
+				};
+				
+				// Сравниваем значения (с учетом null/undefined/пустых строк)
+				const normalizedOld = oldValue === null || oldValue === undefined ? '' : oldValue;
+				const normalizedNew = newValue === null || newValue === undefined ? '' : newValue;
+				
+				if (String(normalizedOld) !== String(normalizedNew)) {
+					changes[label] = {
+						было: formatValue(oldValue),
+						стало: formatValue(newValue)
+					};
+				}
+			});
+
+			// Проверяем также изменения в архивированных полях (на случай удаления сотрудников)
+			if (oldKusp.received_by_name_archived !== formData.received_by_name_archived) {
+				changes['Архивированный принявший'] = {
+					было: oldKusp.received_by_name_archived || 'Не указано',
+					стало: formData.received_by_name_archived || 'Не указано'
+				};
+			}
+			
+			if (oldKusp.assigned_by_name_archived !== formData.assigned_by_name_archived) {
+				changes['Архивированный поручитель'] = {
+					было: oldKusp.assigned_by_name_archived || 'Не указано',
+					стало: formData.assigned_by_name_archived || 'Не указано'
+				};
+			}
+			
+			if (oldKusp.assigned_to_name_archived !== formData.assigned_to_name_archived) {
+				changes['Архивированный исполнитель'] = {
+					было: oldKusp.assigned_to_name_archived || 'Не указано',
+					стало: formData.assigned_to_name_archived || 'Не указано'
+				};
+			}
+
+			// Логируем, если были изменения
+			if (Object.keys(changes).length > 0) {
+				await Logger.log(Logger.ACTION_TYPES.KUSP_UPDATE, {
+					kusp_number: kusp.kusp_number,
+					changes: changes,
+					updated_by: Auth.getCurrentUser()?.nickname,
+					changes_count: Object.keys(changes).length
+				}, 'kusp', kusp.kusp_number);
+				
+				console.log(`Логирование КУСП: обнаружено ${Object.keys(changes).length} изменений`, changes);
+			} else {
+				// Если изменений нет, но пользователь нажал сохранить
+				await Logger.log('kusp_update_attempt', {
+					kusp_number: kusp.kusp_number,
+					message: 'Попытка сохранения без изменений',
+					updated_by: Auth.getCurrentUser()?.nickname
+				}, 'kusp', kusp.kusp_number);
+			}
+
+			UI.showNotification('Запись КУСП обновлена', 'success');
+			await loadKuspList();
+			filterAndRenderKusp();
+			
+			return true;
+		} catch (error) {
+			console.error('Error in updateKusp:', error);
+			UI.showNotification('Ошибка при обновлении записи: ' + error.message, 'error');
+			return false;
+		}
+	}
 
     // Удаление записи КУСП
     async function deleteKusp(id) {
         Auth.ping();
         
-        // Проверка прав
         if (!canDeleteKusp()) {
             UI.showNotification('У вас нет прав на удаление записей', 'error');
             return;
@@ -899,6 +993,13 @@ async function updateKusp(id) {
         
         document.getElementById('confirmDeleteBtn').onclick = async () => {
             try {
+                // Логируем удаление перед фактическим удалением
+                Logger.log(Logger.ACTION_TYPES.KUSP_DELETE, {
+					kusp_number: kusp.kusp_number,
+					reporter_name: kusp.reporter_name,
+					received_by_name: kusp.received_by_name
+				}, 'kusp', kusp.kusp_number);
+                
                 const { error } = await supabaseClient
                     .from('kusps')
                     .delete()
@@ -970,10 +1071,9 @@ async function updateKusp(id) {
         }
     }
 
-    // Публичные методы
     return {
         initKuspList,
-        saveTicketAsPNG  // Заменяем printTicket на saveTicketAsPNG
+        saveTicketAsPNG
     };
 })();
 

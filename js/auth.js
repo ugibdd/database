@@ -42,6 +42,7 @@ const Auth = (function() {
 
     function handleInactivityLogout() {
         if (!currentUser) return;
+       
         
         const message = isGuest() 
             ? 'Гостевой сеанс завершён из-за бездействия' 
@@ -68,7 +69,6 @@ const Auth = (function() {
 
     // -------------------- Гостевой режим --------------------
     function startGuestSession() {
-        // Завершаем предыдущую сессию если была
         logout();
         
         currentMode = 'guest';
@@ -80,9 +80,9 @@ const Auth = (function() {
             category: 'Гость',
             isGuest: true
         };
+       
         
-        // Не сохраняем гостя в localStorage, только в памяти
-        localStorage.removeItem('user'); // Удаляем возможную старую сессию
+        localStorage.removeItem('user');
         updateLastActivity();
         setupActivityListeners();
         resetInactivityTimer();
@@ -114,18 +114,14 @@ const Auth = (function() {
 
     function canDeleteUser(targetUser) {
         if (!currentUser) return false;
-        // Администратор может удалять всех
         if (isAdmin()) return true;
-        // ВРС может удалять всех, кроме администраторов
         if (isVRS() && targetUser.category !== 'Администратор') return true;
         return false;
     }
 
     function canEditUser(targetUser) {
         if (!currentUser) return false;
-        // Администратор может редактировать всех
         if (isAdmin()) return true;
-        // ВРС может редактировать всех, кроме администраторов
         if (isVRS() && targetUser.category !== 'Администратор') return true;
         return false;
     }
@@ -157,25 +153,25 @@ const Auth = (function() {
 		if (!data) throw new Error('Пользователь не найден в системе');
 
 		saveSession(data);
+		
+
+		
 		return data;
 	}
 
     async function register({ nickname, password, rank, department, category }) {
         const email = `${nickname}@app.local`;
 
-        // 1. Создание пользователя в Auth
         const { data: authData, error: authError } = await supabaseClient.auth.signUp({ email, password });
         if (authError || !authData.user) throw new Error(authError?.message || 'Ошибка регистрации');
 
         const userId = authData.user.id;
 
-        // 2. Создание записи в employees
         const { error: insertError } = await supabaseClient.from('employees').insert([{
             nickname, rank, department, category, auth_user_id: userId
         }]);
         if (insertError) throw new Error(insertError.message);
 
-        // 3. Автоматический логин после регистрации
         await supabaseClient.auth.signInWithPassword({ email, password });
 
         return true;
@@ -183,7 +179,6 @@ const Auth = (function() {
 
     // -------------------- Secure Requests --------------------
     async function secureRequest(table, operation, data = null, id = null) {
-        // Гости не имеют доступа к защищённым запросам
         if (isGuest()) {
             throw new Error('Гостевой режим не имеет доступа к этой функции');
         }
@@ -206,6 +201,7 @@ const Auth = (function() {
 
     // -------------------- Helpers --------------------
     function logout() {
+        
         currentUser = null;
         currentMode = 'auth';
         localStorage.removeItem('user');
@@ -215,7 +211,6 @@ const Auth = (function() {
     }
 
     function restoreSession() {
-        // Проверяем, не гость ли мы (гости не сохраняются)
         if (currentMode === 'guest') {
             return currentUser;
         }

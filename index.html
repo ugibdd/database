@@ -124,10 +124,11 @@
             <h2>Управление сотрудниками</h2>
             
             <!-- Вкладки -->
-            <div style="display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 2px solid #eaf0f8; padding-bottom: 8px;">
-                <button id="manageTabBtn" class="nav-btn active" style="border-radius: 30px;">👥 Управление аккаунтами</button>
-                <button id="createTabBtn" class="nav-btn" style="border-radius: 30px;">➕ Создание аккаунтов</button>
-            </div>
+            <div style="display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 2px solid #eaf0f8; padding-bottom: 8px; flex-wrap: wrap;">
+				<button id="manageTabBtn" class="nav-btn active" style="border-radius: 30px;">👥 Управление аккаунтами</button>
+				<button id="createTabBtn" class="nav-btn" style="border-radius: 30px;">➕ Создание аккаунтов</button>
+				<button id="logsTabBtn" class="nav-btn" style="border-radius: 30px;">📋 Журнал действий</button>
+			</div>
 
             <!-- Секция управления аккаунтами -->
             <div id="manageAccountsSection" style="flex: 1; display: flex; flex-direction: column;">
@@ -175,8 +176,35 @@
                     <button id="createUserBtn" style="margin-top: 16px;">➕ Создать учётную запись</button>
                 </div>
             </div>
+			
+			<!-- Секция журнала действий -->
+			<div id="logsSection" class="hidden" style="flex: 1; display: flex; flex-direction: column;">
+				<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+					<h3 style="margin:0;">Журнал действий (последние 100 записей)</h3>
+					<div style="display: flex; gap: 8px; flex-wrap: wrap;">
+						<select id="logFilterAction" style="width: 150px;">
+							<option value="">Все действия</option>
+							<option value="employee_create">Создание сотрудников</option>
+							<option value="employee_update">Редактирование</option>
+							<option value="employee_delete">Удаление</option>
+							<option value="kusp_create">Создание КУСП</option>
+							<option value="kusp_update">Изменение КУСП</option>
+							<option value="kusp_delete">Удаление КУСП</option>
+							<option value="user_login">Входы в систему</option>
+						</select>
+						<input type="date" id="logFilterDate" style="width: 140px;">
+						<button id="refreshLogsBtn" class="small secondary">🔄 Обновить</button>
+						<button id="exportLogsBtn" class="small secondary">📥 Экспорт</button>
+					</div>
+				</div>
+				<div style="background: #f5f9ff; border-radius: 24px; padding: 16px; flex: 1; overflow-y: auto;">
+					<div id="logsList" style="display: flex; flex-direction: column; gap: 8px;"></div>
+				</div>
+			</div>
         </div>
     </template>
+
+	
 
     <template id="kuspListTemplate">
         <div style="height: 100%; display: flex; flex-direction: column;">
@@ -249,6 +277,7 @@
     <!-- Модули приложения -->
     <script src="js/config.js"></script>
     <script src="js/error-handler.js"></script> 
+	<script src="js/logger.js"></script>
     <script src="js/permissions.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/supabase-admin-client.js"></script>

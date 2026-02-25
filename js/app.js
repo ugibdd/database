@@ -1,4 +1,3 @@
-// file: app.js
 // Главный модуль приложения
 const App = (function() {
     const elements = UI.getElements();
