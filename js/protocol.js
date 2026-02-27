@@ -1,1 +1,2254 @@
-function _0x4750(){const _0x22df5d=['PROTOCOL_UPDATE','.step','Протокол\x20обновлен','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22justify-content:\x20flex-end;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22cancelDeleteBtn\x22\x20class=\x22secondary\x22>Отмена</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22confirmDeleteBtn\x22\x20style=\x22background:\x20#dc3545;\x22>🗑️\x20Удалить</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>(марка,\x20гос.\x20регистрационный\x20знак)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Принадлежащим\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-top:15px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>принадлежащим</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','setActiveTab','delete','\x0a\x09\x09\x09\x09\x09\x09<img\x20src=\x22','Error\x20loading\x20protocols:','\x20ч.\x20','round','Ошибка\x20при\x20создании\x20протокола:\x20','color','</textarea>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<!--\x20Блок\x20для\x20подписи\x20сотрудника\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x20signature-section\x22\x20style=\x22grid-column:\x20span\x202;\x20margin-top:\x2010px;\x20border-top:\x201px\x20solid\x20#d8e2ed;\x20padding-top:\x2020px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<h4\x20style=\x22margin-bottom:\x2015px;\x22>Подпись\x20должностного\x20лица,\x20составившего\x20протокол</h4>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22display:\x20grid;\x20grid-template-columns:\x201fr\x202fr;\x20gap:\x2020px;\x20align-items:\x20start;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<!--\x20Область\x20для\x20рисования\x20подписи\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Нарисуйте\x20подпись:</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22border:\x202px\x20dashed\x20#1e3a5f;\x20border-radius:\x208px;\x20padding:\x205px;\x20background:\x20#fff;\x20margin-top:\x205px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<canvas\x20id=\x22signatureCanvas\x22\x20width=\x22250\x22\x20height=\x22120\x22\x20style=\x22width:\x20100%;\x20height:\x20auto;\x20background:\x20white;\x20border:\x201px\x20solid\x20#d8e2ed;\x20border-radius:\x204px;\x20cursor:\x20crosshair;\x22></canvas>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<!--\x20Кнопки\x20управления\x20подписью\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22display:\x20flex;\x20gap:\x208px;\x20margin-top:\x2010px;\x20flex-wrap:\x20wrap;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20id=\x22clearSignatureBtn\x22\x20class=\x22small\x20secondary\x22>🧹\x20Очистить</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<!--\x20Предпросмотр\x20подписи\x20и\x20информация\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Предпросмотр\x20подписи:</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22border:\x201px\x20solid\x20#d8e2ed;\x20border-radius:\x208px;\x20padding:\x2015px;\x20background:\x20#f8fafd;\x20margin-top:\x205px;\x20min-height:\x20120px;\x20display:\x20flex;\x20flex-direction:\x20column;\x20justify-content:\x20center;\x20align-items:\x20center;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<canvas\x20id=\x22signaturePreviewCanvas\x22\x20width=\x22200\x22\x20height=\x2280\x22\x20style=\x22width:\x20100%;\x20height:\x20auto;\x20background:\x20white;\x20border:\x201px\x20solid\x20#d8e2ed;\x20border-radius:\x204px;\x20display:\x20none;\x22></canvas>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20id=\x22noSignatureMessage\x22\x20style=\x22color:\x20#6b7f99;\x20text-align:\x20center;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09⚠️\x20Подпись\x20не\x20добавлена\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<img\x20id=\x22signaturePreviewImg\x22\x20style=\x22max-width:\x20100%;\x20max-height:\x20100px;\x20display:\x20none;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<!--\x20Поле\x20для\x20хранения\x20данных\x20подписи\x20(base64)\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22hidden\x22\x20id=\x22signature_data\x22\x20value=\x22','Государственный\x20номер','error','getMinutes','Действующий','Delete\x20error:','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22item-meta\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<strong>','\x22\x20placeholder=\x22Иванов\x20И.И.\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>ТС\x20состоит\x20на\x20учете</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22vehicle_registered_info\x22\x20value=\x22','14px','onclick','div','forEach','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Кодекса\x20Республики\x20Провинция\x20об\x20административных\x20правонарушениях.</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Лицу,\x20в\x20отношении\x20которого\x20возбуждено\x20дело\x20об\x20административном\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20правонарушении,\x20разъяснены\x20права,\x20предусмотренные\x20статьей\x2030\x20Конституции\x20Республики\x20Провинция.\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Лицо,\x20в\x20отношении\x20которого\x20возбуждено\x20дело\x20об\x20административном\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20правонарушении,\x20ознакомлено\x20с\x20протоколом.\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20при\x20применении\x20спец.\x20тех.\x20средств\x20указываются\x20их\x20показания,\x20наименование,\x20номер)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Неизвестно','Заполните\x20место\x20составления','мая','className','signaturePreviewImg','Время\x20составления','nickname','Error\x20in\x20loadProtocolsList:','августа','600','<div\x20class=\x22list-item\x22\x20style=\x22justify-content:\x20center;\x20color:\x20#6b7f99;\x22>Нет\x20протоколов</div>','\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Отчество</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22violator_patronymic\x22\x20value=\x22','height','warning','getElementById','Новый\x20протокол\x20об\x20АП','getContext','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','borderColor','toLocaleDateString','</strong>\x20·\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','href','mousemove','Администратор','clearRect','&nbsp;','getBoundingClientRect','Просмотр\x20протокола\x20№','explanatory_note','mousedown','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>час.\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>','protocol_number','\x22\x20placeholder=\x226\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Часть\x20статьи\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22offense_article_part\x22\x20required\x20value=\x22','main','violator_firstname','.tab-content','fixed','additional','protocol_export','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>г.</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x22>(дата\x20составления)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-item\x20date-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-field\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>','official_name','protocolCreateOpen','protocol_time','download','padding','Часть\x20статьи','Заполните\x20дату\x20составления','message','none','28WaplMu','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x20г.\x20в\x20\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>','modal-overlay','</div>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09<div\x20class=\x22note\x20flex-space-between\x22>\x0a\x09\x09\x09\x09\x09<span>(дата\x20и\x20место\x20рождения)</span>\x0a\x09\x09\x09\x09\x09<span>(владеет/не\x20владеет)</span>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Водительское\x20удостоверение\x20и\x20транспорт\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Вторая\x20строка\x20с\x20правильным\x20отступом\x20как\x20в\x20поле\x20\x22совершил(а)\x20нарушение\x22\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22margin-top:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x22>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22modal-container\x22\x20style=\x22max-width:\x20400px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22modal-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>Подтверждение\x20удаления</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22modal-close\x22>&times;</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22modal-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Вы\x20уверены,\x20что\x20хотите\x20удалить\x20протокол\x20<strong>№','split','\x22\x20data-action=\x22delete\x22>🗑️\x20Удалить</button>','владеет','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>','ноября','toString','protocolSearch','innerHTML','select','➕\x20Создать','Заполните\x20время\x20составления','add','апреля','#ffffff','input','create','protocolFilterStatus','formatDate','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>(регистрационный\x20номер)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Дата\x20/\x20Время\x20/\x20Место\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-item\x20date-left\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-field\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>','archived','Ошибка\x20прав\x20доступа:\x20вы\x20не\x20можете\x20редактировать\x20этот\x20протокол','Error\x20in\x20createProtocol:','>Архивный</option>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</select>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09<!--\x20Кнопки\x20управления:\x20Отмена\x20слева,\x20Назад/Далее/Создать/Сохранить\x20справа\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22flex-row\x22\x20style=\x22justify-content:\x20space-between;\x20align-items:\x20center;\x20margin-top:\x2020px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20id=\x22cancelProtocolBtn\x22\x20class=\x22secondary\x22>Отмена</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22flex-row\x22\x20style=\x22gap:\x208px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20id=\x22prevTabBtn\x22\x20class=\x22secondary\x22\x20style=\x22display:\x20none;\x22>←\x20Назад</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20id=\x22nextTabBtn\x22\x20class=\x22secondary\x22>Далее\x20→</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<button\x20type=\x22submit\x22\x20id=\x22saveProtocolBtn\x22\x20class=\x22primary\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09','Редактирование\x20протокола\x20№','vehicle','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x203\x20строка\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22height:\x201.35em;\x20margin-top:5px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','lineCap','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>мин.</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x22>(время\x20составления)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-item\x20date-right\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-field\x22\x20style=\x22width:\x20100%;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22>','Описание\x20правонарушения','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22\x20style=\x22margin-top:\x202px;\x22>(фамилия,\x20имя,\x20отчество,\x20организация)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Вторая\x20строка\x20(всегда\x20показываем,\x20даже\x20если\x20пустая)\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22margin-top:\x208px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Заполните\x20обязательное\x20поле:\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>(серия,\x20номер,\x20когда\x20и\x20кем\x20выдан)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Управляя\x20транспортным\x20средством\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-top:15px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>управляя\x20транспортным\x20средством</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','314715IASkiQ','inline-flex','Ошибка\x20прав\x20доступа:\x20вы\x20не\x20можете\x20создавать\x20протоколы','3485006utUsPQ','Ошибка\x20при\x20удалении:\x20','3203864IqlEAd','exportPngBtn','⏳\x20Удаление...','Заполните\x20статью\x20КоАП','\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</button>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09</form>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09</div>\x0a\x09\x09\x09','edit','mainApp','querySelectorAll','appendChild','_______________','loadTemplate','.modal-close','status','lineJoin','fontSize','offense_datetime','textContent','hidden','signaturePreviewCanvas','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x22>\x0a\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09<!--\x20Вкладки\x20мастера\x20создания\x20-->\x0a\x09\x09\x09\x09\x09\x09<div\x20class=\x22protocol-wizard\x22>\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22wizard-steps\x22\x20style=\x22display:\x20flex;\x20justify-content:\x20space-between;\x20margin-bottom:\x2020px;\x20padding:\x200\x2010px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step\x22\x20style=\x22text-align:\x20center;\x20flex:\x201;\x20cursor:\x20pointer;\x22\x20data-tab=\x22main\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-indicator\x22\x20style=\x22width:\x2030px;\x20height:\x2030px;\x20border-radius:\x2050%;\x20background:\x20#1e3a5f;\x20color:\x20white;\x20display:\x20flex;\x20align-items:\x20center;\x20justify-content:\x20center;\x20margin:\x200\x20auto\x205px;\x22>1</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-label\x22\x20style=\x22font-size:\x200.9rem;\x22>Основное</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step\x22\x20style=\x22text-align:\x20center;\x20flex:\x201;\x20cursor:\x20pointer;\x22\x20data-tab=\x22violator\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-indicator\x22\x20style=\x22width:\x2030px;\x20height:\x2030px;\x20border-radius:\x2050%;\x20background:\x20#eef3fa;\x20color:\x20#6b7f99;\x20display:\x20flex;\x20align-items:\x20center;\x20justify-content:\x20center;\x20margin:\x200\x20auto\x205px;\x22>2</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-label\x22\x20style=\x22font-size:\x200.9rem;\x22>Нарушитель</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step\x22\x20style=\x22text-align:\x20center;\x20flex:\x201;\x20cursor:\x20pointer;\x22\x20data-tab=\x22vehicle\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-indicator\x22\x20style=\x22width:\x2030px;\x20height:\x2030px;\x20border-radius:\x2050%;\x20background:\x20#eef3fa;\x20color:\x20#6b7f99;\x20display:\x20flex;\x20align-items:\x20center;\x20justify-content:\x20center;\x20margin:\x200\x20auto\x205px;\x22>3</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-label\x22\x20style=\x22font-size:\x200.9rem;\x22>Транспорт</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step\x22\x20style=\x22text-align:\x20center;\x20flex:\x201;\x20cursor:\x20pointer;\x22\x20data-tab=\x22offense\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-indicator\x22\x20style=\x22width:\x2030px;\x20height:\x2030px;\x20border-radius:\x2050%;\x20background:\x20#eef3fa;\x20color:\x20#6b7f99;\x20display:\x20flex;\x20align-items:\x20center;\x20justify-content:\x20center;\x20margin:\x200\x20auto\x205px;\x22>4</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-label\x22\x20style=\x22font-size:\x200.9rem;\x22>Правонарушение</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step\x22\x20style=\x22text-align:\x20center;\x20flex:\x201;\x20cursor:\x20pointer;\x22\x20data-tab=\x22additional\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-indicator\x22\x20style=\x22width:\x2030px;\x20height:\x2030px;\x20border-radius:\x2050%;\x20background:\x20#eef3fa;\x20color:\x20#6b7f99;\x20display:\x20flex;\x20align-items:\x20center;\x20justify-content:\x20center;\x20margin:\x200\x20auto\x205px;\x22>5</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22step-label\x22\x20style=\x22font-size:\x200.9rem;\x22>Дополнительно</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09<!--\x20Вкладка\x201:\x20Основное\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22tab-content\x22\x20data-tab=\x22main\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h4>Основная\x20информация</h4>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22display:\x20grid;\x20grid-template-columns:\x201fr\x201fr;\x20gap:\x2016px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Дата\x20составления\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22date\x22\x20id=\x22protocol_date\x22\x20required\x20value=\x22','\x22Courier\x20New\x22,\x20monospace','trim','disabled','getMonth','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','block','2MDrViG','querySelector','марта','link','left','У\x20вас\x20нет\x20прав\x20на\x20редактирование\x20этого\x20протокола','closeProtocolBtn','zIndex','prevTabBtn','Дата\x20составления','vehicle_registered_info','ACTION_TYPES','tab','value','body','</small>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22gap:\x208px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22small\x22\x20data-id=\x22','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22\x20мин.</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22flex:\x201;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>на</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x22>','lineHeight','</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22note\x22\x20style=\x22text-align:\x20right;\x22>(место\x20составления)</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Я,\x20...\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x20block-narrow\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Я,</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22line\x20handwritten\x22>','сентября','created_at','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Водительское\x20удостоверение\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>водительское\x20удостоверение\x20(документ,\x20удостоверяющий\x20личность)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x203;\x22>','fontFamily','violator_driver_license','toDataURL','substring','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22margin-top:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x22>&nbsp;</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','find','padStart','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Дата\x20и\x20место\x20рождения\x20/\x20владение\x20русским\x20языком\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x09\x09\x09\x09<div\x20class=\x22flex-row\x22\x20style=\x22flex-wrap:\x20wrap;\x20gap:\x205px;\x22>\x0a\x09\x09\x09\x09\x09<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09','signature_data','января','protocol_place','getFullYear','push','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22offense-note-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22offense-note-left\x22>(дата,\x20время\x20совершения\x20административного\x20правонарушения)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22offense-note-right\x22>(место\x20совершения\x20административного\x20правонарушения)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','ВРС','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20*\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x27Courier\x20New\x27,\x20monospace\x20!important;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.protocol-document,\x20.grid\x20td\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x27Courier\x20New\x27,\x20monospace\x20!important;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.line,\x20.line-row\x20.line\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-bottom:\x201px\x20solid\x20#000\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.grid\x20td\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#000\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','💾\x20Сохранить','Error\x20in\x20initProtocolsList:','top','77AA','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2081px;\x20text-align:left;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x20\x20','click','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22grid\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<table>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>','Пункт\x20нормативного\x20акта','mouseleave','moveTo','clearMain','draw','\x22\x20placeholder=\x22УГИБДД\x20г.\x20Мирный\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09<!--\x20Вкладка\x204:\x20Правонарушение\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22tab-content\x20hidden\x22\x20data-tab=\x22offense\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h4>Данные\x20о\x20правонарушении</h4>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22display:\x20grid;\x20grid-template-columns:\x201fr\x201fr;\x20gap:\x2016px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Дата\x20и\x20время\x20правонарушения\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22datetime-local\x22\x20id=\x22offense_datetime\x22\x20required\x20value=\x22','.step-indicator','signatureCanvas','png','offense_article_number','clientX','⏳\x20Сохранение...','#6b7f99','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22gap:\x205px;\x20flex-wrap:\x20wrap;\x20width:\x20100%;\x20margin-top:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>ответственность\x20за\x20которое\x20предусмотрена\x20частью</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2050px;\x20text-align:center;\x22>','\x22\x20placeholder=\x22№\x20123456,\x20выдано\x20УГИБДД\x20по\x20г.\x20Мирный\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09<!--\x20Вкладка\x203:\x20Транспорт\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22tab-content\x20hidden\x22\x20data-tab=\x22vehicle\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h4>Данные\x20транспортного\x20средства</h4>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22display:\x20grid;\x20grid-template-columns:\x201fr\x201fr;\x20gap:\x2016px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Марка\x20и\x20модель\x20ТС\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22vehicle_make_model\x22\x20required\x20value=\x22','октября','Заполните\x20водительское\x20удостоверение','\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22nowrap\x22>,\x20русским\x20языком</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x22>','join','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','slice','filter','noSignatureMessage','vehicle_make_model','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x22>(место\x20составления)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Я,\x20...\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x20block-narrow\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Я,</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22line\x20handwritten\x22>','offense_description','offense_place','protocolModal','104780aOZkYB','#002b59','</td>','Не\x20авторизован','Заполните\x20часть\x20статьи','\x22\x20\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x20style=\x22position:\x20absolute;\x20bottom:\x20-2px;\x20left:\x2050%;\x20transform:\x20translateX(-50%);\x20max-width:\x20250px;\x20max-height:\x2070px;\x20display:\x20block;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09','У\x20вас\x20нет\x20прав\x20на\x20удаление\x20протоколов','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22\x20style=\x22width:\x20100%;\x20margin:\x2010px\x200;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22gap:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22flex:\x201.7;\x20flex-wrap:\x20wrap;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>','\x22\x20placeholder=\x22г.\x20Мирный\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Владение\x20русским\x20языком</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<select\x20id=\x22violator_russian_language_skill\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<option\x20value=\x22\x22>Не\x20указано</option>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<option\x20value=\x22владеет\x22\x20','button[data-action=\x22delete\x22]','offense_special_equipment','from','cancelProtocolBtn','white','Протокол\x20с\x20таким\x20номером\x20уже\x20существует','violator_patronymic','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22margin:\x205px\x200;\x22><strong>Статья:</strong>\x20ст.\x20','protocol_date','Error\x20in\x20updateProtocol:','Протокол\x20не\x20найден','</h3>\x0a\x09\x09\x09\x09\x09<button\x20class=\x22modal-close\x22>&times;</button>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09<div\x20class=\x22modal-content\x22\x20style=\x22max-height:\x2080vh;\x20overflow-y:\x20auto;\x22>\x0a\x09\x09\x09\x09\x09<form\x20id=\x22protocolForm\x22>\x0a\x09\x09\x09\x09\x09\x09<!--\x20Скрытое\x20поле\x20для\x20номера\x20протокола\x20-->\x0a\x09\x09\x09\x09\x09\x09<input\x20type=\x22hidden\x22\x20id=\x22protocol_number\x22\x20value=\x22','change','violator','>Владеет</option>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<option\x20value=\x22не\x20владеет\x22\x20','style','offense_article_part','\x22\x20data-action=\x22view\x22>👁️\x20Просмотр</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>статьи</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2050px;\x20text-align:center;\x22>','remove','code','6728193bpAXpe','clientY','\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Место\x20составления\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22protocol_place\x22\x20required\x20value=\x22','Ошибка\x20при\x20обновлении\x20протокола:\x20','protocol','cancelDeleteBtn','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>Объяснения\x20и\x20замечания\x20по\x20содержанию\x20протокола:</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',')<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<small>Ст.\x20','log','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','saveProtocolBtn','classList','clearSignatureBtn','февраля','lastIndexOf','не\x20владеет','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22margin-top:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','#1e3a5f','</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22note\x20flex-space-between\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<span>(дата\x20и\x20место\x20рождения)</span>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<span>(владеет/не\x20владеет)</span>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Водительское\x20удостоверение\x20и\x20транспорт\x20-->\x0a','Фамилия\x20нарушителя','июня','display','9999','260853EIEAfT','Протокол\x20удален','Заполните\x20фамилию\x20нарушителя','Данные\x20должностного\x20лица','#eef3fa','Статья\x20КоАП','navProtocols','lineWidth','view','fontWeight','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x22\x20placeholder=\x22г.\x20Мирный,\x20ул.\x20Ленина\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Пункт\x20нормативного\x20акта\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22offense_violation_point\x22\x20required\x20value=\x22','badge-new','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','showNotification','protocols','Protocol','1.35','active','order','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Дата,\x20время\x20и\x20место\x20правонарушения\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x22\x20placeholder=\x22г.\x20Мирный,\x20ул.\x20Ленина\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Должностное\x20лицо\x20(должность,\x20специальное\x20звание,\x20подразделение,\x20фамилия,\x20инициалы)\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22official_name\x22\x20required\x20\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x20\x20\x20value=\x22','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22grid\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<table>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2081px;\x20text-align:left;\x22>','\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Дата\x20рождения</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22date\x22\x20id=\x22violator_birth_date\x22\x20value=\x22','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','protocolList','violator_russian_language_skill','background','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Третья\x20строка\x20(если\x20есть)\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x202\x20строка\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22height:\x201.35em;\x20margin-top:5px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Место\x20рождения</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22violator_birth_place\x22\x20value=\x22','Ошибка\x20загрузки\x20протоколов:\x20','getCurrentUser','23505','<button\x20class=\x22small\x22\x20data-id=\x22','Insert\x20error:','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22flex:1;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22item-title\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Протокол\x20№','toISOString','nextTabBtn','employees','list-item','970398dsVaIB','vehicle_license_plate','length','Заполните\x20имя\x20нарушителя','getDate','\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(должность,\x20специальное\x20звание,\x20подразделение,\x20фамилия,\x20инициалы<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20должностного\x20лица,\x20составившего\x20протокол)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20в\x20соответствии\x20со\x20статьей\x2058\x20Административный\x20регламент\x20ГИБДД\x20составил\x20настоящий\x20протокол\x20о\x20том,\x20что\x20гражданин(ка)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Клетки\x20для\x20ФИО\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','PROTOCOL_CREATE','head','auth_user_id','beginPath','createElement','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22\x20мин.</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22flex:\x201;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>на</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x22>','includes','\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Время\x20составления\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22time\x22\x20id=\x22protocol_time\x22\x20required\x20value=\x22','stylesheet','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Существо\x20нарушения\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Заполните\x20дату\x20и\x20время\x20правонарушения','getElements','</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22modal-close\x22>&times;</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22modal-content\x20protocol-document-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Документ\x20протокола\x20по\x20шаблону\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22protocol-document\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Заголовок\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22center\x20title\x22>\x0a\x09\x09\x09\x09\x09\x09\x09<div>ПРОТОКОЛ</div>\x0a\x09\x09\x09\x09\x09\x09\x09<div>об\x20административном\x20правонарушении</div>\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22title-line\x20handwritten\x22\x20style=\x22font-size:\x2024px\x20!important;\x22>№\x20','onsubmit','map','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22\x20style=\x22margin:\x2015px\x200;\x20text-align:\x20center;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Подпись\x20лица,\x20в\x20отношении\x20которого\x20возбуждено\x20дело\x20об\x20административном\x20правонарушении\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22justify-content:\x20flex-end;\x20margin-top:\x2040px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x20250px;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Подпись\x20должностного\x20лица,\x20составившего\x20протокол\x20-->\x0a\x09\x09\x09\x09\x09\x09<div\x20class=\x22block\x22\x20style=\x22margin:\x2015px\x200;\x20margin-top:\x2040px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22display:\x20flex;\x20align-items:\x20baseline;\x20justify-content:\x20flex-end;\x20flex-wrap:\x20wrap;\x20gap:\x2010px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<span\x20style=\x22white-space:\x20nowrap;\x22>Подпись\x20должностного\x20лица,\x20составившего\x20протокол</span>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22position:\x20relative;\x20width:\x20250px;\x20height:\x2040px;\x20border-bottom:\x201px\x20solid\x20#000;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09','protocol_update','rel','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x201\x20строка\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>совершил(а)\x20нарушение</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x203;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','40px','width','category','400','Марка\x20и\x20модель\x20ТС','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22height:\x201.35em;\x20margin-top:5px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Заполните\x20марку\x20и\x20модель\x20ТС','>Действующий</option>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<option\x20value=\x22archived\x22\x20','button[data-action=\x22view\x22]','violator_birth_place','2-digit','Update\x20error:','addEventListener','protocol_create','ru-RU','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22\x20час.\x20\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>','violator_lastname','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(пункт\x20нормативного\x20правового\x20акта,\x20существо\x20нарушения,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22height:\x201.35em;\x20margin:\x205px\x200;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Место\x20составления','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Заполните\x20описание\x20правонарушения','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2081px;\x20text-align:left;\x22>','link[href*=\x22styles.css\x22]','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2081px;\x20text-align:left;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Ошибка\x20при\x20загрузке\x20раздела\x20протоколов','Водительское\x20удостоверение','Ошибка\x20загрузки\x20шаблона','42501','\x22\x20placeholder=\x22А123ВС\x2077\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Владелец\x20ТС\x20(ФИО,\x20организация)</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22vehicle_owner\x22\x20value=\x22','Имя\x20нарушителя','violator_birth_date','strokeStyle','Ошибка\x20загрузки\x20протоколов','б/н','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>(серия,\x20номер,\x20когда\x20и\x20кем\x20выдан)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Управляя\x20транспортным\x20средством\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-top:15px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>управляя\x20транспортным\x20средством</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22\x20style=\x22margin-top:\x202px;\x22>(фамилия,\x20имя,\x20отчество,\x20организация)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22margin-top:\x208px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','protocol-','badge-closed','confirmDeleteBtn','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20при\x20применении\x20спец.\x20тех.\x20средств\x20указываются\x20их\x20показания,\x20наименование,\x20номер)\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Дата,\x20время\x20и\x20место\x20правонарушения\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','backgroundColor','preventDefault','position','\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<img\x20src=\x22','>Не\x20владеет</option>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</select>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Водительское\x20удостоверение\x20(номер,\x20кем\x20выдано)\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22violator_driver_license\x22\x20required\x20value=\x22','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</table>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>фамилия\x20имя\x20отчество</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20*\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x22Courier\x20New\x22,\x20monospace\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.protocol-document\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x22Courier\x20New\x22,\x20monospace;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.grid\x20td\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x22Courier\x20New\x22,\x20monospace\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.line,\x20.line-row\x20.line\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-bottom:\x201px\x20solid\x20#000\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.note\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#666\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.title-line\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-bottom:\x201px\x20solid\x20#000\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20','showError','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Отступ\x20перед\x20\x22состоящим\x20на\x20учете\x22\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-top:\x2015px;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Состоящим\x20на\x20учете\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22margin-top:5px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>состоящим\x20на\x20учете</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x22>','id,\x20auth_user_id,\x20nickname,\x20rank','dataset','</textarea>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Специальные\x20технические\x20средства\x20(наименование,\x20показания)</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22offense_special_equipment\x22\x20value=\x22','\x22\x20placeholder=\x22п.\x206.1\x20ПДД\x20РП\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Описание\x20правонарушения\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<textarea\x20id=\x22offense_description\x22\x20rows=\x223\x22\x20required\x20placeholder=\x22Проезд\x20на\x20запрещающий\x20сигнал\x20светофора\x22\x20style=\x22resize:\x20vertical;\x22>','декабря','ping','offense_violation_point','success','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22offense-note-row\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22offense-note-left\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20(дата,\x20время\x20совершения\x20административного\x20правонарушения)\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22offense-note-right\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20(место\x20совершения\x20административного\x20правонарушения)\x0a\x20\x20\x20\x20</div>\x0a</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','800px','<td\x20class=\x22handwritten\x22>','image/png','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(пункт\x20нормативного\x20правового\x20акта,\x20существо\x20нарушения,\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x202\x20строка\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22height:\x201.35em;\x20margin:\x205px\x200;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(должность,\x20специальное\x20звание,\x20подразделение,\x20фамилия,\x20инициалы<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20должностного\x20лица,\x20составившего\x20протокол)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20в\x20соответствии\x20со\x20статьей\x2058\x20Административный\x20регламент\x20ГИБДД\x20составил\x20настоящий\x20протокол\x20о\x20том,\x20что\x20гражданин(ка)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Клетки\x20для\x20ФИО\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x20margin-top:\x2010px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Статус\x20протокола</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<select\x20id=\x22status\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<option\x20value=\x22active\x22\x20','\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','stroke','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Дата\x20и\x20место\x20рождения\x20/\x20владение\x20русским\x20языком\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22flex-row\x22\x20style=\x22flex-wrap:\x20wrap;\x20gap:\x205px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09','Дата\x20и\x20время\x20правонарушения','selected','\x20ч.','toLowerCase','vehicle_owner','<button\x20class=\x22small\x20secondary\x22\x20data-id=\x22'];_0x4750=function(){return _0x22df5d;};return _0x4750();}function _0x24aa(_0x586ed1,_0x2d8496){const _0x475016=_0x4750();return _0x24aa=function(_0x24aa8a,_0x482fdc){_0x24aa8a=_0x24aa8a-0x11c;let _0x5e7464=_0x475016[_0x24aa8a];return _0x5e7464;},_0x24aa(_0x586ed1,_0x2d8496);}const _0x8f2613=_0x24aa;(function(_0x2428f8,_0x941a8e){const _0x47da07=_0x24aa,_0x411e2c=_0x2428f8();while(!![]){try{const _0x11e108=-parseInt(_0x47da07(0x1fc))/0x1+-parseInt(_0x47da07(0x1b2))/0x2*(parseInt(_0x47da07(0x231))/0x3)+-parseInt(_0x47da07(0x16c))/0x4*(-parseInt(_0x47da07(0x192))/0x5)+parseInt(_0x47da07(0x25c))/0x6+-parseInt(_0x47da07(0x195))/0x7+-parseInt(_0x47da07(0x197))/0x8+parseInt(_0x47da07(0x21a))/0x9;if(_0x11e108===_0x941a8e)break;else _0x411e2c['push'](_0x411e2c['shift']());}catch(_0x55d198){_0x411e2c['push'](_0x411e2c['shift']());}}}(_0x4750,0x3f6ff));const Protocol=(function(){const _0x5ee774=_0x24aa;let _0x3f3028=[];const _0x405d7e={'ACTIVE':_0x5ee774(0x244),'ARCHIVED':'archived'};function _0x59ffe2(_0x3e38d7){const _0x44538e=_0x5ee774,_0x557ea5=[_0x44538e(0x1d1),_0x44538e(0x227),'марта',_0x44538e(0x17e),_0x44538e(0x13d),'июня','июля',_0x44538e(0x143),'сентября',_0x44538e(0x1ef),_0x44538e(0x176),_0x44538e(0x2ac)];return _0x557ea5[_0x3e38d7]||'';}function _0x772333(_0x9a3058){const _0x413bd0=_0x5ee774;if(!_0x9a3058)return'';const _0xfa9c64=document[_0x413bd0(0x267)](_0x413bd0(0x137));return _0xfa9c64[_0x413bd0(0x1a7)]=_0x9a3058,_0xfa9c64[_0x413bd0(0x179)];}async function _0x1a7cd9(){const _0x211197=_0x5ee774;try{Auth[_0x211197(0x2ad)]();const {data:_0x5c7e14,error:_0x35ba26}=await supabaseClient['from'](_0x211197(0x241))['select']('*')[_0x211197(0x245)](_0x211197(0x1c6),{'ascending':![]});if(_0x35ba26)return console[_0x211197(0x12f)](_0x211197(0x128),_0x35ba26),UI[_0x211197(0x240)](_0x211197(0x252)+_0x35ba26[_0x211197(0x16a)],'error'),[];return _0x3f3028=_0x5c7e14||[],_0x3f3028;}catch(_0x5bbc13){return console['error'](_0x211197(0x142),_0x5bbc13),ErrorHandler[_0x211197(0x2a6)](_0x5bbc13,_0x211197(0x296)),[];}}async function _0x248b4e(){const _0x1195d8=_0x5ee774,_0x565d5e=_0x1195d8(0x1db),{data:_0x45a02f}=await supabaseClient[_0x1195d8(0x207)](_0x1195d8(0x241))[_0x1195d8(0x17a)](_0x1195d8(0x15a));let _0x5a0cbd=0x0;_0x45a02f&&_0x45a02f['length']>0x0&&_0x45a02f[_0x1195d8(0x138)](_0x49ad20=>{const _0x168da8=_0x1195d8;if(_0x49ad20['protocol_number']&&_0x49ad20['protocol_number']['startsWith'](_0x565d5e)){const _0x779a1a=_0x49ad20[_0x168da8(0x15a)]['substring'](_0x565d5e[_0x168da8(0x25e)]),_0x3d7840=parseInt(_0x779a1a,0xa);!isNaN(_0x3d7840)&&_0x3d7840>_0x5a0cbd&&(_0x5a0cbd=_0x3d7840);}});const _0x17cb0c=_0x5a0cbd+0x1,_0x515193=_0x17cb0c[_0x1195d8(0x177)]()[_0x1195d8(0x1ce)](0x6,'0');return''+_0x565d5e+_0x515193;}function _0x2a7b02(_0x345572){const _0x401f73=_0x5ee774,_0x275204=Auth[_0x401f73(0x253)]();if(!_0x275204)return![];if(_0x275204[_0x401f73(0x278)]==='Администратор'||_0x275204[_0x401f73(0x278)]===_0x401f73(0x1d6))return!![];if(_0x275204[_0x401f73(0x278)]==='РС')return _0x345572['created_by_id']===_0x275204[_0x401f73(0x265)];if(_0x275204[_0x401f73(0x278)]==='МС')return _0x345572['created_by_id']===_0x275204[_0x401f73(0x265)];return![];}function _0x262f2b(){const _0x54a508=_0x5ee774,_0x47fd88=Auth[_0x54a508(0x253)]();if(!_0x47fd88)return![];return _0x47fd88[_0x54a508(0x278)]===_0x54a508(0x152)||_0x47fd88['category']===_0x54a508(0x1d6);}function _0x15de3c(_0xe0bd67){const _0x5a7ca3=_0x5ee774;switch(_0xe0bd67){case _0x5a7ca3(0x244):return _0x5a7ca3(0x131);case _0x5a7ca3(0x185):return'Архивный';default:return _0x5a7ca3(0x13b);}}function _0x551318(_0x76f477){const _0x451f53=_0x5ee774;switch(_0x76f477){case _0x451f53(0x244):return _0x451f53(0x23e);case _0x451f53(0x185):return _0x451f53(0x29b);default:return'';}}function _0x34459b(_0x1e610c,_0x341614){const _0x4747a0=_0x5ee774;return _0x3f3028[_0x4747a0(0x1f5)](_0x5149f8=>(!_0x341614||_0x5149f8[_0x4747a0(0x1a3)]===_0x341614)&&(!_0x1e610c||(_0x5149f8[_0x4747a0(0x15a)]?.[_0x4747a0(0x11d)]()[_0x4747a0(0x269)](_0x1e610c[_0x4747a0(0x11d)]())||(_0x5149f8[_0x4747a0(0x286)]+'\x20'+_0x5149f8['violator_firstname']+'\x20'+(_0x5149f8[_0x4747a0(0x20b)]||''))[_0x4747a0(0x11d)]()[_0x4747a0(0x269)](_0x1e610c[_0x4747a0(0x11d)]())||_0x5149f8[_0x4747a0(0x1f9)]?.[_0x4747a0(0x11d)]()[_0x4747a0(0x269)](_0x1e610c['toLowerCase']())||_0x5149f8[_0x4747a0(0x25d)]?.['toLowerCase']()['includes'](_0x1e610c[_0x4747a0(0x11d)]()))));}function _0x5b703f(_0x44cb78){const _0x92576f=_0x5ee774,_0x5f3ef3=document[_0x92576f(0x149)]('protocolList');if(!_0x5f3ef3)return;_0x5f3ef3['innerHTML']='';if(!_0x44cb78[_0x92576f(0x25e)]){_0x5f3ef3[_0x92576f(0x179)]=_0x92576f(0x145);return;}_0x44cb78[_0x92576f(0x138)](_0x476d39=>{const _0x580ac9=_0x92576f,_0x16a8c6=document['createElement']('div');_0x16a8c6[_0x580ac9(0x13e)]=_0x580ac9(0x25b);const _0x29aa85=_0x2a7b02(_0x476d39),_0x127c00=_0x262f2b(),_0x308432=[_0x476d39[_0x580ac9(0x286)],_0x476d39[_0x580ac9(0x15d)],_0x476d39[_0x580ac9(0x20b)]]['filter'](Boolean)[_0x580ac9(0x1f2)]('\x20'),_0x45d019=_0x551318(_0x476d39[_0x580ac9(0x1a3)]),_0x4576fa=_0x15de3c(_0x476d39[_0x580ac9(0x1a3)]);_0x16a8c6[_0x580ac9(0x179)]=_0x580ac9(0x257)+_0x772333(_0x476d39[_0x580ac9(0x15a)]||_0x580ac9(0x297))+'\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20'+_0x45d019+'\x22>'+_0x4576fa+_0x580ac9(0x133)+_0x772333(_0x308432)+_0x580ac9(0x14f)+_0x772333(_0x476d39['vehicle_make_model']||'—')+'\x20('+_0x772333(_0x476d39[_0x580ac9(0x25d)]||'—')+_0x580ac9(0x221)+_0x772333(_0x476d39[_0x580ac9(0x1e9)]||'')+'\x20ч.'+_0x772333(_0x476d39[_0x580ac9(0x215)]||'')+'\x20·\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+UI[_0x580ac9(0x183)](_0x476d39['offense_datetime'])+_0x580ac9(0x1c1)+_0x476d39['id']+_0x580ac9(0x216)+(_0x29aa85?_0x580ac9(0x255)+_0x476d39['id']+'\x22\x20data-action=\x22edit\x22>✏️\x20Редактировать</button>':'')+_0x580ac9(0x1f3)+(_0x127c00?_0x580ac9(0x11f)+_0x476d39['id']+_0x580ac9(0x173):'')+_0x580ac9(0x14c),_0x5f3ef3[_0x580ac9(0x19f)](_0x16a8c6);}),_0x5f3ef3[_0x92576f(0x19e)](_0x92576f(0x27e))[_0x92576f(0x138)](_0x358d63=>{const _0x475afa=_0x92576f;_0x358d63[_0x475afa(0x136)]=()=>_0x5e4f7d(_0x358d63[_0x475afa(0x2a9)]['id'],_0x475afa(0x239));}),_0x5f3ef3['querySelectorAll']('button[data-action=\x22edit\x22]')[_0x92576f(0x138)](_0x3ffd54=>{const _0x211d9b=_0x92576f;_0x3ffd54[_0x211d9b(0x136)]=()=>_0x5e4f7d(_0x3ffd54[_0x211d9b(0x2a9)]['id'],_0x211d9b(0x19c));}),_0x5f3ef3['querySelectorAll'](_0x92576f(0x205))[_0x92576f(0x138)](_0x3b9eda=>{const _0x332dc0=_0x92576f;_0x3b9eda[_0x332dc0(0x136)]=()=>_0x2b0787(_0x3b9eda[_0x332dc0(0x2a9)]['id']);});}function _0x3de1f5(){const _0x1ebd3e=_0x5ee774,_0x44ebc8=document[_0x1ebd3e(0x149)](_0x1ebd3e(0x178))?.[_0x1ebd3e(0x1bf)][_0x1ebd3e(0x11d)]()||'',_0x4e7569=document[_0x1ebd3e(0x149)](_0x1ebd3e(0x182))?.[_0x1ebd3e(0x1bf)]||'',_0x4c1ed7=_0x34459b(_0x44ebc8,_0x4e7569);_0x5b703f(_0x4c1ed7);}async function _0x1a213c(){const _0x5b004c=_0x5ee774;try{Auth[_0x5b004c(0x2ad)]();const _0x581c78=UI[_0x5b004c(0x1a1)](_0x5b004c(0x24c));if(!_0x581c78){console[_0x5b004c(0x12f)]('Protocol\x20template\x20not\x20found'),UI[_0x5b004c(0x240)](_0x5b004c(0x290),_0x5b004c(0x12f));return;}UI[_0x5b004c(0x1e3)](),document[_0x5b004c(0x149)](_0x5b004c(0x19d))[_0x5b004c(0x19f)](_0x581c78);const _0xd2fef8=UI[_0x5b004c(0x26e)]();_0xd2fef8[_0x5b004c(0x237)]&&UI[_0x5b004c(0x125)](_0xd2fef8[_0x5b004c(0x237)]);await _0x1a7cd9(),_0x3de1f5();const _0x4a1255=document[_0x5b004c(0x149)](_0x5b004c(0x178)),_0x33afe3=document[_0x5b004c(0x149)]('protocolFilterStatus'),_0x3c37e6=document[_0x5b004c(0x149)](_0x5b004c(0x164));_0x4a1255&&_0x4a1255['addEventListener'](_0x5b004c(0x180),_0x3de1f5),_0x33afe3&&_0x33afe3[_0x5b004c(0x282)](_0x5b004c(0x211),_0x3de1f5),_0x3c37e6&&(_0x3c37e6[_0x5b004c(0x136)]=()=>_0x5e4f7d(null,_0x5b004c(0x181)));}catch(_0x3c284f){console['error'](_0x5b004c(0x1d9),_0x3c284f),UI[_0x5b004c(0x240)](_0x5b004c(0x28e),'error');}}async function _0x5e4f7d(_0x22f588=null,_0x34939c='create'){const _0x3b110d=_0x5ee774;Auth[_0x3b110d(0x2ad)]();const _0x582e95=Auth['getCurrentUser']();let _0x23b80f=null,_0x40fe72=[];if(_0x22f588){_0x23b80f=_0x3f3028[_0x3b110d(0x1cd)](_0x437728=>_0x437728['id']==_0x22f588);if(!_0x23b80f){UI[_0x3b110d(0x240)](_0x3b110d(0x20f),_0x3b110d(0x12f));return;}if(_0x34939c==='edit'&&!_0x2a7b02(_0x23b80f)){UI[_0x3b110d(0x240)](_0x3b110d(0x1b7),_0x3b110d(0x12f));return;}}const {data:_0x5d714f}=await supabaseClient[_0x3b110d(0x207)](_0x3b110d(0x25a))[_0x3b110d(0x17a)](_0x3b110d(0x2a8))['order'](_0x3b110d(0x141));_0x40fe72=_0x5d714f||[];const _0x1a6566=document[_0x3b110d(0x267)](_0x3b110d(0x137));_0x1a6566['className']=_0x3b110d(0x16e),_0x1a6566['id']=_0x3b110d(0x1fb);const _0x4590af=_0x34939c==='create'?_0x3b110d(0x14a):_0x34939c===_0x3b110d(0x19c)?_0x3b110d(0x189)+_0x23b80f['protocol_number']:_0x3b110d(0x156)+_0x23b80f[_0x3b110d(0x15a)],_0x33391d=_0x34939c==='view',_0x3d33c9=_0x23b80f?_0x23b80f['protocol_number']:await _0x248b4e();if(_0x34939c==='create'||_0x34939c===_0x3b110d(0x19c)){_0x1a6566[_0x3b110d(0x179)]='\x0a\x09\x09\x09<div\x20class=\x22modal-container\x20modal-large\x22\x20style=\x22max-width:\x20900px;\x20width:\x2095%;\x22>\x0a\x09\x09\x09\x09<div\x20class=\x22modal-header\x22>\x0a\x09\x09\x09\x09\x09<h3>'+_0x772333(_0x4590af)+_0x3b110d(0x210)+_0x772333(_0x3d33c9)+_0x3b110d(0x1ab)+(_0x23b80f?_0x23b80f[_0x3b110d(0x20d)]?_0x23b80f[_0x3b110d(0x20d)]['slice'](0x0,0xa):'':new Date()['toISOString']()['slice'](0x0,0xa))+_0x3b110d(0x26a)+(_0x23b80f?_0x23b80f[_0x3b110d(0x165)]?_0x23b80f[_0x3b110d(0x165)]['slice'](0x0,0x5):'':new Date()['toLocaleTimeString'](_0x3b110d(0x284),{'hour':_0x3b110d(0x280),'minute':_0x3b110d(0x280)}))+_0x3b110d(0x21c)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x1d2)]||''):'')+_0x3b110d(0x247)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x163)]||''):'')+'\x22\x20\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x20\x20\x20placeholder=\x22Инспектор\x20ДПС\x20лейтенант\x20полиции\x20ОБ\x20ДПС\x20Иванов\x20И.И.\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09<!--\x20Вкладка\x202:\x20Нарушитель\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22tab-content\x20hidden\x22\x20data-tab=\x22violator\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h4>Данные\x20нарушителя</h4>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22display:\x20grid;\x20grid-template-columns:\x201fr\x201fr;\x20gap:\x2016px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Фамилия\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22violator_lastname\x22\x20required\x20value=\x22'+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x286)]||''):'')+'\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Имя\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22violator_firstname\x22\x20required\x20value=\x22'+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x15d)]||''):'')+_0x3b110d(0x146)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x20b)]||''):'')+_0x3b110d(0x24a)+(_0x23b80f?_0x23b80f[_0x3b110d(0x294)]?_0x23b80f[_0x3b110d(0x294)][_0x3b110d(0x1f4)](0x0,0xa):'':'')+_0x3b110d(0x251)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x27f)]||''):'')+_0x3b110d(0x204)+(_0x23b80f?.[_0x3b110d(0x24d)]===_0x3b110d(0x174)?_0x3b110d(0x2bb):'')+_0x3b110d(0x213)+(_0x23b80f?.['violator_russian_language_skill']===_0x3b110d(0x229)?_0x3b110d(0x2bb):'')+_0x3b110d(0x2a3)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x1c9)]||''):'')+_0x3b110d(0x1ee)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x1f7)]||''):'')+'\x22\x20placeholder=\x22Toyota\x20Camry\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Государственный\x20номер\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22vehicle_license_plate\x22\x20required\x20value=\x22'+(_0x23b80f?_0x772333(_0x23b80f['vehicle_license_plate']||''):'')+_0x3b110d(0x292)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x11e)]||''):'')+_0x3b110d(0x134)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x1bc)]||''):'')+_0x3b110d(0x1e5)+(_0x23b80f?_0x23b80f['offense_datetime']?_0x23b80f[_0x3b110d(0x1a6)]['slice'](0x0,0x10):'':new Date()[_0x3b110d(0x258)]()['slice'](0x0,0x10))+'\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Место\x20совершения</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22offense_place\x22\x20value=\x22'+(_0x23b80f?_0x772333(_0x23b80f['offense_place']||''):'')+_0x3b110d(0x23d)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x2ae)]||''):'')+_0x3b110d(0x2ab)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x1f9)]||''):'')+_0x3b110d(0x2aa)+(_0x23b80f?_0x772333(_0x23b80f['offense_special_equipment']||''):'')+'\x22\x20placeholder=\x22Тоник,\x20показания\x2023%\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Статья\x20КоАП\x20<span\x20class=\x22required\x22>*</span></label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20id=\x22offense_article_number\x22\x20required\x20value=\x22'+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x1e9)]||''):'')+_0x3b110d(0x15b)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x215)]||''):'')+'\x22\x20placeholder=\x221\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09\x0a\x09\x09\x09\x09\x09\x09\x09<!--\x20Вкладка\x205:\x20Дополнительно\x20-->\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22tab-content\x20hidden\x22\x20data-tab=\x22additional\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<h4>Дополнительная\x20информация\x20и\x20подпись</h4>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20style=\x22display:\x20grid;\x20grid-template-columns:\x201fr\x201fr;\x20gap:\x2016px;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22form-group\x22\x20style=\x22grid-column:\x20span\x202;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<label>Объяснения\x20и\x20замечания\x20по\x20содержанию\x20протокола</label>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<textarea\x20id=\x22explanatory_note\x22\x20rows=\x223\x22\x20placeholder=\x22Объяснения\x20нарушителя,\x20замечания\x20по\x20содержанию\x20протокола\x22\x20style=\x22resize:\x20vertical;\x22>'+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x157)]||''):'')+_0x3b110d(0x12d)+(_0x23b80f?_0x772333(_0x23b80f[_0x3b110d(0x1d0)]||''):'')+_0x3b110d(0x2b6)+(_0x23b80f?.[_0x3b110d(0x1a3)]==='active'?'selected':'')+_0x3b110d(0x27d)+(_0x23b80f?.['status']===_0x3b110d(0x185)?_0x3b110d(0x2bb):'')+_0x3b110d(0x188)+(_0x34939c===_0x3b110d(0x181)?_0x3b110d(0x17b):_0x3b110d(0x1d8))+_0x3b110d(0x19b),document[_0x3b110d(0x1c0)][_0x3b110d(0x19f)](_0x1a6566),_0x1a6566[_0x3b110d(0x1b3)](_0x3b110d(0x1a2))[_0x3b110d(0x136)]=()=>_0x1a6566[_0x3b110d(0x218)](),_0x1a6566[_0x3b110d(0x136)]=_0x9da897=>{const _0x486d70=_0x3b110d;if(_0x9da897['target']===_0x1a6566)_0x1a6566[_0x486d70(0x218)]();};function _0x8f6ed8(){const _0x38e71a=_0x3b110d,_0x3439c2=document['getElementById'](_0x38e71a(0x1e7)),_0x488666=document[_0x38e71a(0x149)](_0x38e71a(0x1a9)),_0x280320=document[_0x38e71a(0x149)](_0x38e71a(0x13f)),_0x3f222d=document[_0x38e71a(0x149)](_0x38e71a(0x1f6)),_0x2da653=document[_0x38e71a(0x149)]('signature_data');if(!_0x3439c2)return;let _0x218b87=![],_0x445195=0x0,_0x34be10=0x0,_0x4b9c6b=_0x38e71a(0x1e4);const _0x191e8f=_0x3439c2[_0x38e71a(0x14b)]('2d');_0x191e8f[_0x38e71a(0x295)]=_0x38e71a(0x1fd),_0x191e8f[_0x38e71a(0x238)]=0x2,_0x191e8f[_0x38e71a(0x18c)]='round',_0x191e8f[_0x38e71a(0x1a4)]=_0x38e71a(0x12a);function _0x28d873(){const _0xd13f0f=_0x38e71a;_0x191e8f[_0xd13f0f(0x153)](0x0,0x0,_0x3439c2[_0xd13f0f(0x277)],_0x3439c2['height']),_0x162f6f();}function _0x162f6f(){const _0x4f6278=_0x38e71a,_0x55842a=_0x3439c2[_0x4f6278(0x1ca)](_0x4f6278(0x2b3));_0x2da653['value']=_0x55842a;if(_0x488666){_0x488666[_0x4f6278(0x277)]=0xc8,_0x488666['height']=0x50;const _0x2fa4b5=_0x488666[_0x4f6278(0x14b)]('2d');_0x2fa4b5['clearRect'](0x0,0x0,0xc8,0x50),_0x2fa4b5['drawImage'](_0x3439c2,0x0,0x0,0xc8,0x50),_0x488666['style'][_0x4f6278(0x22f)]=_0x4f6278(0x1b1);if(_0x3f222d)_0x3f222d['style'][_0x4f6278(0x22f)]=_0x4f6278(0x16b);}_0x2da653[_0x4f6278(0x1bf)]=_0x3439c2[_0x4f6278(0x1ca)](_0x4f6278(0x2b3));}function _0x58f7b2(_0x4cfa93){const _0x10006e=_0x38e71a;if(!_0x218b87)return;_0x4cfa93[_0x10006e(0x2a0)]();const _0x7e8717=_0x3439c2[_0x10006e(0x155)](),_0x55c361=_0x3439c2['width']/_0x7e8717[_0x10006e(0x277)],_0x39b6cb=_0x3439c2[_0x10006e(0x147)]/_0x7e8717[_0x10006e(0x147)],_0x4f183d=(_0x4cfa93[_0x10006e(0x1ea)]-_0x7e8717['left'])*_0x55c361,_0x292020=(_0x4cfa93[_0x10006e(0x21b)]-_0x7e8717[_0x10006e(0x1da)])*_0x39b6cb;if(_0x4b9c6b===_0x10006e(0x1e4))_0x191e8f[_0x10006e(0x266)](),_0x191e8f[_0x10006e(0x1e2)](_0x445195,_0x34be10),_0x191e8f['lineTo'](_0x4f183d,_0x292020),_0x191e8f[_0x10006e(0x295)]=_0x10006e(0x1fd),_0x191e8f[_0x10006e(0x238)]=0x2,_0x191e8f[_0x10006e(0x2b8)]();else _0x4b9c6b==='erase'&&_0x191e8f[_0x10006e(0x153)](_0x4f183d-0x5,_0x292020-0x5,0xa,0xa);_0x445195=_0x4f183d,_0x34be10=_0x292020;}_0x3439c2[_0x38e71a(0x282)](_0x38e71a(0x158),_0x3c4a47=>{const _0x3d1282=_0x38e71a;_0x218b87=!![];const _0x4fb1fe=_0x3439c2[_0x3d1282(0x155)]();_0x445195=(_0x3c4a47[_0x3d1282(0x1ea)]-_0x4fb1fe[_0x3d1282(0x1b6)])*(_0x3439c2['width']/_0x4fb1fe['width']),_0x34be10=(_0x3c4a47[_0x3d1282(0x21b)]-_0x4fb1fe[_0x3d1282(0x1da)])*(_0x3439c2[_0x3d1282(0x147)]/_0x4fb1fe[_0x3d1282(0x147)]);}),_0x3439c2[_0x38e71a(0x282)](_0x38e71a(0x151),_0x58f7b2),_0x3439c2[_0x38e71a(0x282)]('mouseup',()=>{_0x218b87=![],_0x162f6f();}),_0x3439c2[_0x38e71a(0x282)](_0x38e71a(0x1e1),()=>{_0x218b87=![];});const _0x3233b6=document[_0x38e71a(0x149)](_0x38e71a(0x226));_0x3233b6&&_0x3233b6[_0x38e71a(0x282)](_0x38e71a(0x1dd),()=>{_0x28d873();});}_0x8f6ed8();const _0x4cfad0=[_0x3b110d(0x15c),_0x3b110d(0x212),_0x3b110d(0x18a),'offense',_0x3b110d(0x160)];let _0x45cc64=0x0;const _0x4c85c2=_0x1a6566[_0x3b110d(0x19e)](_0x3b110d(0x15e)),_0x435be3=_0x1a6566[_0x3b110d(0x19e)](_0x3b110d(0x1e6)),_0x3d38e6=_0x1a6566[_0x3b110d(0x19e)]('.step-label'),_0x55342d=_0x1a6566[_0x3b110d(0x19e)](_0x3b110d(0x121)),_0x3b6fcb=document[_0x3b110d(0x149)](_0x3b110d(0x1ba)),_0x761570=document[_0x3b110d(0x149)](_0x3b110d(0x259)),_0xe29c72=document[_0x3b110d(0x149)](_0x3b110d(0x224)),_0xcd58a9=document[_0x3b110d(0x149)](_0x3b110d(0x208));_0xcd58a9&&(_0xcd58a9['onclick']=()=>_0x1a6566[_0x3b110d(0x218)]());function _0x186d33(){const _0x1895d6=_0x3b110d;_0x4c85c2[_0x1895d6(0x138)](_0x389406=>_0x389406[_0x1895d6(0x225)][_0x1895d6(0x17d)](_0x1895d6(0x1a8))),_0x4c85c2[_0x45cc64][_0x1895d6(0x225)][_0x1895d6(0x218)](_0x1895d6(0x1a8)),_0x435be3[_0x1895d6(0x138)]((_0x450614,_0x10f183)=>{const _0x139703=_0x1895d6;if(_0x10f183<_0x45cc64)_0x450614[_0x139703(0x214)][_0x139703(0x24e)]=_0x139703(0x22b),_0x450614['style'][_0x139703(0x12c)]=_0x139703(0x209),_0x450614[_0x139703(0x214)][_0x139703(0x14d)]=_0x139703(0x22b),_0x450614[_0x139703(0x179)]='✓';else _0x10f183===_0x45cc64?(_0x450614[_0x139703(0x214)][_0x139703(0x24e)]=_0x139703(0x22b),_0x450614['style'][_0x139703(0x12c)]=_0x139703(0x209),_0x450614[_0x139703(0x214)]['borderColor']=_0x139703(0x22b),_0x450614[_0x139703(0x179)]=_0x10f183+0x1):(_0x450614[_0x139703(0x214)][_0x139703(0x24e)]=_0x139703(0x235),_0x450614[_0x139703(0x214)][_0x139703(0x12c)]=_0x139703(0x1ec),_0x450614[_0x139703(0x214)][_0x139703(0x14d)]='#d8e2ed',_0x450614[_0x139703(0x179)]=_0x10f183+0x1);}),_0x3d38e6[_0x1895d6(0x138)]((_0x4fb0d0,_0x4e390f)=>{const _0x42a111=_0x1895d6;_0x4e390f<=_0x45cc64?(_0x4fb0d0[_0x42a111(0x214)][_0x42a111(0x12c)]=_0x42a111(0x22b),_0x4fb0d0[_0x42a111(0x214)]['fontWeight']=_0x42a111(0x144)):(_0x4fb0d0[_0x42a111(0x214)][_0x42a111(0x12c)]='#6b7f99',_0x4fb0d0[_0x42a111(0x214)][_0x42a111(0x23a)]=_0x42a111(0x279));});_0x3b6fcb&&(_0x3b6fcb[_0x1895d6(0x214)][_0x1895d6(0x22f)]=_0x45cc64===0x0?_0x1895d6(0x16b):_0x1895d6(0x193));if(_0x761570){if(_0x34939c===_0x1895d6(0x181))_0x45cc64===_0x4c85c2[_0x1895d6(0x25e)]-0x1?_0x761570['style'][_0x1895d6(0x22f)]=_0x1895d6(0x16b):_0x761570[_0x1895d6(0x214)][_0x1895d6(0x22f)]=_0x1895d6(0x193);else _0x34939c==='edit'&&(_0x761570[_0x1895d6(0x214)][_0x1895d6(0x22f)]=_0x45cc64===_0x4c85c2[_0x1895d6(0x25e)]-0x1?_0x1895d6(0x16b):_0x1895d6(0x193));}_0xe29c72&&(_0x34939c===_0x1895d6(0x181)?(_0xe29c72[_0x1895d6(0x214)]['display']=_0x45cc64===_0x4c85c2[_0x1895d6(0x25e)]-0x1?'inline-flex':_0x1895d6(0x16b),_0xe29c72[_0x1895d6(0x1a7)]=_0x1895d6(0x17b)):(_0xe29c72[_0x1895d6(0x214)][_0x1895d6(0x22f)]=_0x1895d6(0x193),_0xe29c72[_0x1895d6(0x1a7)]=_0x1895d6(0x1d8)));}function _0x132111(_0x4004a3){const _0x510a4a=_0x4cfad0['indexOf'](_0x4004a3);_0x510a4a!==-0x1&&_0x510a4a!==_0x45cc64&&(_0x45cc64=_0x510a4a,_0x186d33());}_0x55342d[_0x3b110d(0x138)](_0x499ef7=>{const _0x29b4a0=_0x3b110d,_0x404144=_0x499ef7['dataset'][_0x29b4a0(0x1be)];_0x499ef7[_0x29b4a0(0x282)](_0x29b4a0(0x1dd),()=>_0x132111(_0x404144));});function _0x40daa1(_0x311c97){const _0x3aa029=_0x3b110d,_0x48e029=_0x4cfad0[_0x311c97];let _0x5f0418=!![],_0x1b2878='';switch(_0x48e029){case _0x3aa029(0x15c):if(!document[_0x3aa029(0x149)]('protocol_date')?.[_0x3aa029(0x1bf)])_0x1b2878=_0x3aa029(0x169),_0x5f0418=![];else{if(!document[_0x3aa029(0x149)](_0x3aa029(0x165))?.[_0x3aa029(0x1bf)])_0x1b2878=_0x3aa029(0x17c),_0x5f0418=![];else{if(!document[_0x3aa029(0x149)]('protocol_place')?.[_0x3aa029(0x1bf)]?.['trim']())_0x1b2878=_0x3aa029(0x13c),_0x5f0418=![];else!document[_0x3aa029(0x149)]('official_name')?.[_0x3aa029(0x1bf)]?.[_0x3aa029(0x1ad)]()&&(_0x1b2878='Заполните\x20данные\x20должностного\x20лица',_0x5f0418=![]);}}break;case _0x3aa029(0x212):if(!document[_0x3aa029(0x149)](_0x3aa029(0x286))?.[_0x3aa029(0x1bf)]?.['trim']())_0x1b2878=_0x3aa029(0x233),_0x5f0418=![];else{if(!document[_0x3aa029(0x149)]('violator_firstname')?.['value']?.[_0x3aa029(0x1ad)]())_0x1b2878=_0x3aa029(0x25f),_0x5f0418=![];else!document[_0x3aa029(0x149)]('violator_driver_license')?.[_0x3aa029(0x1bf)]?.[_0x3aa029(0x1ad)]()&&(_0x1b2878=_0x3aa029(0x1f0),_0x5f0418=![]);}break;case'vehicle':if(!document['getElementById'](_0x3aa029(0x1f7))?.['value']?.[_0x3aa029(0x1ad)]())_0x1b2878=_0x3aa029(0x27c),_0x5f0418=![];else!document['getElementById'](_0x3aa029(0x25d))?.['value']?.[_0x3aa029(0x1ad)]()&&(_0x1b2878='Заполните\x20государственный\x20номер',_0x5f0418=![]);break;case'offense':if(!document[_0x3aa029(0x149)]('offense_datetime')?.[_0x3aa029(0x1bf)])_0x1b2878=_0x3aa029(0x26d),_0x5f0418=![];else{if(!document[_0x3aa029(0x149)](_0x3aa029(0x1f9))?.[_0x3aa029(0x1bf)]?.[_0x3aa029(0x1ad)]())_0x1b2878=_0x3aa029(0x28a),_0x5f0418=![];else{if(!document[_0x3aa029(0x149)]('offense_article_number')?.[_0x3aa029(0x1bf)]?.[_0x3aa029(0x1ad)]())_0x1b2878=_0x3aa029(0x19a),_0x5f0418=![];else{if(!document['getElementById'](_0x3aa029(0x215))?.[_0x3aa029(0x1bf)]?.[_0x3aa029(0x1ad)]())_0x1b2878=_0x3aa029(0x200),_0x5f0418=![];else!document[_0x3aa029(0x149)](_0x3aa029(0x2ae))?.[_0x3aa029(0x1bf)]?.[_0x3aa029(0x1ad)]()&&(_0x1b2878='Заполните\x20пункт\x20нормативного\x20акта',_0x5f0418=![]);}}}break;case'additional':break;}return!_0x5f0418&&UI[_0x3aa029(0x240)](_0x1b2878,_0x3aa029(0x148)),_0x5f0418;}_0x761570&&_0x761570[_0x3b110d(0x282)](_0x3b110d(0x1dd),()=>{const _0x5c9526=_0x3b110d;_0x40daa1(_0x45cc64)&&(_0x45cc64<_0x4c85c2[_0x5c9526(0x25e)]-0x1&&(_0x45cc64++,_0x186d33()));});_0x3b6fcb&&_0x3b6fcb[_0x3b110d(0x282)]('click',()=>{_0x45cc64>0x0&&(_0x45cc64--,_0x186d33());});_0x186d33();const _0x20e191=document[_0x3b110d(0x149)]('protocolForm');_0x20e191&&(_0x20e191[_0x3b110d(0x270)]=async _0x145974=>{const _0x1b7430=_0x3b110d;_0x145974[_0x1b7430(0x2a0)]();if(!_0x40daa1(_0x45cc64))return;let _0x359057=![];_0x34939c==='create'?_0x359057=await _0x24012f():_0x359057=await _0x285df1(_0x22f588),_0x359057&&_0x1a6566['remove']();});}else{if(_0x34939c===_0x3b110d(0x239)){_0x1a6566['innerHTML']='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22modal-container\x20protocol-document-modal\x22\x20style=\x22max-width:\x20800px;\x20width:\x2090%;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22modal-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>'+_0x772333(_0x4590af)+_0x3b110d(0x26f)+_0x772333(_0x23b80f?.[_0x3b110d(0x15a)]||_0x3b110d(0x1a0))+'</div>\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22note\x20note-center\x22>(регистрационный\x20номер)</div>\x0a\x09\x09\x09\x09\x09\x09</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Дата\x20/\x20Время\x20/\x20Место\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-item\x20date-left\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-field\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>'+(_0x23b80f?.[_0x3b110d(0x20d)]?new Date(_0x23b80f[_0x3b110d(0x20d)])[_0x3b110d(0x260)]()[_0x3b110d(0x177)]()[_0x3b110d(0x1ce)](0x2,'0'):'')+_0x3b110d(0x1dc)+(_0x23b80f?.[_0x3b110d(0x20d)]?((()=>{const _0x3ef5d2=_0x3b110d,_0x528476=new Date(_0x23b80f['protocol_date']),_0x330274=[_0x3ef5d2(0x1d1),_0x3ef5d2(0x227),_0x3ef5d2(0x1b4),'апреля',_0x3ef5d2(0x13d),_0x3ef5d2(0x22e),'июля',_0x3ef5d2(0x143),_0x3ef5d2(0x1c5),'октября',_0x3ef5d2(0x176),_0x3ef5d2(0x2ac)];return _0x330274[_0x528476[_0x3ef5d2(0x1af)]()];})()):'')+_0x3b110d(0x261)+(_0x23b80f?.[_0x3b110d(0x20d)]?new Date(_0x23b80f[_0x3b110d(0x20d)])[_0x3b110d(0x1d3)]()[_0x3b110d(0x177)]()[_0x3b110d(0x1f4)](-0x2):'')+_0x3b110d(0x162)+(_0x23b80f?.[_0x3b110d(0x165)]?_0x23b80f[_0x3b110d(0x165)][_0x3b110d(0x172)](':')[0x0]:'')+_0x3b110d(0x159)+(_0x23b80f?.[_0x3b110d(0x165)]?_0x23b80f[_0x3b110d(0x165)][_0x3b110d(0x172)](':')[0x1]:'')+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>мин.</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x22>(время\x20составления)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-item\x20date-right\x22\x20style=\x22display:\x20flex;\x20justify-content:\x20flex-end;\x20width:\x20100%;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22date-field\x22\x20style=\x22width:\x20100%;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22date-row\x22\x20style=\x22display:\x20flex;\x20justify-content:\x20flex-end;\x20width:\x20100%;\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x20100%;\x20text-align:\x20right;\x22>'+_0x772333(_0x23b80f?.[_0x3b110d(0x1d2)]||'')+_0x3b110d(0x1c4)+_0x772333(_0x23b80f?.['official_name']||'')+_0x3b110d(0x2b5)+((()=>{const _0x1f01af=_0x3b110d,_0x2b8ef5=[_0x23b80f?.[_0x1f01af(0x286)]||'',_0x23b80f?.[_0x1f01af(0x15d)]||'',_0x23b80f?.['violator_patronymic']||'']['join']('\x20'),_0x4409fc=_0x2b8ef5['length']>0x23?_0x2b8ef5[_0x1f01af(0x1cb)](0x0,0x23):_0x2b8ef5,_0xb67a26=_0x4409fc[_0x1f01af(0x172)](''),_0x1cb81a=[];for(let _0x2a0fd6=0x0;_0x2a0fd6<0x23;_0x2a0fd6++){_0x1cb81a[_0x1f01af(0x1d4)](_0xb67a26[_0x2a0fd6]||'');}return _0x1f01af(0x248)+_0x1cb81a[_0x1f01af(0x271)](_0x4e5712=>_0x1f01af(0x2b2)+_0x772333(_0x4e5712)+_0x1f01af(0x1fe))[_0x1f01af(0x1f2)]('')+_0x1f01af(0x2a4);})())+_0x3b110d(0x2b9)+(_0x23b80f[_0x3b110d(0x294)]?new Date(_0x23b80f[_0x3b110d(0x294)])[_0x3b110d(0x14e)](_0x3b110d(0x284))+',\x20':'')+_0x772333(_0x23b80f[_0x3b110d(0x27f)]||'')+_0x3b110d(0x1f1)+(_0x23b80f[_0x3b110d(0x24d)]||'')+_0x3b110d(0x22c)+((()=>{const _0x1d78d4=_0x3b110d,_0x5a7d5f=_0x23b80f?.['violator_driver_license']||'',_0x1444ab=0x13;let _0x404e52=_0x5a7d5f,_0x2c74b7='';if(_0x5a7d5f['length']>_0x1444ab){let _0x2c59fb=_0x5a7d5f[_0x1d78d4(0x228)]('\x20',_0x1444ab);if(_0x2c59fb===-0x1)_0x2c59fb=_0x1444ab;_0x404e52=_0x5a7d5f['substring'](0x0,_0x2c59fb),_0x2c74b7=_0x5a7d5f[_0x1d78d4(0x1cb)](_0x2c59fb)[_0x1d78d4(0x1ad)]();}const _0x6d9f3a=_0x23b80f?.[_0x1d78d4(0x11e)]||'',_0x5a77b8=0x44,_0x171657=0x53;let _0x1529d9=_0x6d9f3a,_0x1f5911='',_0x303e3c='';if(_0x6d9f3a['length']>_0x5a77b8){let _0x21d71c=_0x6d9f3a[_0x1d78d4(0x228)]('\x20',_0x5a77b8);if(_0x21d71c===-0x1)_0x21d71c=_0x5a77b8;_0x1529d9=_0x6d9f3a[_0x1d78d4(0x1cb)](0x0,_0x21d71c);const _0x5cdfe3=_0x6d9f3a[_0x1d78d4(0x1cb)](_0x21d71c)[_0x1d78d4(0x1ad)]();if(_0x5cdfe3[_0x1d78d4(0x25e)]>_0x171657){let _0x58538d=_0x5cdfe3[_0x1d78d4(0x228)]('\x20',_0x171657);if(_0x58538d===-0x1)_0x58538d=_0x171657;_0x1f5911=_0x5cdfe3[_0x1d78d4(0x1cb)](0x0,_0x58538d),_0x303e3c=_0x5cdfe3[_0x1d78d4(0x1cb)](_0x58538d)['trim']();}else _0x1f5911=_0x5cdfe3;}return _0x1d78d4(0x1c7)+_0x772333(_0x404e52)+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+(_0x2c74b7?_0x1d78d4(0x170)+_0x772333(_0x2c74b7)+_0x1d78d4(0x289):'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Пустая\x20строка\x20для\x20сохранения\x20отступа,\x20если\x20нет\x20текста\x20(как\x20в\x20идеальной\x20реализации)\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22margin-top:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x22>&nbsp;</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20')+_0x1d78d4(0x298)+_0x772333(_0x23b80f?.[_0x1d78d4(0x1f7)]||'')+'\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+(_0x23b80f?.[_0x1d78d4(0x25d)]?'('+_0x772333(_0x23b80f[_0x1d78d4(0x25d)])+')':'')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>(марка,\x20гос.\x20регистрационный\x20знак)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Принадлежащим\x20-\x20всегда\x20показываем\x20две\x20строки\x20как\x20в\x20идеальной\x20реализации\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-top:15px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Первая\x20строка\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>принадлежащим</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x772333(_0x1529d9)+_0x1d78d4(0x18f)+(_0x1f5911?_0x772333(_0x1f5911):_0x1d78d4(0x154))+_0x1d78d4(0x24f)+(_0x303e3c?'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22margin-top:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x772333(_0x303e3c)+_0x1d78d4(0x23b):'')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Отступ\x20перед\x20\x22состоящим\x20на\x20учете\x22\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-top:\x2015px;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Состоящим\x20на\x20учете\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22margin-top:5px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>состоящим\x20на\x20учете</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x22>'+_0x772333(_0x23b80f?.[_0x1d78d4(0x1bc)]||'')+_0x1d78d4(0x24b);})())+_0x3b110d(0x246)+((()=>{const _0x6ef68c=_0x3b110d,_0x20190b=_0x23b80f?.[_0x6ef68c(0x1a6)]?new Date(_0x23b80f[_0x6ef68c(0x1a6)]):null,_0x24c5b6=_0x20190b?_0x20190b[_0x6ef68c(0x260)]()[_0x6ef68c(0x177)]()['padStart'](0x2,'0'):'',_0x2e268e=_0x20190b?_0x59ffe2(_0x20190b['getMonth']()):'',_0x4e7017=_0x20190b?_0x20190b[_0x6ef68c(0x1d3)]()[_0x6ef68c(0x177)]()[_0x6ef68c(0x1f4)](-0x2):'',_0x120554=_0x20190b?_0x20190b['getHours']()[_0x6ef68c(0x177)]()['padStart'](0x2,'0'):'',_0x2e79e8=_0x20190b?_0x20190b[_0x6ef68c(0x130)]()[_0x6ef68c(0x177)]()[_0x6ef68c(0x1ce)](0x2,'0'):'';return _0x6ef68c(0x203)+_0x24c5b6+_0x6ef68c(0x249)+_0x2e268e+_0x6ef68c(0x175)+_0x4e7017+_0x6ef68c(0x16d)+_0x120554+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22\x20час.\x20\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>'+_0x2e79e8+_0x6ef68c(0x268)+_0x772333(_0x23b80f?.[_0x6ef68c(0x1fa)]||'')+_0x6ef68c(0x2b0);})())+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Существо\x20нарушения\x20-->\x0a'+((()=>{const _0x480117=_0x3b110d,_0x44c094=[_0x23b80f?.[_0x480117(0x2ae)],_0x23b80f?.[_0x480117(0x1f9)],_0x23b80f?.[_0x480117(0x206)]][_0x480117(0x1f5)](Boolean)[_0x480117(0x1f2)](',\x20'),_0x578d99=0x3c,_0x16fa8f=_0x44c094[_0x480117(0x1cb)](0x0,_0x578d99),_0x53d189=_0x44c094[_0x480117(0x25e)]>_0x578d99?_0x44c094[_0x480117(0x1cb)](_0x578d99):'';return _0x480117(0x275)+_0x772333(_0x16fa8f)+_0x480117(0x2b4)+_0x772333(_0x53d189)+_0x480117(0x29d);})())+_0x3b110d(0x1ed)+_0x772333(_0x23b80f?.['offense_article_part']||'')+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>статьи</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2050px;\x20text-align:center;\x22>'+_0x772333(_0x23b80f?.[_0x3b110d(0x1e9)]||'')+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Кодекса\x20Республики\x20Провинция\x20об\x20административных\x20правонарушениях.</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Лицу,\x20в\x20отношении\x20которого\x20возбуждено\x20дело\x20об\x20административном\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20правонарушении,\x20разъяснены\x20права,\x20предусмотренные\x20статьей\x2030\x20Конституции\x20Республики\x20Провинция.\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Лицо,\x20в\x20отношении\x20которого\x20возбуждено\x20дело\x20об\x20административном\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20правонарушении,\x20ознакомлено\x20с\x20протоколом.\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+((()=>{const _0x50a35b=_0x3b110d,_0x3ec4d1=_0x23b80f?.[_0x50a35b(0x157)]||'',_0x5613e3=0x23,_0x3bd189=0x53,_0x203759=0x53,_0x2b686c=_0x3ec4d1[_0x50a35b(0x1cb)](0x0,_0x5613e3),_0x4b941b=_0x3ec4d1[_0x50a35b(0x25e)]>_0x5613e3?_0x3ec4d1[_0x50a35b(0x1cb)](_0x5613e3,_0x5613e3+_0x3bd189):'',_0x4e8b0e=_0x3ec4d1[_0x50a35b(0x25e)]>_0x5613e3+_0x3bd189?_0x3ec4d1[_0x50a35b(0x1cb)](_0x5613e3+_0x3bd189,_0x5613e3+_0x3bd189+_0x203759):'';return'\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x201\x20строка\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>Объяснения\x20и\x20замечания\x20по\x20содержанию\x20протокола:</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x202;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x772333(_0x2b686c)+_0x50a35b(0x250)+_0x772333(_0x4b941b)+_0x50a35b(0x18b)+_0x772333(_0x4e8b0e)+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20';})())+_0x3b110d(0x272)+(_0x23b80f?.['signature_data']?_0x3b110d(0x2a2)+_0x772333(_0x23b80f[_0x3b110d(0x1d0)])+_0x3b110d(0x201):'')+'\x0a\x09\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22\x20style=\x22margin:\x2015px\x200;\x20margin-top:\x2040px;\x20text-align:\x20right;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22justify-content:\x20flex-end;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Копию\x20протокола\x20получил(а)</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x20300px;\x20margin-left:\x2010px;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x22\x20style=\x22text-align:\x20right;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(подпись\x20лица,\x20в\x20отношении\x20которого<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20возбуждено\x20дело\x20об\x20адм.\x20правонарушении)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Кнопки\x20управления\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22protocol-view-buttons\x22\x20style=\x22margin-top:\x2020px;\x20display:\x20flex;\x20gap:\x2010px;\x20justify-content:\x20flex-end;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20id=\x22exportPngBtn\x22\x20class=\x22secondary\x22>📸\x20Сохранить\x20протокол</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20id=\x22closeProtocolBtn\x22\x20class=\x22secondary\x22>Закрыть</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',document[_0x3b110d(0x1c0)][_0x3b110d(0x19f)](_0x1a6566),_0x1a6566['querySelector'](_0x3b110d(0x1a2))[_0x3b110d(0x136)]=()=>_0x1a6566['remove'](),_0x1a6566[_0x3b110d(0x136)]=_0x289a4d=>{const _0x19064=_0x3b110d;if(_0x289a4d['target']===_0x1a6566)_0x1a6566[_0x19064(0x218)]();};const _0x2c0c84=document['getElementById'](_0x3b110d(0x1b8));if(_0x2c0c84)_0x2c0c84[_0x3b110d(0x136)]=()=>_0x1a6566[_0x3b110d(0x218)]();const _0x2fe8f5=document[_0x3b110d(0x149)](_0x3b110d(0x198));_0x2fe8f5&&(_0x2fe8f5[_0x3b110d(0x136)]=()=>{const _0x2adef3=_0x3b110d;_0x3943e9(_0x22f588,_0x2adef3(0x1e8));});}}}async function _0x24012f(){const _0x1caaf7=_0x5ee774;Auth[_0x1caaf7(0x2ad)]();const _0x5ecf8d=Auth[_0x1caaf7(0x253)]();if(!_0x5ecf8d)return UI[_0x1caaf7(0x240)](_0x1caaf7(0x1ff),_0x1caaf7(0x12f)),![];const _0x3c2271={'protocol_number':document[_0x1caaf7(0x149)](_0x1caaf7(0x15a))?.['value'],'protocol_date':document[_0x1caaf7(0x149)]('protocol_date')?.[_0x1caaf7(0x1bf)],'protocol_time':document[_0x1caaf7(0x149)](_0x1caaf7(0x165))?.[_0x1caaf7(0x1bf)],'protocol_place':document[_0x1caaf7(0x149)](_0x1caaf7(0x1d2))?.['value']?.[_0x1caaf7(0x1ad)](),'official_name':document[_0x1caaf7(0x149)](_0x1caaf7(0x163))?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)](),'violator_lastname':document['getElementById'](_0x1caaf7(0x286))?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)](),'violator_firstname':document[_0x1caaf7(0x149)](_0x1caaf7(0x15d))?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)](),'violator_patronymic':document[_0x1caaf7(0x149)](_0x1caaf7(0x20b))?.['value']?.[_0x1caaf7(0x1ad)]()||null,'violator_birth_date':document[_0x1caaf7(0x149)]('violator_birth_date')?.[_0x1caaf7(0x1bf)]||null,'violator_birth_place':document[_0x1caaf7(0x149)](_0x1caaf7(0x27f))?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)]()||null,'violator_russian_language_skill':document['getElementById'](_0x1caaf7(0x24d))?.['value']||null,'violator_driver_license':document[_0x1caaf7(0x149)](_0x1caaf7(0x1c9))?.[_0x1caaf7(0x1bf)]?.['trim']()||null,'vehicle_make_model':document[_0x1caaf7(0x149)](_0x1caaf7(0x1f7))?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)]()||null,'vehicle_license_plate':document[_0x1caaf7(0x149)](_0x1caaf7(0x25d))?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)]()||null,'vehicle_owner':document[_0x1caaf7(0x149)](_0x1caaf7(0x11e))?.[_0x1caaf7(0x1bf)]?.['trim']()||null,'vehicle_registered_info':document[_0x1caaf7(0x149)](_0x1caaf7(0x1bc))?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)]()||null,'offense_datetime':document['getElementById']('offense_datetime')?.[_0x1caaf7(0x1bf)],'offense_place':document['getElementById'](_0x1caaf7(0x1fa))?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)](),'offense_description':document[_0x1caaf7(0x149)]('offense_description')?.[_0x1caaf7(0x1bf)]?.['trim'](),'offense_violation_point':document[_0x1caaf7(0x149)](_0x1caaf7(0x2ae))?.['value']?.[_0x1caaf7(0x1ad)]()||null,'offense_special_equipment':document['getElementById']('offense_special_equipment')?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)]()||null,'offense_article_number':document[_0x1caaf7(0x149)](_0x1caaf7(0x1e9))?.[_0x1caaf7(0x1bf)]?.[_0x1caaf7(0x1ad)](),'offense_article_part':document[_0x1caaf7(0x149)](_0x1caaf7(0x215))?.['value']?.[_0x1caaf7(0x1ad)](),'explanatory_note':document[_0x1caaf7(0x149)](_0x1caaf7(0x157))?.['value']?.[_0x1caaf7(0x1ad)]()||null,'signature_data':document['getElementById']('signature_data')?.['value']||null,'status':document[_0x1caaf7(0x149)]('status')?.[_0x1caaf7(0x1bf)]||_0x1caaf7(0x244),'created_by_id':_0x5ecf8d['auth_user_id'],'created_by_name':_0x5ecf8d['nickname'],'updated_by_id':_0x5ecf8d[_0x1caaf7(0x265)],'updated_by_name':_0x5ecf8d[_0x1caaf7(0x141)]},_0x4b8041=[_0x1caaf7(0x20d),_0x1caaf7(0x165),_0x1caaf7(0x1d2),_0x1caaf7(0x163),_0x1caaf7(0x286),_0x1caaf7(0x15d),'violator_driver_license','vehicle_make_model',_0x1caaf7(0x25d),_0x1caaf7(0x1a6),_0x1caaf7(0x1f9),_0x1caaf7(0x2ae),'offense_article_number','offense_article_part'];for(const _0x7624b5 of _0x4b8041){if(!_0x3c2271[_0x7624b5]){const _0x3057ec={'protocol_date':_0x1caaf7(0x1bb),'protocol_time':'Время\x20составления','protocol_place':'Место\x20составления','official_name':'Данные\x20должностного\x20лица','violator_lastname':_0x1caaf7(0x22d),'violator_firstname':_0x1caaf7(0x293),'violator_driver_license':_0x1caaf7(0x28f),'vehicle_make_model':_0x1caaf7(0x27a),'vehicle_license_plate':_0x1caaf7(0x12e),'offense_datetime':_0x1caaf7(0x2ba),'offense_description':'Описание\x20правонарушения','offense_violation_point':'Пункт\x20нормативного\x20акта','offense_article_number':_0x1caaf7(0x236),'offense_article_part':'Часть\x20статьи'};return UI[_0x1caaf7(0x240)]('Заполните\x20обязательное\x20поле:\x20'+(_0x3057ec[_0x7624b5]||_0x7624b5),_0x1caaf7(0x12f)),![];}}try{const _0x12245f=document[_0x1caaf7(0x149)](_0x1caaf7(0x224)),_0x50a82a=_0x12245f[_0x1caaf7(0x1a7)];_0x12245f[_0x1caaf7(0x1a7)]=_0x1caaf7(0x1eb),_0x12245f[_0x1caaf7(0x1ae)]=!![];const {data:_0x2bc080,error:_0x5bb589}=await supabaseClient[_0x1caaf7(0x207)](_0x1caaf7(0x241))['insert']([_0x3c2271])[_0x1caaf7(0x17a)]();if(_0x5bb589){console[_0x1caaf7(0x12f)](_0x1caaf7(0x256),_0x5bb589);if(_0x5bb589[_0x1caaf7(0x219)]===_0x1caaf7(0x291))UI['showNotification'](_0x1caaf7(0x194),_0x1caaf7(0x12f));else _0x5bb589['code']===_0x1caaf7(0x254)?UI[_0x1caaf7(0x240)](_0x1caaf7(0x20a),_0x1caaf7(0x12f)):UI[_0x1caaf7(0x240)](_0x1caaf7(0x12b)+_0x5bb589[_0x1caaf7(0x16a)],_0x1caaf7(0x12f));return![];}return Logger&&Logger[_0x1caaf7(0x1bd)]&&Logger[_0x1caaf7(0x222)](Logger['ACTION_TYPES'][_0x1caaf7(0x263)]||_0x1caaf7(0x283),{'protocol_number':_0x3c2271['protocol_number'],'violator':_0x3c2271[_0x1caaf7(0x286)]+'\x20'+_0x3c2271[_0x1caaf7(0x15d)],'article':'ст.'+_0x3c2271[_0x1caaf7(0x1e9)]+_0x1caaf7(0x11c)+_0x3c2271[_0x1caaf7(0x215)],'created_by':_0x5ecf8d[_0x1caaf7(0x141)]},'protocol',_0x3c2271[_0x1caaf7(0x15a)]),UI['showNotification']('Протокол\x20успешно\x20создан',_0x1caaf7(0x2af)),await _0x1a7cd9(),_0x3de1f5(),!![];}catch(_0x5035d3){return console['error'](_0x1caaf7(0x187),_0x5035d3),UI['showNotification'](_0x1caaf7(0x12b)+_0x5035d3['message'],_0x1caaf7(0x12f)),![];}finally{const _0x23210e=document[_0x1caaf7(0x149)](_0x1caaf7(0x224));_0x23210e&&(_0x23210e[_0x1caaf7(0x1ae)]=![]);}}async function _0x285df1(_0x1b7b72){const _0x4fa5e1=_0x5ee774;Auth[_0x4fa5e1(0x2ad)]();const _0x5dbb0d=Auth['getCurrentUser']();if(!_0x5dbb0d)return UI['showNotification']('Не\x20авторизован',_0x4fa5e1(0x12f)),![];const _0x247af2=_0x3f3028[_0x4fa5e1(0x1cd)](_0x2f6845=>_0x2f6845['id']==_0x1b7b72);if(!_0x247af2)return UI[_0x4fa5e1(0x240)](_0x4fa5e1(0x20f),_0x4fa5e1(0x12f)),![];const _0x3c3320={'protocol_number':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x15a))?.[_0x4fa5e1(0x1bf)],'protocol_date':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x20d))?.['value'],'protocol_time':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x165))?.[_0x4fa5e1(0x1bf)],'protocol_place':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x1d2))?.['value']?.[_0x4fa5e1(0x1ad)](),'official_name':document[_0x4fa5e1(0x149)]('official_name')?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)](),'violator_lastname':document['getElementById'](_0x4fa5e1(0x286))?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)](),'violator_firstname':document['getElementById'](_0x4fa5e1(0x15d))?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)](),'violator_patronymic':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x20b))?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)]()||null,'violator_birth_date':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x294))?.[_0x4fa5e1(0x1bf)]||null,'violator_birth_place':document['getElementById']('violator_birth_place')?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)]()||null,'violator_russian_language_skill':document['getElementById'](_0x4fa5e1(0x24d))?.[_0x4fa5e1(0x1bf)]||null,'violator_driver_license':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x1c9))?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)]()||null,'vehicle_make_model':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x1f7))?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)]()||null,'vehicle_license_plate':document[_0x4fa5e1(0x149)]('vehicle_license_plate')?.['value']?.[_0x4fa5e1(0x1ad)]()||null,'vehicle_owner':document[_0x4fa5e1(0x149)]('vehicle_owner')?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)]()||null,'vehicle_registered_info':document[_0x4fa5e1(0x149)]('vehicle_registered_info')?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)]()||null,'offense_datetime':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x1a6))?.['value'],'offense_place':document[_0x4fa5e1(0x149)]('offense_place')?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)](),'offense_description':document['getElementById'](_0x4fa5e1(0x1f9))?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)](),'offense_violation_point':document['getElementById']('offense_violation_point')?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)]()||null,'offense_special_equipment':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x206))?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)]()||null,'offense_article_number':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x1e9))?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)](),'offense_article_part':document['getElementById']('offense_article_part')?.[_0x4fa5e1(0x1bf)]?.[_0x4fa5e1(0x1ad)](),'explanatory_note':document[_0x4fa5e1(0x149)]('explanatory_note')?.['value']?.[_0x4fa5e1(0x1ad)]()||null,'signature_data':document[_0x4fa5e1(0x149)]('signature_data')?.['value']||null,'status':document[_0x4fa5e1(0x149)](_0x4fa5e1(0x1a3))?.['value']||_0x4fa5e1(0x244),'updated_by_id':_0x5dbb0d['auth_user_id'],'updated_by_name':_0x5dbb0d[_0x4fa5e1(0x141)]},_0x542254=[_0x4fa5e1(0x20d),_0x4fa5e1(0x165),_0x4fa5e1(0x1d2),_0x4fa5e1(0x163),_0x4fa5e1(0x286),_0x4fa5e1(0x15d),_0x4fa5e1(0x1c9),_0x4fa5e1(0x1f7),_0x4fa5e1(0x25d),_0x4fa5e1(0x1a6),_0x4fa5e1(0x1f9),'offense_violation_point','offense_article_number',_0x4fa5e1(0x215)];for(const _0x29401f of _0x542254){if(!_0x3c3320[_0x29401f]){const _0x5a58cc={'protocol_date':_0x4fa5e1(0x1bb),'protocol_time':_0x4fa5e1(0x140),'protocol_place':_0x4fa5e1(0x288),'official_name':_0x4fa5e1(0x234),'violator_lastname':'Фамилия\x20нарушителя','violator_firstname':_0x4fa5e1(0x293),'violator_driver_license':_0x4fa5e1(0x28f),'vehicle_make_model':_0x4fa5e1(0x27a),'vehicle_license_plate':_0x4fa5e1(0x12e),'offense_datetime':_0x4fa5e1(0x2ba),'offense_description':_0x4fa5e1(0x18e),'offense_violation_point':_0x4fa5e1(0x1e0),'offense_article_number':_0x4fa5e1(0x236),'offense_article_part':_0x4fa5e1(0x168)};return UI['showNotification'](_0x4fa5e1(0x190)+(_0x5a58cc[_0x29401f]||_0x29401f),'error'),![];}}try{const _0x5ed95a=document['getElementById'](_0x4fa5e1(0x224)),_0xc7cfde=_0x5ed95a[_0x4fa5e1(0x1a7)];_0x5ed95a['textContent']=_0x4fa5e1(0x1eb),_0x5ed95a['disabled']=!![];const {error:_0x432d1f}=await supabaseClient[_0x4fa5e1(0x207)]('protocols')['update'](_0x3c3320)['eq']('id',_0x1b7b72);if(_0x432d1f)return console['error'](_0x4fa5e1(0x281),_0x432d1f),_0x432d1f[_0x4fa5e1(0x219)]==='42501'?UI['showNotification'](_0x4fa5e1(0x186),_0x4fa5e1(0x12f)):UI[_0x4fa5e1(0x240)](_0x4fa5e1(0x21d)+_0x432d1f[_0x4fa5e1(0x16a)],_0x4fa5e1(0x12f)),![];return Logger&&Logger['ACTION_TYPES']&&Logger[_0x4fa5e1(0x222)](Logger[_0x4fa5e1(0x1bd)][_0x4fa5e1(0x120)]||_0x4fa5e1(0x273),{'protocol_number':_0x3c3320[_0x4fa5e1(0x15a)],'updated_by':_0x5dbb0d[_0x4fa5e1(0x141)]},_0x4fa5e1(0x21e),_0x3c3320['protocol_number']),UI[_0x4fa5e1(0x240)](_0x4fa5e1(0x122),'success'),await _0x1a7cd9(),_0x3de1f5(),!![];}catch(_0x1483c0){return console[_0x4fa5e1(0x12f)](_0x4fa5e1(0x20e),_0x1483c0),UI[_0x4fa5e1(0x240)](_0x4fa5e1(0x21d)+_0x1483c0[_0x4fa5e1(0x16a)],_0x4fa5e1(0x12f)),![];}finally{const _0xa7a9aa=document[_0x4fa5e1(0x149)](_0x4fa5e1(0x224));_0xa7a9aa&&(_0xa7a9aa[_0x4fa5e1(0x1ae)]=![]);}}async function _0x2b0787(_0x126f4f){const _0x3919c4=_0x5ee774;Auth[_0x3919c4(0x2ad)]();if(!_0x262f2b()){UI[_0x3919c4(0x240)](_0x3919c4(0x202),_0x3919c4(0x12f));return;}const _0xa2bfbf=_0x3f3028['find'](_0x9703c6=>_0x9703c6['id']==_0x126f4f);if(!_0xa2bfbf){UI[_0x3919c4(0x240)]('Протокол\x20не\x20найден',_0x3919c4(0x12f));return;}const _0x145a21=document[_0x3919c4(0x267)](_0x3919c4(0x137));_0x145a21[_0x3919c4(0x13e)]=_0x3919c4(0x16e),_0x145a21[_0x3919c4(0x179)]=_0x3919c4(0x171)+_0x772333(_0xa2bfbf[_0x3919c4(0x15a)])+'</strong>?</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22color:\x20#dc3545;\x20font-size:\x200.9rem;\x22>Это\x20действие\x20необратимо.\x20Все\x20данные\x20будут\x20потеряны.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22background:\x20#f5f9ff;\x20padding:\x2012px;\x20border-radius:\x208px;\x20margin:\x2015px\x200;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22margin:\x205px\x200;\x22><strong>Нарушитель:</strong>\x20'+_0x772333(_0xa2bfbf[_0x3919c4(0x286)])+'\x20'+_0x772333(_0xa2bfbf['violator_firstname'])+_0x3919c4(0x20c)+_0x772333(_0xa2bfbf[_0x3919c4(0x1e9)])+_0x3919c4(0x129)+_0x772333(_0xa2bfbf[_0x3919c4(0x215)])+'</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22margin:\x205px\x200;\x22><strong>Дата:</strong>\x20'+UI['formatDate'](_0xa2bfbf['offense_datetime'])+_0x3919c4(0x123),document[_0x3919c4(0x1c0)][_0x3919c4(0x19f)](_0x145a21);const _0x50cbf6=_0x145a21[_0x3919c4(0x1b3)]('.modal-close');_0x50cbf6[_0x3919c4(0x136)]=()=>_0x145a21[_0x3919c4(0x218)](),_0x145a21[_0x3919c4(0x136)]=_0x13c563=>{const _0xdd1e4b=_0x3919c4;if(_0x13c563['target']===_0x145a21)_0x145a21[_0xdd1e4b(0x218)]();},document[_0x3919c4(0x149)](_0x3919c4(0x21f))[_0x3919c4(0x136)]=()=>_0x145a21[_0x3919c4(0x218)](),document[_0x3919c4(0x149)]('confirmDeleteBtn')[_0x3919c4(0x136)]=async()=>{const _0x64a034=_0x3919c4;try{const _0xa4779c=document[_0x64a034(0x149)](_0x64a034(0x29c)),_0x824bc7=_0xa4779c['textContent'];_0xa4779c[_0x64a034(0x1a7)]=_0x64a034(0x199),_0xa4779c[_0x64a034(0x1ae)]=!![];Logger&&Logger[_0x64a034(0x1bd)]&&Logger['log'](Logger[_0x64a034(0x1bd)]['PROTOCOL_DELETE']||'protocol_delete',{'protocol_number':_0xa2bfbf[_0x64a034(0x15a)],'violator':_0xa2bfbf[_0x64a034(0x286)]+'\x20'+_0xa2bfbf[_0x64a034(0x15d)],'article':'ст.'+_0xa2bfbf['offense_article_number']+'\x20ч.'+_0xa2bfbf[_0x64a034(0x215)],'deleted_by':Auth[_0x64a034(0x253)]()?.[_0x64a034(0x141)]},_0x64a034(0x21e),_0xa2bfbf[_0x64a034(0x15a)]);const {error:_0x1f719a}=await supabaseClient[_0x64a034(0x207)](_0x64a034(0x241))[_0x64a034(0x126)]()['eq']('id',_0x126f4f);if(_0x1f719a){console[_0x64a034(0x12f)](_0x64a034(0x132),_0x1f719a);_0x1f719a['code']===_0x64a034(0x291)?UI['showNotification']('Ошибка\x20прав\x20доступа:\x20вы\x20не\x20можете\x20удалять\x20протоколы',_0x64a034(0x12f)):UI['showNotification']('Ошибка\x20при\x20удалении:\x20'+_0x1f719a[_0x64a034(0x16a)],_0x64a034(0x12f));return;}UI[_0x64a034(0x240)](_0x64a034(0x232),_0x64a034(0x2af)),_0x145a21[_0x64a034(0x218)](),await _0x1a7cd9(),_0x3de1f5();}catch(_0x3d7a8c){console['error']('Error\x20in\x20deleteProtocol:',_0x3d7a8c),UI[_0x64a034(0x240)](_0x64a034(0x196)+_0x3d7a8c[_0x64a034(0x16a)],_0x64a034(0x12f));}};}async function _0x3943e9(_0x3b6c84,_0x207203='png'){const _0x5cfbeb=_0x5ee774;Auth[_0x5cfbeb(0x2ad)]();const _0x369e4e=_0x3f3028[_0x5cfbeb(0x1cd)](_0x53bbf2=>_0x53bbf2['id']==_0x3b6c84);if(!_0x369e4e){UI['showNotification'](_0x5cfbeb(0x20f),_0x5cfbeb(0x12f));return;}const _0x2d4ae4=document['createElement'](_0x5cfbeb(0x137));_0x2d4ae4[_0x5cfbeb(0x214)][_0x5cfbeb(0x2a1)]=_0x5cfbeb(0x15f),_0x2d4ae4[_0x5cfbeb(0x214)]['left']='-9999px',_0x2d4ae4[_0x5cfbeb(0x214)][_0x5cfbeb(0x1da)]='0',_0x2d4ae4[_0x5cfbeb(0x214)][_0x5cfbeb(0x277)]=_0x5cfbeb(0x2b1),_0x2d4ae4[_0x5cfbeb(0x214)][_0x5cfbeb(0x29f)]=_0x5cfbeb(0x209),_0x2d4ae4[_0x5cfbeb(0x214)][_0x5cfbeb(0x167)]=_0x5cfbeb(0x276),_0x2d4ae4[_0x5cfbeb(0x214)][_0x5cfbeb(0x1b9)]=_0x5cfbeb(0x230),_0x2d4ae4[_0x5cfbeb(0x214)][_0x5cfbeb(0x1c8)]=_0x5cfbeb(0x1ac),_0x2d4ae4[_0x5cfbeb(0x214)][_0x5cfbeb(0x1a5)]=_0x5cfbeb(0x135),_0x2d4ae4[_0x5cfbeb(0x214)][_0x5cfbeb(0x1c3)]=_0x5cfbeb(0x243);const _0x2c82fd=document[_0x5cfbeb(0x1b3)](_0x5cfbeb(0x28c));if(_0x2c82fd){const _0x50a157=document['createElement'](_0x5cfbeb(0x1b5));_0x50a157[_0x5cfbeb(0x274)]=_0x5cfbeb(0x26b),_0x50a157[_0x5cfbeb(0x150)]=_0x2c82fd[_0x5cfbeb(0x150)],_0x2d4ae4[_0x5cfbeb(0x19f)](_0x50a157);}const _0x493646=document[_0x5cfbeb(0x267)]('style');_0x493646['textContent']=_0x5cfbeb(0x2a5),_0x2d4ae4[_0x5cfbeb(0x19f)](_0x493646),_0x2d4ae4['innerHTML']+='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22protocol-document\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Заголовок\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22center\x20title\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>ПРОТОКОЛ</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>об\x20административном\x20правонарушении</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22title-line\x20handwritten\x22\x20style=\x22font-size:\x2024px\x20!important;\x22>№\x20'+_0x772333(_0x369e4e['protocol_number']||'_______________')+_0x5cfbeb(0x184)+(_0x369e4e['protocol_date']?new Date(_0x369e4e['protocol_date'])['getDate']()[_0x5cfbeb(0x177)]()['padStart'](0x2,'0'):'')+_0x5cfbeb(0x28d)+(_0x369e4e[_0x5cfbeb(0x20d)]?((()=>{const _0x4414d8=_0x5cfbeb,_0x16d08d=new Date(_0x369e4e[_0x4414d8(0x20d)]),_0x47b4d7=['января','февраля',_0x4414d8(0x1b4),_0x4414d8(0x17e),'мая',_0x4414d8(0x22e),'июля',_0x4414d8(0x143),'сентября',_0x4414d8(0x1ef),_0x4414d8(0x176),_0x4414d8(0x2ac)];return _0x47b4d7[_0x16d08d['getMonth']()];})()):'')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>'+(_0x369e4e[_0x5cfbeb(0x20d)]?new Date(_0x369e4e[_0x5cfbeb(0x20d)])['getFullYear']()[_0x5cfbeb(0x177)]()['slice'](-0x2):'')+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>г.</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x22>(дата\x20составления)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-item\x20date-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-field\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>'+(_0x369e4e[_0x5cfbeb(0x165)]?_0x369e4e[_0x5cfbeb(0x165)]['split'](':')[0x0]:'')+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>час.\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>'+(_0x369e4e[_0x5cfbeb(0x165)]?_0x369e4e[_0x5cfbeb(0x165)][_0x5cfbeb(0x172)](':')[0x1]:'')+_0x5cfbeb(0x18d)+_0x772333(_0x369e4e['protocol_place']||'')+_0x5cfbeb(0x1f8)+_0x772333(_0x369e4e['official_name']||'')+_0x5cfbeb(0x262)+((()=>{const _0x466348=_0x5cfbeb,_0x46d98b=[_0x369e4e[_0x466348(0x286)]||'',_0x369e4e[_0x466348(0x15d)]||'',_0x369e4e[_0x466348(0x20b)]||'']['join']('\x20'),_0x1f0ba5=_0x46d98b[_0x466348(0x25e)]>0x23?_0x46d98b['substring'](0x0,0x23):_0x46d98b,_0x30058e=_0x1f0ba5['split'](''),_0x361365=[];for(let _0xb1d27c=0x0;_0xb1d27c<0x23;_0xb1d27c++){_0x361365['push'](_0x30058e[_0xb1d27c]||'');}return _0x466348(0x1de)+_0x361365['map'](_0x4e8d0d=>_0x466348(0x2b2)+_0x772333(_0x4e8d0d)+_0x466348(0x1fe))[_0x466348(0x1f2)]('')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</table>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x20note-center\x22>фамилия\x20имя\x20отчество</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20';})())+_0x5cfbeb(0x1cf)+(_0x369e4e[_0x5cfbeb(0x294)]?new Date(_0x369e4e[_0x5cfbeb(0x294)])[_0x5cfbeb(0x14e)](_0x5cfbeb(0x284))+',\x20':'')+_0x772333(_0x369e4e['violator_birth_place']||'')+'\x0a\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09<div\x20class=\x22nowrap\x22>,\x20русским\x20языком</div>\x0a\x09\x09\x09\x09\x09<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x22>'+(_0x369e4e[_0x5cfbeb(0x24d)]||'')+_0x5cfbeb(0x16f)+((()=>{const _0x1ed3d6=_0x5cfbeb,_0x15643d=_0x369e4e[_0x1ed3d6(0x1c9)]||'',_0x4e0152=0x13;let _0xe8b7c6=_0x15643d,_0xce0187='';if(_0x15643d[_0x1ed3d6(0x25e)]>_0x4e0152){let _0x1cde16=_0x15643d['lastIndexOf']('\x20',_0x4e0152);if(_0x1cde16===-0x1)_0x1cde16=_0x4e0152;_0xe8b7c6=_0x15643d['substring'](0x0,_0x1cde16),_0xce0187=_0x15643d[_0x1ed3d6(0x1cb)](_0x1cde16)[_0x1ed3d6(0x1ad)]();}const _0x48b090=_0x369e4e[_0x1ed3d6(0x11e)]||'',_0x180ba4=0x44,_0x301aac=0x53;let _0x4f619f=_0x48b090,_0x4ff5cd='',_0x3e876d='';if(_0x48b090[_0x1ed3d6(0x25e)]>_0x180ba4){let _0x3d4ff0=_0x48b090[_0x1ed3d6(0x228)]('\x20',_0x180ba4);if(_0x3d4ff0===-0x1)_0x3d4ff0=_0x180ba4;_0x4f619f=_0x48b090['substring'](0x0,_0x3d4ff0);const _0x560e51=_0x48b090[_0x1ed3d6(0x1cb)](_0x3d4ff0)[_0x1ed3d6(0x1ad)]();if(_0x560e51['length']>_0x301aac){let _0x546790=_0x560e51[_0x1ed3d6(0x228)]('\x20',_0x301aac);if(_0x546790===-0x1)_0x546790=_0x301aac;_0x4ff5cd=_0x560e51[_0x1ed3d6(0x1cb)](0x0,_0x546790),_0x3e876d=_0x560e51[_0x1ed3d6(0x1cb)](_0x546790)[_0x1ed3d6(0x1ad)]();}else _0x4ff5cd=_0x560e51;}return'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Водительское\x20удостоверение\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>водительское\x20удостоверение\x20(документ,\x20удостоверяющий\x20личность)</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x203;\x22>'+_0x772333(_0xe8b7c6)+_0x1ed3d6(0x1aa)+(_0xce0187?'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22margin-top:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x22>'+_0x772333(_0xce0187)+_0x1ed3d6(0x1b0):_0x1ed3d6(0x1cc))+_0x1ed3d6(0x191)+_0x772333(_0x369e4e[_0x1ed3d6(0x1f7)]||'')+_0x1ed3d6(0x2b7)+(_0x369e4e[_0x1ed3d6(0x25d)]?'('+_0x772333(_0x369e4e[_0x1ed3d6(0x25d)])+')':'')+_0x1ed3d6(0x124)+_0x772333(_0x4f619f)+_0x1ed3d6(0x299)+(_0x4ff5cd?_0x772333(_0x4ff5cd):_0x1ed3d6(0x154))+_0x1ed3d6(0x223)+(_0x3e876d?_0x1ed3d6(0x22a)+_0x772333(_0x3e876d)+_0x1ed3d6(0x23f):'')+_0x1ed3d6(0x2a7)+_0x772333(_0x369e4e[_0x1ed3d6(0x1bc)]||'')+_0x1ed3d6(0x23c);})())+_0x5cfbeb(0x29e)+((()=>{const _0x1f71fe=_0x5cfbeb,_0x47efa5=_0x369e4e[_0x1f71fe(0x1a6)]?new Date(_0x369e4e[_0x1f71fe(0x1a6)]):null,_0x41fbdd=_0x47efa5?_0x47efa5['getDate']()['toString']()[_0x1f71fe(0x1ce)](0x2,'0'):'',_0x9b4fe7=_0x47efa5?_0x59ffe2(_0x47efa5[_0x1f71fe(0x1af)]()):'',_0x58ab2e=_0x47efa5?_0x47efa5[_0x1f71fe(0x1d3)]()[_0x1f71fe(0x177)]()['slice'](-0x2):'',_0x5f1cb5=_0x47efa5?_0x47efa5['getHours']()[_0x1f71fe(0x177)]()[_0x1f71fe(0x1ce)](0x2,'0'):'',_0x5b752c=_0x47efa5?_0x47efa5[_0x1f71fe(0x130)]()[_0x1f71fe(0x177)]()[_0x1f71fe(0x1ce)](0x2,'0'):'';return'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22\x20style=\x22width:\x20100%;\x20margin:\x2010px\x200;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22gap:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22flex:\x201.7;\x20flex-wrap:\x20wrap;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>'+_0x41fbdd+_0x1f71fe(0x28b)+_0x9b4fe7+_0x1f71fe(0x1df)+_0x58ab2e+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>\x20г.\x20в\x20\x22</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2026px;\x20text-align:left;\x22>'+_0x5f1cb5+_0x1f71fe(0x285)+_0x5b752c+_0x1f71fe(0x1c2)+_0x772333(_0x369e4e['offense_place']||'')+_0x1f71fe(0x1d5);})())+_0x5cfbeb(0x26c)+((()=>{const _0x156155=_0x5cfbeb,_0xde1e4b=[_0x369e4e[_0x156155(0x2ae)],_0x369e4e[_0x156155(0x1f9)],_0x369e4e[_0x156155(0x206)]][_0x156155(0x1f5)](Boolean)['join'](',\x20'),_0x17080b=0x3c,_0x4c29b8=_0xde1e4b[_0x156155(0x1cb)](0x0,_0x17080b),_0x1f5a15=_0xde1e4b[_0x156155(0x25e)]>_0x17080b?_0xde1e4b[_0x156155(0x1cb)](_0x17080b):'';return'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22nowrap\x22>совершил(а)\x20нарушение</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x203;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x772333(_0x4c29b8)+_0x156155(0x287)+_0x772333(_0x1f5a15)+_0x156155(0x13a);})())+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22gap:\x205px;\x20flex-wrap:\x20wrap;\x20width:\x20100%;\x20margin-top:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>ответственность\x20за\x20которое\x20предусмотрена\x20частью</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x2050px;\x20text-align:center;\x22>'+_0x772333(_0x369e4e[_0x5cfbeb(0x215)]||'')+_0x5cfbeb(0x217)+_0x772333(_0x369e4e['offense_article_number']||'')+_0x5cfbeb(0x139)+((()=>{const _0x150703=_0x5cfbeb,_0x115ce8=_0x369e4e[_0x150703(0x157)]||'',_0x6db38=0x23,_0x5f0f40=0x53,_0x281228=0x53,_0x535f97=_0x115ce8[_0x150703(0x1cb)](0x0,_0x6db38),_0x175ead=_0x115ce8[_0x150703(0x25e)]>_0x6db38?_0x115ce8[_0x150703(0x1cb)](_0x6db38,_0x6db38+_0x5f0f40):'',_0x194ac2=_0x115ce8[_0x150703(0x25e)]>_0x6db38+_0x5f0f40?_0x115ce8['substring'](_0x6db38+_0x5f0f40,_0x6db38+_0x5f0f40+_0x281228):'';return _0x150703(0x220)+_0x772333(_0x535f97)+_0x150703(0x27b)+_0x772333(_0x175ead)+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line-row\x22\x20style=\x22height:\x201.35em;\x20margin-top:5px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22flex:\x201;\x20white-space:\x20nowrap;\x20overflow:\x20hidden;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x772333(_0x194ac2)+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20';})())+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22\x20style=\x22margin:\x2015px\x200;\x20text-align:\x20center;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Подпись\x20лица,\x20в\x20отношении\x20которого\x20возбуждено\x20дело\x20об\x20административном\x20правонарушении\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22justify-content:\x20flex-end;\x20margin-top:\x2040px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x20250px;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Подпись\x20должностного\x20лица,\x20составившего\x20протокол\x20-->\x0a\x09\x09\x09<div\x20class=\x22block\x22\x20style=\x22margin:\x2015px\x200;\x20margin-top:\x2040px;\x22>\x0a\x09\x09\x09\x09<div\x20style=\x22display:\x20flex;\x20align-items:\x20baseline;\x20justify-content:\x20flex-end;\x20flex-wrap:\x20wrap;\x20gap:\x2010px;\x22>\x0a\x09\x09\x09\x09\x09<span\x20style=\x22white-space:\x20nowrap;\x22>Подпись\x20должностного\x20лица,\x20составившего\x20протокол</span>\x0a\x09\x09\x09\x09\x09<div\x20style=\x22position:\x20relative;\x20width:\x20250px;\x20height:\x2040px;\x20border-bottom:\x201px\x20solid\x20#000;\x22>\x0a\x09\x09\x09\x09\x09\x09'+(_0x369e4e?.['signature_data']?_0x5cfbeb(0x127)+_0x772333(_0x369e4e['signature_data'])+'\x22\x20\x0a\x09\x09\x09\x09\x09\x09\x09style=\x22position:\x20absolute;\x20bottom:\x20-2px;\x20left:\x2050%;\x20transform:\x20translateX(-50%);\x20max-width:\x20250px;\x20max-height:\x2070px;\x20display:\x20block;\x22>\x0a\x09\x09\x09\x09\x09\x09':'')+'\x0a\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22block\x22\x20style=\x22margin:\x2015px\x200;\x20margin-top:\x2040px;\x20text-align:\x20right;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex-row\x22\x20style=\x22justify-content:\x20flex-end;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Копию\x20протокола\x20получил(а)</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22line\x20handwritten\x22\x20style=\x22width:\x20300px;\x20margin-left:\x2010px;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22note\x22\x20style=\x22text-align:\x20right;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(подпись\x20лица,\x20в\x20отношении\x20которого<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20возбуждено\x20дело\x20об\x20адм.\x20правонарушении)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20',document['body'][_0x5cfbeb(0x19f)](_0x2d4ae4);try{if(_0x207203===_0x5cfbeb(0x1e8)){await new Promise(_0x2955dc=>setTimeout(_0x2955dc,0x12c));const _0x24b373=await html2canvas(_0x2d4ae4,{'scale':0x2,'backgroundColor':_0x5cfbeb(0x17f),'logging':![],'allowTaint':![],'useCORS':!![],'windowWidth':0x320,'onclone':_0x3e41cc=>{const _0x3e60b8=_0x5cfbeb,_0x20dd41=_0x3e41cc[_0x3e60b8(0x267)](_0x3e60b8(0x214));_0x20dd41['textContent']=_0x3e60b8(0x1d7),_0x3e41cc[_0x3e60b8(0x264)][_0x3e60b8(0x19f)](_0x20dd41);}}),_0x21ef3d=document[_0x5cfbeb(0x267)]('a');_0x21ef3d[_0x5cfbeb(0x166)]=_0x5cfbeb(0x29a)+_0x369e4e[_0x5cfbeb(0x15a)]+'.png',_0x21ef3d[_0x5cfbeb(0x150)]=_0x24b373[_0x5cfbeb(0x1ca)](_0x5cfbeb(0x2b3)),_0x21ef3d[_0x5cfbeb(0x1dd)](),UI['showNotification']('Протокол\x20сохранён\x20как\x20PNG',_0x5cfbeb(0x2af)),Logger&&Logger['ACTION_TYPES']&&Logger['log'](_0x5cfbeb(0x161),{'protocol_number':_0x369e4e[_0x5cfbeb(0x15a)],'format':_0x207203,'exported_by':Auth[_0x5cfbeb(0x253)]()?.[_0x5cfbeb(0x141)]},_0x5cfbeb(0x21e),_0x369e4e['protocol_number']);}}catch(_0x1d1f0c){console[_0x5cfbeb(0x12f)]('Error\x20exporting\x20protocol:',_0x1d1f0c),UI[_0x5cfbeb(0x240)]('Ошибка\x20при\x20экспорте\x20протокола:\x20'+_0x1d1f0c[_0x5cfbeb(0x16a)],_0x5cfbeb(0x12f));}finally{document[_0x5cfbeb(0x1c0)]['removeChild'](_0x2d4ae4);}}return{'initProtocolsList':_0x1a213c,'loadProtocolsList':_0x1a7cd9,'generateProtocolNumber':_0x248b4e,'canEditProtocol':_0x2a7b02,'canDeleteProtocol':_0x262f2b,'filterProtocolsList':_0x34459b,'renderProtocolsList':_0x5b703f,'filterAndRenderProtocols':_0x3de1f5,'openProtocolModal':_0x5e4f7d,'deleteProtocol':_0x2b0787,'exportProtocol':_0x3943e9,'PROTOCOL_STATUS':_0x405d7e};}());window[_0x8f2613(0x242)]=Protocol;
+// Модуль Протоколы
+const Protocol = (function() {
+    let protocolsCache = [];
+
+    // Статусы протоколов
+    const PROTOCOL_STATUS = {
+        ACTIVE: 'active',
+        ARCHIVED: 'archived',
+    };
+	
+	function getMonthGenitive(monthIndex) {
+		const monthsGenitive = [
+			'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+			'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+		];
+		return monthsGenitive[monthIndex] || '';
+	}
+    
+    function escapeHtml(text) {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    // Загрузка списка протоколов из БД
+    async function loadProtocolsList() {
+        try {
+            Auth.ping();
+            
+            const { data, error } = await supabaseClient
+                .from('protocols')
+                .select('*')
+                .order('created_at', { ascending: false });
+            
+            if (error) {
+                console.error('Error loading protocols:', error);
+                UI.showNotification('Ошибка загрузки протоколов: ' + error.message, 'error');
+                return [];
+            }
+            
+            protocolsCache = data || [];
+            return protocolsCache;
+        } catch (error) {
+            console.error('Error in loadProtocolsList:', error);
+            ErrorHandler.showError(error, 'Ошибка загрузки протоколов');
+            return [];
+        }
+    }
+
+    // Генерация номера протокола
+		async function generateProtocolNumber() {
+		const prefix = '77AA'; // префикс
+		
+		const { data } = await supabaseClient
+			.from('protocols')
+			.select('protocol_number');
+		
+		let maxNumber = 0;
+		if (data && data.length > 0) {
+			data.forEach(item => {
+				if (item.protocol_number && item.protocol_number.startsWith(prefix)) {
+					const numPart = item.protocol_number.substring(prefix.length);
+					const num = parseInt(numPart, 10);
+					if (!isNaN(num) && num > maxNumber) {
+						maxNumber = num;
+					}
+				}
+			});
+		}
+		
+		// Следующий порядковый номер (начинаем с 1, если нет протоколов)
+		const nextNumber = maxNumber + 1;
+		
+		// Форматируем номер с ведущими нулями до 6 цифр
+		const formattedNumber = nextNumber.toString().padStart(6, '0');
+		
+		return `${prefix}${formattedNumber}`;
+	}
+
+    // Проверка прав на редактирование протокола
+    function canEditProtocol(protocol) {
+		const user = Auth.getCurrentUser();
+		if (!user) return false;
+		
+		// Администратор и ВРС могут редактировать любые протоколы
+		if (user.category === 'Администратор' || user.category === 'ВРС') {
+			return true;
+		}
+		
+		// РС могут редактировать только свои протоколы
+		if (user.category === 'РС') {
+			return protocol.created_by_id === user.auth_user_id;
+		}
+		
+		// МС могут редактировать только свои протоколы
+		if (user.category === 'МС') {
+			return protocol.created_by_id === user.auth_user_id;
+		}
+		
+		return false;
+	}
+
+    // Проверка прав на удаление протокола
+    function canDeleteProtocol() {
+        const user = Auth.getCurrentUser();
+        if (!user) return false;
+        
+        return user.category === 'Администратор' || user.category === 'ВРС';
+    }
+
+    // Получение текста статуса для отображения
+    function getStatusText(status) {
+        switch(status) {
+            case 'active': return 'Действующий';
+            case 'archived': return 'Архивный';
+            default: return 'Неизвестно';
+        }
+    }
+
+    // Получение класса для бейджа статуса
+    function getStatusBadgeClass(status) {
+        switch(status) {
+            case 'active': return 'badge-new';
+            case 'archived': return 'badge-closed';
+            default: return '';
+        }
+    }
+
+    // Фильтрация списка протоколов
+    function filterProtocolsList(search, status) {
+        return protocolsCache.filter(p => 
+            (!status || p.status === status) &&
+            (!search || (
+                p.protocol_number?.toLowerCase().includes(search.toLowerCase()) ||
+                `${p.violator_lastname} ${p.violator_firstname} ${p.violator_patronymic || ''}`.toLowerCase().includes(search.toLowerCase()) ||
+                p.offense_description?.toLowerCase().includes(search.toLowerCase()) ||
+                p.vehicle_license_plate?.toLowerCase().includes(search.toLowerCase())
+            ))
+        );
+    }
+
+    // Отображение списка протоколов
+    function renderProtocolsList(filteredList) {
+        const container = document.getElementById('protocolList');
+        if (!container) return;
+
+        container.innerHTML = '';
+        
+        if (!filteredList.length) {
+            container.innerHTML = '<div class="list-item" style="justify-content: center; color: #6b7f99;">Нет протоколов</div>';
+            return;
+        }
+
+        filteredList.forEach(p => {
+            const div = document.createElement('div');
+            div.className = 'list-item';
+            
+            const canEdit = canEditProtocol(p);
+            const canDelete = canDeleteProtocol();
+            
+            // Формируем ФИО нарушителя
+            const violatorName = [p.violator_lastname, p.violator_firstname, p.violator_patronymic]
+                .filter(Boolean)
+                .join(' ');
+            
+            const statusClass = getStatusBadgeClass(p.status);
+            const statusText = getStatusText(p.status);
+            
+            div.innerHTML = `
+                <div style="flex:1;">
+                    <div class="item-title">
+                        Протокол №${escapeHtml(p.protocol_number || 'б/н')} 
+                        <span class="badge ${statusClass}">${statusText}</span>
+                    </div>
+                    <div class="item-meta">
+                        <strong>${escapeHtml(violatorName)}</strong> · 
+                        ${escapeHtml(p.vehicle_make_model || '—')} (${escapeHtml(p.vehicle_license_plate || '—')})<br>
+                        <small>Ст. ${escapeHtml(p.offense_article_number || '')} ч.${escapeHtml(p.offense_article_part || '')} · 
+                        ${UI.formatDate(p.offense_datetime)}</small>
+                    </div>
+                </div>
+                <div class="flex-row" style="gap: 8px;">
+                    <button class="small" data-id="${p.id}" data-action="view">👁️ Просмотр</button>
+                    ${canEdit ? `<button class="small" data-id="${p.id}" data-action="edit">✏️ Редактировать</button>` : ''}
+                    ${canDelete ? `<button class="small secondary" data-id="${p.id}" data-action="delete">🗑️ Удалить</button>` : ''}
+                </div>
+            `;
+            container.appendChild(div);
+        });
+
+        // Назначаем обработчики
+        container.querySelectorAll('button[data-action="view"]').forEach(btn => {
+            btn.onclick = () => openProtocolModal(btn.dataset.id, 'view');
+        });
+        
+        container.querySelectorAll('button[data-action="edit"]').forEach(btn => {
+            btn.onclick = () => openProtocolModal(btn.dataset.id, 'edit');
+        });
+        
+        container.querySelectorAll('button[data-action="delete"]').forEach(btn => {
+            btn.onclick = () => deleteProtocol(btn.dataset.id);
+        });
+    }
+
+    // Фильтрация и отображение списка
+    function filterAndRenderProtocols() {
+        const search = document.getElementById('protocolSearch')?.value.toLowerCase() || '';
+        const status = document.getElementById('protocolFilterStatus')?.value || '';
+        const filtered = filterProtocolsList(search, status);
+        renderProtocolsList(filtered);
+    }
+
+    // Инициализация списка протоколов
+    async function initProtocolsList() {
+        try {
+            Auth.ping();
+            
+            const clone = UI.loadTemplate('protocolList');
+            if (!clone) {
+                console.error('Protocol template not found');
+                UI.showNotification('Ошибка загрузки шаблона', 'error');
+                return;
+            }
+            
+            UI.clearMain();
+            document.getElementById('mainApp').appendChild(clone);
+            
+            // Устанавливаем активную вкладку
+            const elements = UI.getElements();
+            if (elements.navProtocols) {
+                UI.setActiveTab(elements.navProtocols);
+            }
+
+            // Загружаем данные
+            await loadProtocolsList();
+            filterAndRenderProtocols();
+
+            // Назначаем обработчики событий
+            const searchInput = document.getElementById('protocolSearch');
+            const filterSelect = document.getElementById('protocolFilterStatus');
+            const createBtn = document.getElementById('protocolCreateOpen');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', filterAndRenderProtocols);
+            }
+            
+            if (filterSelect) {
+                filterSelect.addEventListener('change', filterAndRenderProtocols);
+            }
+            
+            if (createBtn) {
+                createBtn.onclick = () => openProtocolModal(null, 'create');
+            }
+
+        } catch (error) {
+            console.error('Error in initProtocolsList:', error);
+            UI.showNotification('Ошибка при загрузке раздела протоколов', 'error');
+        }
+    }
+
+    // Открыть модальное окно протокола
+    async function openProtocolModal(id = null, mode = 'create') {
+		Auth.ping();
+		
+		const user = Auth.getCurrentUser();
+		let protocol = null;
+		let employees = [];
+		
+		// Загружаем протокол, если передан ID
+		if (id) {
+			protocol = protocolsCache.find(p => p.id == id);
+			if (!protocol) {
+				UI.showNotification('Протокол не найден', 'error');
+				return;
+			}
+			
+			if (mode === 'edit' && !canEditProtocol(protocol)) {
+				UI.showNotification('У вас нет прав на редактирование этого протокола', 'error');
+				return;
+			}
+		}
+		
+		// Загружаем список сотрудников для выбора
+		const { data: empData } = await supabaseClient
+			.from('employees')
+			.select('id, auth_user_id, nickname, rank')
+			.order('nickname');
+		employees = empData || [];
+
+		const modal = document.createElement('div');
+		modal.className = 'modal-overlay';
+		modal.id = 'protocolModal';
+		
+		const title = mode === 'create' ? 'Новый протокол об АП' : 
+					 (mode === 'edit' ? `Редактирование протокола №${protocol.protocol_number}` : 
+					  `Просмотр протокола №${protocol.protocol_number}`);
+		
+		const isReadOnly = mode === 'view';
+		const protocolNumber = protocol ? protocol.protocol_number : await generateProtocolNumber();
+		
+		// Для режимов создания и редактирования показываем форму
+		if (mode === 'create' || mode === 'edit') {
+			modal.innerHTML = `
+			<div class="modal-container modal-large" style="max-width: 900px; width: 95%;">
+				<div class="modal-header">
+					<h3>${escapeHtml(title)}</h3>
+					<button class="modal-close">&times;</button>
+				</div>
+				<div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
+					<form id="protocolForm">
+						<!-- Скрытое поле для номера протокола -->
+						<input type="hidden" id="protocol_number" value="${escapeHtml(protocolNumber)}">
+						
+						<!-- Вкладки мастера создания -->
+						<div class="protocol-wizard">
+							<div class="wizard-steps" style="display: flex; justify-content: space-between; margin-bottom: 20px; padding: 0 10px;">
+								<div class="step" style="text-align: center; flex: 1; cursor: pointer;" data-tab="main">
+									<div class="step-indicator" style="width: 30px; height: 30px; border-radius: 50%; background: #1e3a5f; color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px;">1</div>
+									<div class="step-label" style="font-size: 0.9rem;">Основное</div>
+								</div>
+								<div class="step" style="text-align: center; flex: 1; cursor: pointer;" data-tab="violator">
+									<div class="step-indicator" style="width: 30px; height: 30px; border-radius: 50%; background: #eef3fa; color: #6b7f99; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px;">2</div>
+									<div class="step-label" style="font-size: 0.9rem;">Нарушитель</div>
+								</div>
+								<div class="step" style="text-align: center; flex: 1; cursor: pointer;" data-tab="vehicle">
+									<div class="step-indicator" style="width: 30px; height: 30px; border-radius: 50%; background: #eef3fa; color: #6b7f99; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px;">3</div>
+									<div class="step-label" style="font-size: 0.9rem;">Транспорт</div>
+								</div>
+								<div class="step" style="text-align: center; flex: 1; cursor: pointer;" data-tab="offense">
+									<div class="step-indicator" style="width: 30px; height: 30px; border-radius: 50%; background: #eef3fa; color: #6b7f99; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px;">4</div>
+									<div class="step-label" style="font-size: 0.9rem;">Правонарушение</div>
+								</div>
+								<div class="step" style="text-align: center; flex: 1; cursor: pointer;" data-tab="additional">
+									<div class="step-indicator" style="width: 30px; height: 30px; border-radius: 50%; background: #eef3fa; color: #6b7f99; display: flex; align-items: center; justify-content: center; margin: 0 auto 5px;">5</div>
+									<div class="step-label" style="font-size: 0.9rem;">Дополнительно</div>
+								</div>
+							</div>
+							
+							<!-- Вкладка 1: Основное -->
+							<div class="tab-content" data-tab="main">
+								<h4>Основная информация</h4>
+								<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+									<div class="form-group">
+										<label>Дата составления <span class="required">*</span></label>
+										<input type="date" id="protocol_date" required value="${protocol ? (protocol.protocol_date ? protocol.protocol_date.slice(0,10) : '') : new Date().toISOString().slice(0,10)}">
+									</div>
+									<div class="form-group">
+										<label>Время составления <span class="required">*</span></label>
+										<input type="time" id="protocol_time" required value="${protocol ? (protocol.protocol_time ? protocol.protocol_time.slice(0,5) : '') : new Date().toLocaleTimeString('ru-RU', {hour: '2-digit', minute:'2-digit'})}">
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Место составления <span class="required">*</span></label>
+										<input type="text" id="protocol_place" required value="${protocol ? escapeHtml(protocol.protocol_place || '') : ''}" placeholder="г. Мирный, ул. Ленина">
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Должностное лицо (должность, специальное звание, подразделение, фамилия, инициалы) <span class="required">*</span></label>
+										<input type="text" id="official_name" required 
+										   value="${protocol ? escapeHtml(protocol.official_name || '') : ''}" 
+										   placeholder="Инспектор ДПС лейтенант полиции ОБ ДПС Иванов И.И.">
+									</div>
+								</div>
+							</div>
+							
+							<!-- Вкладка 2: Нарушитель -->
+							<div class="tab-content hidden" data-tab="violator">
+								<h4>Данные нарушителя</h4>
+								<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+									<div class="form-group">
+										<label>Фамилия <span class="required">*</span></label>
+										<input type="text" id="violator_lastname" required value="${protocol ? escapeHtml(protocol.violator_lastname || '') : ''}">
+									</div>
+									<div class="form-group">
+										<label>Имя <span class="required">*</span></label>
+										<input type="text" id="violator_firstname" required value="${protocol ? escapeHtml(protocol.violator_firstname || '') : ''}">
+									</div>
+									<div class="form-group">
+										<label>Отчество</label>
+										<input type="text" id="violator_patronymic" value="${protocol ? escapeHtml(protocol.violator_patronymic || '') : ''}">
+									</div>
+									<div class="form-group">
+										<label>Дата рождения</label>
+										<input type="date" id="violator_birth_date" value="${protocol ? (protocol.violator_birth_date ? protocol.violator_birth_date.slice(0,10) : '') : ''}">
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Место рождения</label>
+										<input type="text" id="violator_birth_place" value="${protocol ? escapeHtml(protocol.violator_birth_place || '') : ''}" placeholder="г. Мирный">
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Владение русским языком</label>
+										<select id="violator_russian_language_skill">
+											<option value="">Не указано</option>
+											<option value="владеет" ${protocol?.violator_russian_language_skill === 'владеет' ? 'selected' : ''}>Владеет</option>
+											<option value="не владеет" ${protocol?.violator_russian_language_skill === 'не владеет' ? 'selected' : ''}>Не владеет</option>
+										</select>
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Водительское удостоверение (номер, кем выдано) <span class="required">*</span></label>
+										<input type="text" id="violator_driver_license" required value="${protocol ? escapeHtml(protocol.violator_driver_license || '') : ''}" placeholder="№ 123456, выдано УГИБДД по г. Мирный">
+									</div>
+								</div>
+							</div>
+							
+							<!-- Вкладка 3: Транспорт -->
+							<div class="tab-content hidden" data-tab="vehicle">
+								<h4>Данные транспортного средства</h4>
+								<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Марка и модель ТС <span class="required">*</span></label>
+										<input type="text" id="vehicle_make_model" required value="${protocol ? escapeHtml(protocol.vehicle_make_model || '') : ''}" placeholder="Toyota Camry">
+									</div>
+									<div class="form-group">
+										<label>Государственный номер <span class="required">*</span></label>
+										<input type="text" id="vehicle_license_plate" required value="${protocol ? escapeHtml(protocol.vehicle_license_plate || '') : ''}" placeholder="А123ВС 77">
+									</div>
+									<div class="form-group">
+										<label>Владелец ТС (ФИО, организация)</label>
+										<input type="text" id="vehicle_owner" value="${protocol ? escapeHtml(protocol.vehicle_owner || '') : ''}" placeholder="Иванов И.И.">
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>ТС состоит на учете</label>
+										<input type="text" id="vehicle_registered_info" value="${protocol ? escapeHtml(protocol.vehicle_registered_info || '') : ''}" placeholder="УГИБДД г. Мирный">
+									</div>
+								</div>
+							</div>
+							
+							<!-- Вкладка 4: Правонарушение -->
+							<div class="tab-content hidden" data-tab="offense">
+								<h4>Данные о правонарушении</h4>
+								<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Дата и время правонарушения <span class="required">*</span></label>
+										<input type="datetime-local" id="offense_datetime" required value="${protocol ? (protocol.offense_datetime ? protocol.offense_datetime.slice(0,16) : '') : new Date().toISOString().slice(0,16)}">
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Место совершения</label>
+										<input type="text" id="offense_place" value="${protocol ? escapeHtml(protocol.offense_place || '') : ''}" placeholder="г. Мирный, ул. Ленина">
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Пункт нормативного акта <span class="required">*</span></label>
+										<input type="text" id="offense_violation_point" required value="${protocol ? escapeHtml(protocol.offense_violation_point || '') : ''}" placeholder="п. 6.1 ПДД РП">
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Описание правонарушения <span class="required">*</span></label>
+										<textarea id="offense_description" rows="3" required placeholder="Проезд на запрещающий сигнал светофора" style="resize: vertical;">${protocol ? escapeHtml(protocol.offense_description || '') : ''}</textarea>
+									</div>
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Специальные технические средства (наименование, показания)</label>
+										<input type="text" id="offense_special_equipment" value="${protocol ? escapeHtml(protocol.offense_special_equipment || '') : ''}" placeholder="Тоник, показания 23%">
+									</div>
+									<div class="form-group">
+										<label>Статья КоАП <span class="required">*</span></label>
+										<input type="text" id="offense_article_number" required value="${protocol ? escapeHtml(protocol.offense_article_number || '') : ''}" placeholder="6">
+									</div>
+									<div class="form-group">
+										<label>Часть статьи <span class="required">*</span></label>
+										<input type="text" id="offense_article_part" required value="${protocol ? escapeHtml(protocol.offense_article_part || '') : ''}" placeholder="1">
+									</div>
+								</div>
+							</div>
+							
+							<!-- Вкладка 5: Дополнительно -->
+							<div class="tab-content hidden" data-tab="additional">
+								<h4>Дополнительная информация и подпись</h4>
+								<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+									<div class="form-group" style="grid-column: span 2;">
+										<label>Объяснения и замечания по содержанию протокола</label>
+										<textarea id="explanatory_note" rows="3" placeholder="Объяснения нарушителя, замечания по содержанию протокола" style="resize: vertical;">${protocol ? escapeHtml(protocol.explanatory_note || '') : ''}</textarea>
+									</div>
+									
+									<!-- Блок для подписи сотрудника -->
+									<div class="form-group signature-section" style="grid-column: span 2; margin-top: 10px; border-top: 1px solid #d8e2ed; padding-top: 20px;">
+										<h4 style="margin-bottom: 15px;">Подпись должностного лица, составившего протокол</h4>
+										
+										<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: start;">
+											<!-- Область для рисования подписи -->
+											<div>
+												<label>Нарисуйте подпись:</label>
+												<div style="border: 2px dashed #1e3a5f; border-radius: 8px; padding: 5px; background: #fff; margin-top: 5px;">
+													<canvas id="signatureCanvas" width="250" height="120" style="width: 100%; height: auto; background: white; border: 1px solid #d8e2ed; border-radius: 4px; cursor: crosshair;"></canvas>
+												</div>
+												
+												<!-- Кнопки управления подписью -->
+												<div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+													<button type="button" id="clearSignatureBtn" class="small secondary">🧹 Очистить</button>
+												</div>
+											</div>
+											
+											<!-- Предпросмотр подписи и информация -->
+											<div>
+												<label>Предпросмотр подписи:</label>
+												<div style="border: 1px solid #d8e2ed; border-radius: 8px; padding: 15px; background: #f8fafd; margin-top: 5px; min-height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+													<canvas id="signaturePreviewCanvas" width="200" height="80" style="width: 100%; height: auto; background: white; border: 1px solid #d8e2ed; border-radius: 4px; display: none;"></canvas>
+													<div id="noSignatureMessage" style="color: #6b7f99; text-align: center;">
+														⚠️ Подпись не добавлена
+													</div>
+													<img id="signaturePreviewImg" style="max-width: 100%; max-height: 100px; display: none;">
+												</div>
+												
+												<!-- Поле для хранения данных подписи (base64) -->
+												<input type="hidden" id="signature_data" value="${protocol ? escapeHtml(protocol.signature_data || '') : ''}">
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-group" style="grid-column: span 2; margin-top: 10px;">
+										<label>Статус протокола</label>
+										<select id="status">
+											<option value="active" ${protocol?.status === 'active' ? 'selected' : ''}>Действующий</option>
+											<option value="archived" ${protocol?.status === 'archived' ? 'selected' : ''}>Архивный</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Кнопки управления: Отмена слева, Назад/Далее/Создать/Сохранить справа -->
+							<div class="flex-row" style="justify-content: space-between; align-items: center; margin-top: 20px;">
+								<button type="button" id="cancelProtocolBtn" class="secondary">Отмена</button>
+								<div class="flex-row" style="gap: 8px;">
+									<button type="button" id="prevTabBtn" class="secondary" style="display: none;">← Назад</button>
+									<button type="button" id="nextTabBtn" class="secondary">Далее →</button>
+									<button type="submit" id="saveProtocolBtn" class="primary">
+										${mode === 'create' ? '➕ Создать' : '💾 Сохранить'}
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			`;
+
+			document.body.appendChild(modal);
+
+			// Обработчики закрытия
+			modal.querySelector('.modal-close').onclick = () => modal.remove();
+			modal.onclick = (e) => {
+				if (e.target === modal) modal.remove();
+			};
+			
+			// Инициализация подписи
+			function initSignatureCanvas() {
+				const canvas = document.getElementById('signatureCanvas');
+				const previewCanvas = document.getElementById('signaturePreviewCanvas');
+				const previewImg = document.getElementById('signaturePreviewImg');
+				const noSignatureMessage = document.getElementById('noSignatureMessage');
+				const signatureDataInput = document.getElementById('signature_data');
+				
+				if (!canvas) return;
+				
+				let isDrawing = false;
+				let lastX = 0;
+				let lastY = 0;
+				let mode = 'draw';
+				
+				const ctx = canvas.getContext('2d');
+				ctx.strokeStyle = '#002b59';
+				ctx.lineWidth = 2;
+				ctx.lineCap = 'round';
+				ctx.lineJoin = 'round';
+				
+				// Очистка canvas
+				function clearCanvas() {
+					ctx.clearRect(0, 0, canvas.width, canvas.height);
+					updatePreview();
+				}
+				
+				// Обновление предпросмотра
+				function updatePreview() {
+					const signatureData = canvas.toDataURL('image/png');
+					signatureDataInput.value = signatureData;
+					
+					// Показываем предпросмотр
+					if (previewCanvas) {
+						previewCanvas.width = 200;
+						previewCanvas.height = 80;
+						const previewCtx = previewCanvas.getContext('2d');
+						previewCtx.clearRect(0, 0, 200, 80);
+						previewCtx.drawImage(canvas, 0, 0, 200, 80);
+						
+						previewCanvas.style.display = 'block';
+						if (noSignatureMessage) noSignatureMessage.style.display = 'none';
+					}
+					
+					// Также сохраняем как base64
+					signatureDataInput.value = canvas.toDataURL('image/png');
+				}
+				
+				// Рисование
+				function draw(e) {
+					if (!isDrawing) return;
+					
+					e.preventDefault();
+					
+					const rect = canvas.getBoundingClientRect();
+					const scaleX = canvas.width / rect.width;
+					const scaleY = canvas.height / rect.height;
+					
+					const x = (e.clientX - rect.left) * scaleX;
+					const y = (e.clientY - rect.top) * scaleY;
+					
+					if (mode === 'draw') {
+						ctx.beginPath();
+						ctx.moveTo(lastX, lastY);
+						ctx.lineTo(x, y);
+						ctx.strokeStyle = '#002b59';
+						ctx.lineWidth = 2;
+						ctx.stroke();
+					} else if (mode === 'erase') {
+						ctx.clearRect(x - 5, y - 5, 10, 10);
+					}
+					
+					lastX = x;
+					lastY = y;
+				}
+				
+				// Обработчики событий мыши
+				canvas.addEventListener('mousedown', (e) => {
+					isDrawing = true;
+					const rect = canvas.getBoundingClientRect();
+					lastX = (e.clientX - rect.left) * (canvas.width / rect.width);
+					lastY = (e.clientY - rect.top) * (canvas.height / rect.height);
+				});
+				
+				canvas.addEventListener('mousemove', draw);
+				canvas.addEventListener('mouseup', () => {
+					isDrawing = false;
+					updatePreview();
+				});
+				canvas.addEventListener('mouseleave', () => {
+					isDrawing = false;
+				});
+				
+				// Кнопка очистки
+				const clearBtn = document.getElementById('clearSignatureBtn');
+				if (clearBtn) {
+					clearBtn.addEventListener('click', () => {
+						clearCanvas();
+					});
+				}
+			}
+
+			// Вызываем инициализацию подписи
+			initSignatureCanvas();
+
+			// Настройка навигации по вкладкам
+			const tabs = ['main', 'violator', 'vehicle', 'offense', 'additional'];
+			let currentTabIndex = 0;
+			const tabContents = modal.querySelectorAll('.tab-content');
+			const stepIndicators = modal.querySelectorAll('.step-indicator');
+			const stepLabels = modal.querySelectorAll('.step-label');
+			const stepElements = modal.querySelectorAll('.step');
+			const prevBtn = document.getElementById('prevTabBtn');
+			const nextBtn = document.getElementById('nextTabBtn');
+			const saveBtn = document.getElementById('saveProtocolBtn');
+			const cancelBtn = document.getElementById('cancelProtocolBtn');
+
+			if (cancelBtn) {
+				cancelBtn.onclick = () => modal.remove();
+			}
+			
+			function updateTabDisplay() {
+				tabContents.forEach(content => content.classList.add('hidden'));
+				tabContents[currentTabIndex].classList.remove('hidden');
+				
+				stepIndicators.forEach((indicator, index) => {
+					if (index < currentTabIndex) {
+						indicator.style.background = '#1e3a5f';
+						indicator.style.color = 'white';
+						indicator.style.borderColor = '#1e3a5f';
+						indicator.innerHTML = '✓';
+					} else if (index === currentTabIndex) {
+						indicator.style.background = '#1e3a5f';
+						indicator.style.color = 'white';
+						indicator.style.borderColor = '#1e3a5f';
+						indicator.innerHTML = index + 1;
+					} else {
+						indicator.style.background = '#eef3fa';
+						indicator.style.color = '#6b7f99';
+						indicator.style.borderColor = '#d8e2ed';
+						indicator.innerHTML = index + 1;
+					}
+				});
+				
+				stepLabels.forEach((label, index) => {
+					if (index <= currentTabIndex) {
+						label.style.color = '#1e3a5f';
+						label.style.fontWeight = '600';
+					} else {
+						label.style.color = '#6b7f99';
+						label.style.fontWeight = '400';
+					}
+				});
+				
+				// Показываем/скрываем кнопки навигации
+				if (prevBtn) {
+					prevBtn.style.display = currentTabIndex === 0 ? 'none' : 'inline-flex';
+				}
+				
+				if (nextBtn) {
+					// В режиме создания показываем "Далее" до последней вкладки, 
+					// на последней вкладке показываем "Создать"
+					if (mode === 'create') {
+						if (currentTabIndex === tabContents.length - 1) {
+							nextBtn.style.display = 'none';
+							// Кнопка сохранения уже видна с текстом "Создать"
+						} else {
+							nextBtn.style.display = 'inline-flex';
+						}
+					} 
+					// В режиме редактирования показываем "Далее" всегда, если не последняя вкладка
+					else if (mode === 'edit') {
+						nextBtn.style.display = currentTabIndex === tabContents.length - 1 ? 'none' : 'inline-flex';
+					}
+				}
+				
+				// Кнопка сохранения теперь видна на всех вкладках в режиме редактирования,
+				// а в режиме создания - только на последней вкладке
+				if (saveBtn) {
+					if (mode === 'create') {
+						// В режиме создания показываем кнопку только на последней вкладке
+						saveBtn.style.display = currentTabIndex === tabContents.length - 1 ? 'inline-flex' : 'none';
+						saveBtn.textContent = '➕ Создать';
+					} else {
+						// В режиме редактирования показываем на всех вкладках
+						saveBtn.style.display = 'inline-flex';
+						saveBtn.textContent = '💾 Сохранить';
+					}
+				}
+			}
+			
+			function switchToTab(tabName) {
+				const index = tabs.indexOf(tabName);
+				if (index !== -1 && index !== currentTabIndex) {
+					currentTabIndex = index;
+					updateTabDisplay();
+				}
+			}
+			
+			stepElements.forEach(step => {
+				const tabName = step.dataset.tab;
+				step.addEventListener('click', () => switchToTab(tabName));
+			});
+			
+			function validateCurrentTab(index) {
+				const tabName = tabs[index];
+				let isValid = true;
+				let errorMessage = '';
+				
+				switch(tabName) {
+					case 'main':
+						if (!document.getElementById('protocol_date')?.value) {
+							errorMessage = 'Заполните дату составления';
+							isValid = false;
+						} else if (!document.getElementById('protocol_time')?.value) {
+							errorMessage = 'Заполните время составления';
+							isValid = false;
+						} else if (!document.getElementById('protocol_place')?.value?.trim()) {
+							errorMessage = 'Заполните место составления';
+							isValid = false;
+						} else if (!document.getElementById('official_name')?.value?.trim()) {
+							errorMessage = 'Заполните данные должностного лица';
+							isValid = false;
+						}
+						break;
+						
+					case 'violator':
+						if (!document.getElementById('violator_lastname')?.value?.trim()) {
+							errorMessage = 'Заполните фамилию нарушителя';
+							isValid = false;
+						} else if (!document.getElementById('violator_firstname')?.value?.trim()) {
+							errorMessage = 'Заполните имя нарушителя';
+							isValid = false;
+						} else if (!document.getElementById('violator_driver_license')?.value?.trim()) {
+							errorMessage = 'Заполните водительское удостоверение';
+							isValid = false;
+						}
+						break;
+						
+					case 'vehicle':
+						if (!document.getElementById('vehicle_make_model')?.value?.trim()) {
+							errorMessage = 'Заполните марку и модель ТС';
+							isValid = false;
+						} else if (!document.getElementById('vehicle_license_plate')?.value?.trim()) {
+							errorMessage = 'Заполните государственный номер';
+							isValid = false;
+						}
+						break;
+						
+					case 'offense':
+						if (!document.getElementById('offense_datetime')?.value) {
+							errorMessage = 'Заполните дату и время правонарушения';
+							isValid = false;
+						} else if (!document.getElementById('offense_description')?.value?.trim()) {
+							errorMessage = 'Заполните описание правонарушения';
+							isValid = false;
+						} else if (!document.getElementById('offense_article_number')?.value?.trim()) {
+							errorMessage = 'Заполните статью КоАП';
+							isValid = false;
+						} else if (!document.getElementById('offense_article_part')?.value?.trim()) {
+							errorMessage = 'Заполните часть статьи';
+							isValid = false;
+						} else if (!document.getElementById('offense_violation_point')?.value?.trim()) {
+							errorMessage = 'Заполните пункт нормативного акта';
+							isValid = false;
+						}
+						break;
+						
+					case 'additional':
+						// Статус протокола всегда имеет значение по умолчанию, поэтому проверка не требуется
+						break;
+				}
+				
+				if (!isValid) {
+					UI.showNotification(errorMessage, 'warning');
+				}
+				
+				return isValid;
+			}
+			
+			if (nextBtn) {
+				nextBtn.addEventListener('click', () => {
+					if (validateCurrentTab(currentTabIndex)) {
+						if (currentTabIndex < tabContents.length - 1) {
+							currentTabIndex++;
+							updateTabDisplay();
+						}
+					}
+				});
+			}
+			
+			if (prevBtn) {
+				prevBtn.addEventListener('click', () => {
+					if (currentTabIndex > 0) {
+						currentTabIndex--;
+						updateTabDisplay();
+					}
+				});
+			}
+			
+			updateTabDisplay();
+			
+			const form = document.getElementById('protocolForm');
+			if (form) {
+				form.onsubmit = async (e) => {
+					e.preventDefault();
+					
+					if (!validateCurrentTab(currentTabIndex)) {
+						return;
+					}
+					
+					let success = false;
+					if (mode === 'create') {
+						success = await createProtocol();
+					} else {
+						success = await updateProtocol(id);
+					}
+					
+					if (success) {
+						modal.remove();
+					}
+				};
+			}
+        } else if (mode === 'view') {
+            // Для режима просмотра
+            modal.innerHTML = `
+            <div class="modal-container protocol-document-modal" style="max-width: 800px; width: 90%;">
+                <div class="modal-header">
+                    <h3>${escapeHtml(title)}</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-content protocol-document-content">
+                    <!-- Документ протокола по шаблону -->
+                    <div class="protocol-document">
+                        <!-- Заголовок -->
+                        <div class="center title">
+							<div>ПРОТОКОЛ</div>
+							<div>об административном правонарушении</div>
+							<div class="title-line handwritten" style="font-size: 24px !important;">№ ${escapeHtml(protocol?.protocol_number || '_______________')}</div>
+							<div class="note note-center">(регистрационный номер)</div>
+						</div>
+                        
+                        <!-- Дата / Время / Место -->
+                        <div class="date-container">
+                            <div class="date-item date-left">
+                                <div class="date-field">
+                                    <div class="date-row">
+                                        <span>"</span>
+                                        <div class="line handwritten" style="width: 26px; text-align:left;">${protocol?.protocol_date ? new Date(protocol.protocol_date).getDate().toString().padStart(2,'0') : ''}</div>
+                                        <span>"</span>
+                                        <div class="line handwritten" style="width: 81px; text-align:left;">
+										  ${protocol?.protocol_date 
+											? (() => {
+												const date = new Date(protocol.protocol_date);
+												const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+																'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+												return months[date.getMonth()];
+											  })()
+											: ''}
+										</div>
+                                        <span>20</span>
+                                        <div class="line handwritten" style="width: 26px; text-align:left;">${protocol?.protocol_date ? new Date(protocol.protocol_date).getFullYear().toString().slice(-2) : ''}</div>
+                                        <span>г.</span>
+                                    </div>
+                                    <div class="note">(дата составления)</div>
+                                </div>
+                            </div>
+                            
+                            <div class="date-item date-center">
+                                <div class="date-field">
+                                    <div class="date-row">
+                                        <div class="line handwritten" style="width: 26px; text-align:left;">${protocol?.protocol_time ? protocol.protocol_time.split(':')[0] : ''}</div>
+                                        <span>час. </span>
+                                        <div class="line handwritten" style="width: 26px; text-align:left;">${protocol?.protocol_time ? protocol.protocol_time.split(':')[1] : ''}</div>
+                                        <span>мин.</span>
+                                    </div>
+                                    <div class="note">(время составления)</div>
+                                </div>
+                            </div>
+                            
+                            <div class="date-item date-right" style="display: flex; justify-content: flex-end; width: 100%;">
+								<div class="date-field" style="width: 100%;">
+									<div class="date-row" style="display: flex; justify-content: flex-end; width: 100%;">
+										<div class="line handwritten" style="width: 100%; text-align: right;">${escapeHtml(protocol?.protocol_place || '')}</div>
+									</div>
+									<div class="note" style="text-align: right;">(место составления)</div>
+								</div>
+							</div>
+                        </div>
+                        
+                        <!-- Я, ... -->
+                        <div class="block block-narrow">
+                            <div class="line-row">
+                                <span>Я,</span>
+                                <span class="line handwritten">${escapeHtml(protocol?.official_name || '')}</span>
+                            </div>
+                            <div class="note note-center">
+                                (должность, специальное звание, подразделение, фамилия, инициалы<br>
+                                должностного лица, составившего протокол)
+                            </div>
+                        </div>
+                        
+                        <div class="block">
+                            в соответствии со статьей 58 Административный регламент ГИБДД составил настоящий протокол о том, что гражданин(ка)
+                        </div>
+                        
+                        <!-- Клетки для ФИО -->
+                        ${(() => {
+                            const violatorName = [protocol?.violator_lastname || '', protocol?.violator_firstname || '', protocol?.violator_patronymic || ''].join(' ');
+                            const truncatedName = violatorName.length > 35 ? violatorName.substring(0, 35) : violatorName;
+                            const nameChars = truncatedName.split('');
+                            const cells = [];
+                            for (let i = 0; i < 35; i++) {
+                                cells.push(nameChars[i] || '');
+                            }
+                            return `
+                            <div class="grid">
+                                <table>
+                                    <tr>
+                                        ${cells.map(char => `<td class="handwritten">${escapeHtml(char)}</td>`).join('')}
+                                    </tr>
+                                </table>
+                                <div class="note note-center">фамилия имя отчество</div>
+                            </div>
+                            `;
+                        })()}
+                        
+                        <!-- Дата и место рождения / владение русским языком -->
+                        <div class="block">
+							<div class="flex-row" style="flex-wrap: wrap; gap: 5px;">
+								<div class="line handwritten" style="flex: 2;">
+									${protocol.violator_birth_date ? new Date(protocol.violator_birth_date).toLocaleDateString('ru-RU') + ', ' : ''}${escapeHtml(protocol.violator_birth_place || '')}
+								</div>
+								<div class="nowrap">, русским языком</div>
+								<div class="line handwritten" style="flex: 1;">${protocol.violator_russian_language_skill || ''}</div>
+							</div>
+							<div class="note flex-space-between">
+								<span>(дата и место рождения)</span>
+								<span>(владеет/не владеет)</span>
+							</div>
+						</div>
+                        
+                        <!-- Водительское удостоверение и транспорт -->
+${(() => {
+    const licenseText = protocol?.violator_driver_license || '';
+    const licenseMaxLength = 19;
+    
+    // Разбиваем текст водительского удостоверения
+    let licenseFirstLine = licenseText;
+    let licenseSecondLine = '';
+    
+    if (licenseText.length > licenseMaxLength) {
+        let cutIndex = licenseText.lastIndexOf(' ', licenseMaxLength);
+        if (cutIndex === -1) cutIndex = licenseMaxLength;
+        
+        licenseFirstLine = licenseText.substring(0, cutIndex);
+        licenseSecondLine = licenseText.substring(cutIndex).trim();
+    }
+    
+    // Разбиваем текст для поля "принадлежащим"
+    const ownerText = protocol?.vehicle_owner || '';
+    const ownerMaxLength1 = 68; // длина первой строки
+    const ownerMaxLength2 = 83; // длина второй строки
+    
+    let ownerFirstLine = ownerText;
+    let ownerSecondLine = '';
+    let ownerThirdLine = ''; // на случай если текст очень длинный
+    
+    if (ownerText.length > ownerMaxLength1) {
+        let cutIndex1 = ownerText.lastIndexOf(' ', ownerMaxLength1);
+        if (cutIndex1 === -1) cutIndex1 = ownerMaxLength1;
+        
+        ownerFirstLine = ownerText.substring(0, cutIndex1);
+        
+        const remainingText = ownerText.substring(cutIndex1).trim();
+        
+        if (remainingText.length > ownerMaxLength2) {
+            let cutIndex2 = remainingText.lastIndexOf(' ', ownerMaxLength2);
+            if (cutIndex2 === -1) cutIndex2 = ownerMaxLength2;
+            
+            ownerSecondLine = remainingText.substring(0, cutIndex2);
+            ownerThirdLine = remainingText.substring(cutIndex2).trim();
+        } else {
+            ownerSecondLine = remainingText;
+        }
+    }
+    
+    return `
+        <div class="block">
+            <!-- Водительское удостоверение -->
+            <div class="flex-row">
+                <div class="nowrap">водительское удостоверение (документ, удостоверяющий личность)</div>
+                <div class="line handwritten" style="flex: 3;">${escapeHtml(licenseFirstLine)}</div>
+            </div>
+            
+            ${licenseSecondLine ? `
+            <!-- Вторая строка с правильным отступом как в поле "совершил(а) нарушение" -->
+            <div class="line-row" style="margin-top: 5px;">
+                <div class="line handwritten" style="flex: 1;">${escapeHtml(licenseSecondLine)}</div>
+            </div>
+            ` : `
+            <!-- Пустая строка для сохранения отступа, если нет текста (как в идеальной реализации) -->
+            <div class="line-row" style="margin-top: 5px;">
+                <div class="line handwritten" style="flex: 1;">&nbsp;</div>
+            </div>
+            `}
+            <div class="note note-center">(серия, номер, когда и кем выдан)</div>
+            
+            <!-- Управляя транспортным средством -->
+            <div style="margin-top:15px;">
+                <div class="flex-row">
+                    <div class="nowrap">управляя транспортным средством</div>
+                    <div class="line handwritten" style="flex: 2;">
+                        ${escapeHtml(protocol?.vehicle_make_model || '')} 
+                        ${protocol?.vehicle_license_plate ? '(' + escapeHtml(protocol.vehicle_license_plate) + ')' : ''}
+                    </div>
+                </div>
+                <div class="note note-center">(марка, гос. регистрационный знак)</div>
+            </div>
+            
+            <!-- Принадлежащим - всегда показываем две строки как в идеальной реализации -->
+            <div style="margin-top:15px;">
+                <!-- Первая строка -->
+                <div class="flex-row">
+                    <div class="nowrap">принадлежащим</div>
+                    <div class="line handwritten" style="flex: 2; white-space: nowrap; overflow: hidden;">
+                        ${escapeHtml(ownerFirstLine)}
+                    </div>
+                </div>
+                
+                <div class="note note-center" style="margin-top: 2px;">(фамилия, имя, отчество, организация)</div>
+                
+                <!-- Вторая строка (всегда показываем, даже если пустая) -->
+                <div class="line-row" style="margin-top: 8px;">
+                    <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                        ${ownerSecondLine ? escapeHtml(ownerSecondLine) : '&nbsp;'}
+                    </div>
+                </div>
+                
+                <!-- Третья строка (если есть) -->
+                ${ownerThirdLine ? `
+                <div class="line-row" style="margin-top: 5px;">
+                    <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                        ${escapeHtml(ownerThirdLine)}
+                    </div>
+                </div>
+                ` : ''}
+            </div>
+            
+            <!-- Отступ перед "состоящим на учете" -->
+            <div style="margin-top: 15px;"></div>
+            
+            <!-- Состоящим на учете -->
+            <div class="flex-row" style="margin-top:5px;">
+                <div class="nowrap">состоящим на учете</div>
+                <div class="line handwritten" style="flex: 2;">${escapeHtml(protocol?.vehicle_registered_info || '')}</div>
+            </div>
+        </div>
+    `;
+})()}
+                        
+                        <!-- Дата, время и место правонарушения -->
+                        ${(() => {
+                           const offenseDateTime = protocol?.offense_datetime || '';
+							let offenseDay = '', offenseMonth = '', offenseYear = '', offenseHour = '', offenseMinute = '';
+
+							if (offenseDateTime) {
+								const [datePart, timePart] = offenseDateTime.split('T');
+								if (datePart) {
+									const [year, month, day] = datePart.split('-');
+									offenseDay = day || '';
+									offenseMonth = month ? getMonthGenitive(parseInt(month) - 1) : '';
+									offenseYear = year ? year.slice(-2) : '';
+								}
+								if (timePart) {
+									const [hour, minute] = timePart.split(':');
+									offenseHour = hour || '';
+									offenseMinute = minute || '';
+								}
+							}
+                            
+                            return `
+                            <div class="block" style="width: 100%; margin: 10px 0;">
+                                <div class="flex-row" style="gap: 10px;">
+                                    <div class="flex-row" style="flex: 1.7; flex-wrap: wrap;">
+                                        <span>"</span>
+                                        <div class="line handwritten" style="width: 26px; text-align:left;">${offenseDay}</div>
+                                        <span>"</span>
+                                        <div class="line handwritten" style="width: 81px; text-align:left;">${offenseMonth}</div>
+                                        <span>20</span>
+                                        <div class="line handwritten" style="width: 26px; text-align:left;">${offenseYear}</div>
+                                        <span> г. в "</span>
+                                        <div class="line handwritten" style="width: 26px; text-align:left;">${offenseHour}</div>
+                                        <span>" час. "</span>
+                                        <div class="line handwritten" style="width: 26px; text-align:left;">${offenseMinute}</div>
+                                        <span>" мин.</span>
+                                    </div>
+                                    
+                                    <div class="flex-row" style="flex: 1;">
+                                        <span>на</span>
+                                        <div class="line handwritten" style="flex: 1;">${escapeHtml(protocol?.offense_place || '')}</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="offense-note-row">
+    <div class="offense-note-left">
+        (дата, время совершения административного правонарушения)
+    </div>
+    <div class="offense-note-right">
+        (место совершения административного правонарушения)
+    </div>
+</div>
+                            </div>
+                            `;
+                        })()}
+                        
+                        <!-- Существо нарушения -->
+${(() => {
+
+    const combinedText = [
+        protocol?.offense_violation_point,
+        protocol?.offense_description,
+        protocol?.offense_special_equipment
+    ]
+    .filter(Boolean)
+    .join(', ');
+
+    const maxLength = 60;
+
+    const part1 = combinedText.substring(0, maxLength);
+    const part2 = combinedText.length > maxLength
+        ? combinedText.substring(maxLength)
+        : '';
+
+    return `
+        <!-- 1 строка -->
+        <div class="flex-row">
+            <div class="nowrap">совершил(а) нарушение</div>
+            <div class="line handwritten" style="flex: 3; white-space: nowrap; overflow: hidden;">
+                ${escapeHtml(part1)}
+            </div>
+        </div>
+
+        <div class="note note-center">
+            (пункт нормативного правового акта, существо нарушения,
+        </div>
+
+        <!-- 2 строка -->
+        <div class="line-row" style="height: 1.35em; margin: 5px 0;">
+            <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                ${escapeHtml(part2)}
+            </div>
+        </div>
+
+        <div class="note note-center">
+            при применении спец. тех. средств указываются их показания, наименование, номер)
+        </div>
+    `;
+
+})()}
+                        
+                        <div class="flex-row" style="gap: 5px; flex-wrap: wrap; width: 100%; margin-top: 10px;">
+                            <span>ответственность за которое предусмотрена частью</span>
+                            <div class="line handwritten" style="width: 50px; text-align:center;">${escapeHtml(protocol?.offense_article_part || '')}</div>
+                            <span>статьи</span>
+                            <div class="line handwritten" style="width: 50px; text-align:center;">${escapeHtml(protocol?.offense_article_number || '')}</div>
+                            <span>Кодекса Республики Провинция об административных правонарушениях.</span>
+                        </div>
+                        
+                        <div class="block">
+                            Лицу, в отношении которого возбуждено дело об административном
+                            правонарушении, разъяснены права, предусмотренные статьей 30 Конституции Республики Провинция.
+                        </div>
+                        
+                        <div class="block">
+                            Лицо, в отношении которого возбуждено дело об административном
+                            правонарушении, ознакомлено с протоколом.
+                        </div>
+                        
+                        ${(() => {
+    const fullText = protocol?.explanatory_note || '';
+
+    // разные лимиты для каждой линии
+    const maxLength1 = 35;
+    const maxLength2 = 83; 
+    const maxLength3 = 83; 
+
+    // первая линия
+    const line1 = fullText.substring(0, maxLength1);
+
+    // вторая линия — начинается после первой
+    const line2 = fullText.length > maxLength1
+        ? fullText.substring(maxLength1, maxLength1 + maxLength2)
+        : '';
+
+    // третья линия — начинается после первой+второй
+    const line3 = fullText.length > (maxLength1 + maxLength2)
+        ? fullText.substring(maxLength1 + maxLength2, maxLength1 + maxLength2 + maxLength3)
+        : '';
+
+    return `
+        <!-- 1 строка -->
+        <div class="flex-row">
+            <div class="nowrap">Объяснения и замечания по содержанию протокола:</div>
+            <div class="line handwritten" style="flex: 2; white-space: nowrap; overflow: hidden;">
+                ${escapeHtml(line1)}
+            </div>
+        </div>
+
+        <!-- 2 строка -->
+        <div class="line-row" style="height: 1.35em; margin-top:5px;">
+            <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                ${escapeHtml(line2)}
+            </div>
+        </div>
+
+        <!-- 3 строка -->
+        <div class="line-row" style="height: 1.35em; margin-top:5px;">
+            <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                ${escapeHtml(line3)}
+            </div>
+        </div>
+    `;
+})()}
+                        
+                        <div class="block" style="margin: 15px 0; text-align: center;">
+                            Подпись лица, в отношении которого возбуждено дело об административном правонарушении
+                        </div>
+                        
+                        <div class="flex-row" style="justify-content: flex-end; margin-top: 40px;">
+                            <div class="line handwritten" style="width: 250px;"></div>
+                        </div>
+                        
+                        <!-- Подпись должностного лица, составившего протокол -->
+						<div class="block" style="margin: 15px 0; margin-top: 40px;">
+							<div style="display: flex; align-items: baseline; justify-content: flex-end; flex-wrap: wrap; gap: 10px;">
+								<span style="white-space: nowrap;">Подпись должностного лица, составившего протокол</span>
+								<div style="position: relative; width: 250px; height: 40px; border-bottom: 1px solid #000;">
+									${protocol?.signature_data ? `
+									<img src="${escapeHtml(protocol.signature_data)}" 
+										 style="position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); max-width: 250px; max-height: 70px; display: block;">
+									` : ''}
+								</div>
+							</div>
+						</div>
+                        
+                        <div class="block" style="margin: 15px 0; margin-top: 40px; text-align: right;">
+                            <div class="flex-row" style="justify-content: flex-end;">
+                                <span>Копию протокола получил(а)</span>
+                                <div class="line handwritten" style="width: 300px; margin-left: 10px;"></div>
+                            </div>
+                            <div class="note" style="text-align: right;">
+                                (подпись лица, в отношении которого<br>
+                                возбуждено дело об адм. правонарушении)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Кнопки управления -->
+                    <div class="protocol-view-buttons" style="margin-top: 20px; display: flex; gap: 10px; justify-content: flex-end;">
+                        <button type="button" id="exportPngBtn" class="secondary">📸 Сохранить протокол</button>
+                        <button type="button" id="closeProtocolBtn" class="secondary">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+            `;
+            
+            document.body.appendChild(modal);
+
+            // Обработчики закрытия
+            modal.querySelector('.modal-close').onclick = () => modal.remove();
+            modal.onclick = (e) => {
+                if (e.target === modal) modal.remove();
+            };
+            
+            // Для режима просмотра
+            const closeBtn = document.getElementById('closeProtocolBtn');
+            if (closeBtn) closeBtn.onclick = () => modal.remove();
+            
+            const exportPngBtn = document.getElementById('exportPngBtn');
+            if (exportPngBtn) {
+                exportPngBtn.onclick = () => {
+                    exportProtocol(id, 'png');
+                };
+            }
+        }
+    }
+
+    // Создание нового протокола
+    async function createProtocol() {
+        Auth.ping();
+        
+        const user = Auth.getCurrentUser();
+        if (!user) {
+            UI.showNotification('Не авторизован', 'error');
+            return false;
+        }
+
+        // Собираем данные из формы (только нужные поля)
+        const formData = {
+            protocol_number: document.getElementById('protocol_number')?.value,
+            protocol_date: document.getElementById('protocol_date')?.value,
+            protocol_time: document.getElementById('protocol_time')?.value,
+            protocol_place: document.getElementById('protocol_place')?.value?.trim(),
+            
+            // Должностное лицо (все в одном поле)
+            official_name: document.getElementById('official_name')?.value?.trim(),
+            
+            // Нарушитель
+            violator_lastname: document.getElementById('violator_lastname')?.value?.trim(),
+            violator_firstname: document.getElementById('violator_firstname')?.value?.trim(),
+            violator_patronymic: document.getElementById('violator_patronymic')?.value?.trim() || null,
+            violator_birth_date: document.getElementById('violator_birth_date')?.value || null,
+            violator_birth_place: document.getElementById('violator_birth_place')?.value?.trim() || null,
+            violator_russian_language_skill: document.getElementById('violator_russian_language_skill')?.value || null,
+            
+            // Водительское удостоверение
+            violator_driver_license: document.getElementById('violator_driver_license')?.value?.trim() || null,
+            
+            // Транспорт
+            vehicle_make_model: document.getElementById('vehicle_make_model')?.value?.trim() || null,
+            vehicle_license_plate: document.getElementById('vehicle_license_plate')?.value?.trim() || null,
+            vehicle_owner: document.getElementById('vehicle_owner')?.value?.trim() || null,
+            vehicle_registered_info: document.getElementById('vehicle_registered_info')?.value?.trim() || null,
+            
+            // Правонарушение
+            offense_datetime: document.getElementById('offense_datetime')?.value,
+            offense_place: document.getElementById('offense_place')?.value?.trim(),
+            offense_description: document.getElementById('offense_description')?.value?.trim(),
+            offense_violation_point: document.getElementById('offense_violation_point')?.value?.trim() || null,
+            offense_special_equipment: document.getElementById('offense_special_equipment')?.value?.trim() || null,
+            offense_article_number: document.getElementById('offense_article_number')?.value?.trim(),
+            offense_article_part: document.getElementById('offense_article_part')?.value?.trim(),
+            
+            // Объяснения
+            explanatory_note: document.getElementById('explanatory_note')?.value?.trim() || null,
+			signature_data: document.getElementById('signature_data')?.value || null, 
+            
+            // Статус
+            status: document.getElementById('status')?.value || 'active',
+            
+            // Служебные поля
+            created_by_id: user.auth_user_id,
+            created_by_name: user.nickname,
+            updated_by_id: user.auth_user_id,
+            updated_by_name: user.nickname
+        };
+
+        // Валидация обязательных полей
+        const requiredFields = [
+			'protocol_date', 'protocol_time', 'protocol_place',
+			'official_name',
+			'violator_lastname', 'violator_firstname', 'violator_driver_license',
+			'vehicle_make_model', 'vehicle_license_plate',
+			'offense_datetime', 'offense_description', 'offense_violation_point',
+			'offense_article_number', 'offense_article_part'
+		];
+
+        for (const field of requiredFields) {
+            if (!formData[field]) {
+                const fieldNames = {
+					'protocol_date': 'Дата составления',
+					'protocol_time': 'Время составления',
+					'protocol_place': 'Место составления',
+					'official_name': 'Данные должностного лица',
+					'violator_lastname': 'Фамилия нарушителя',
+					'violator_firstname': 'Имя нарушителя',
+					'violator_driver_license': 'Водительское удостоверение',
+					'vehicle_make_model': 'Марка и модель ТС',
+					'vehicle_license_plate': 'Государственный номер',
+					'offense_datetime': 'Дата и время правонарушения',
+					'offense_description': 'Описание правонарушения',
+					'offense_violation_point': 'Пункт нормативного акта',
+					'offense_article_number': 'Статья КоАП',
+					'offense_article_part': 'Часть статьи'
+				};
+                UI.showNotification(`Заполните обязательное поле: ${fieldNames[field] || field}`, 'error');
+                return false;
+            }
+        }
+
+        try {
+            // Показываем индикатор загрузки
+            const saveBtn = document.getElementById('saveProtocolBtn');
+            const originalText = saveBtn.textContent;
+            saveBtn.textContent = '⏳ Сохранение...';
+            saveBtn.disabled = true;
+
+            // Сохраняем в БД
+            const { data, error } = await supabaseClient
+                .from('protocols')
+                .insert([formData])
+                .select();
+
+            if (error) {
+                console.error('Insert error:', error);
+                if (error.code === '42501') {
+                    UI.showNotification('Ошибка прав доступа: вы не можете создавать протоколы', 'error');
+                } else if (error.code === '23505') {
+                    UI.showNotification('Протокол с таким номером уже существует', 'error');
+                } else {
+                    UI.showNotification('Ошибка при создании протокола: ' + error.message, 'error');
+                }
+                return false;
+            }
+
+            // Логируем создание протокола
+            if (Logger && Logger.ACTION_TYPES) {
+                Logger.log(Logger.ACTION_TYPES.PROTOCOL_CREATE || 'protocol_create', {
+                    protocol_number: formData.protocol_number,
+                    violator: `${formData.violator_lastname} ${formData.violator_firstname}`,
+                    article: `ст.${formData.offense_article_number} ч.${formData.offense_article_part}`,
+                    created_by: user.nickname
+                }, 'protocol', formData.protocol_number);
+            }
+
+            UI.showNotification('Протокол успешно создан', 'success');
+            
+            // Обновляем список
+            await loadProtocolsList();
+            filterAndRenderProtocols();
+            
+            return true;
+
+        } catch (error) {
+            console.error('Error in createProtocol:', error);
+            UI.showNotification('Ошибка при создании протокола: ' + error.message, 'error');
+            return false;
+        } finally {
+            const saveBtn = document.getElementById('saveProtocolBtn');
+            if (saveBtn) {
+                saveBtn.disabled = false;
+            }
+        }
+    }
+
+    // Обновление протокола
+    async function updateProtocol(id) {
+        Auth.ping();
+        
+        const user = Auth.getCurrentUser();
+        if (!user) {
+            UI.showNotification('Не авторизован', 'error');
+            return false;
+        }
+
+        const oldProtocol = protocolsCache.find(p => p.id == id);
+        if (!oldProtocol) {
+            UI.showNotification('Протокол не найден', 'error');
+            return false;
+        }
+
+        // Собираем данные из формы (только нужные поля)
+        const formData = {
+            protocol_number: document.getElementById('protocol_number')?.value,
+            protocol_date: document.getElementById('protocol_date')?.value,
+            protocol_time: document.getElementById('protocol_time')?.value,
+            protocol_place: document.getElementById('protocol_place')?.value?.trim(),
+            
+            official_name: document.getElementById('official_name')?.value?.trim(),
+            
+            violator_lastname: document.getElementById('violator_lastname')?.value?.trim(),
+            violator_firstname: document.getElementById('violator_firstname')?.value?.trim(),
+            violator_patronymic: document.getElementById('violator_patronymic')?.value?.trim() || null,
+            violator_birth_date: document.getElementById('violator_birth_date')?.value || null,
+            violator_birth_place: document.getElementById('violator_birth_place')?.value?.trim() || null,
+            violator_russian_language_skill: document.getElementById('violator_russian_language_skill')?.value || null,
+            
+            violator_driver_license: document.getElementById('violator_driver_license')?.value?.trim() || null,
+            
+            vehicle_make_model: document.getElementById('vehicle_make_model')?.value?.trim() || null,
+            vehicle_license_plate: document.getElementById('vehicle_license_plate')?.value?.trim() || null,
+            vehicle_owner: document.getElementById('vehicle_owner')?.value?.trim() || null,
+            vehicle_registered_info: document.getElementById('vehicle_registered_info')?.value?.trim() || null,
+            
+            offense_datetime: document.getElementById('offense_datetime')?.value,
+            offense_place: document.getElementById('offense_place')?.value?.trim(),
+            offense_description: document.getElementById('offense_description')?.value?.trim(),
+            offense_violation_point: document.getElementById('offense_violation_point')?.value?.trim() || null,
+            offense_special_equipment: document.getElementById('offense_special_equipment')?.value?.trim() || null,
+            offense_article_number: document.getElementById('offense_article_number')?.value?.trim(),
+            offense_article_part: document.getElementById('offense_article_part')?.value?.trim(),
+            
+            explanatory_note: document.getElementById('explanatory_note')?.value?.trim() || null,
+			signature_data: document.getElementById('signature_data')?.value || null,
+            
+            status: document.getElementById('status')?.value || 'active',
+            
+            // Обновляем информацию о редакторе
+            updated_by_id: user.auth_user_id,
+            updated_by_name: user.nickname
+        };
+
+        // Валидация обязательных полей
+        const requiredFields = [
+			'protocol_date', 'protocol_time', 'protocol_place',
+			'official_name',
+			'violator_lastname', 'violator_firstname', 'violator_driver_license',
+			'vehicle_make_model', 'vehicle_license_plate',
+			'offense_datetime', 'offense_description', 'offense_violation_point',
+			'offense_article_number', 'offense_article_part'
+		];
+
+        for (const field of requiredFields) {
+            if (!formData[field]) {
+                const fieldNames = {
+					'protocol_date': 'Дата составления',
+					'protocol_time': 'Время составления',
+					'protocol_place': 'Место составления',
+					'official_name': 'Данные должностного лица',
+					'violator_lastname': 'Фамилия нарушителя',
+					'violator_firstname': 'Имя нарушителя',
+					'violator_driver_license': 'Водительское удостоверение',
+					'vehicle_make_model': 'Марка и модель ТС',
+					'vehicle_license_plate': 'Государственный номер',
+					'offense_datetime': 'Дата и время правонарушения',
+					'offense_description': 'Описание правонарушения',
+					'offense_violation_point': 'Пункт нормативного акта',
+					'offense_article_number': 'Статья КоАП',
+					'offense_article_part': 'Часть статьи'
+				};
+                UI.showNotification(`Заполните обязательное поле: ${fieldNames[field] || field}`, 'error');
+                return false;
+            }
+        }
+
+        try {
+            const saveBtn = document.getElementById('saveProtocolBtn');
+            const originalText = saveBtn.textContent;
+            saveBtn.textContent = '⏳ Сохранение...';
+            saveBtn.disabled = true;
+
+            const { error } = await supabaseClient
+                .from('protocols')
+                .update(formData)
+                .eq('id', id);
+
+            if (error) {
+                console.error('Update error:', error);
+                if (error.code === '42501') {
+                    UI.showNotification('Ошибка прав доступа: вы не можете редактировать этот протокол', 'error');
+                } else {
+                    UI.showNotification('Ошибка при обновлении протокола: ' + error.message, 'error');
+                }
+                return false;
+            }
+
+            // Логируем изменения
+            if (Logger && Logger.ACTION_TYPES) {
+                Logger.log(Logger.ACTION_TYPES.PROTOCOL_UPDATE || 'protocol_update', {
+                    protocol_number: formData.protocol_number,
+                    updated_by: user.nickname
+                }, 'protocol', formData.protocol_number);
+            }
+
+            UI.showNotification('Протокол обновлен', 'success');
+            
+            await loadProtocolsList();
+            filterAndRenderProtocols();
+            
+            return true;
+
+        } catch (error) {
+            console.error('Error in updateProtocol:', error);
+            UI.showNotification('Ошибка при обновлении протокола: ' + error.message, 'error');
+            return false;
+        } finally {
+            const saveBtn = document.getElementById('saveProtocolBtn');
+            if (saveBtn) {
+                saveBtn.disabled = false;
+            }
+        }
+    }
+    
+    // Удаление протокола
+    async function deleteProtocol(id) {
+        Auth.ping();
+        
+        if (!canDeleteProtocol()) {
+            UI.showNotification('У вас нет прав на удаление протоколов', 'error');
+            return;
+        }
+
+        const protocol = protocolsCache.find(p => p.id == id);
+        if (!protocol) {
+            UI.showNotification('Протокол не найден', 'error');
+            return;
+        }
+
+        // Создаем модальное окно подтверждения
+        const confirmModal = document.createElement('div');
+        confirmModal.className = 'modal-overlay';
+        confirmModal.innerHTML = `
+            <div class="modal-container" style="max-width: 400px;">
+                <div class="modal-header">
+                    <h3>Подтверждение удаления</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-content">
+                    <p>Вы уверены, что хотите удалить протокол <strong>№${escapeHtml(protocol.protocol_number)}</strong>?</p>
+                    <p style="color: #dc3545; font-size: 0.9rem;">Это действие необратимо. Все данные будут потеряны.</p>
+                    
+                    <div style="background: #f5f9ff; padding: 12px; border-radius: 8px; margin: 15px 0;">
+                        <p style="margin: 5px 0;"><strong>Нарушитель:</strong> ${escapeHtml(protocol.violator_lastname)} ${escapeHtml(protocol.violator_firstname)}</p>
+                        <p style="margin: 5px 0;"><strong>Статья:</strong> ст. ${escapeHtml(protocol.offense_article_number)} ч. ${escapeHtml(protocol.offense_article_part)}</p>
+                        <p style="margin: 5px 0;"><strong>Дата:</strong> ${UI.formatDate(protocol.offense_datetime)}</p>
+                    </div>
+                    
+                    <div class="flex-row" style="justify-content: flex-end;">
+                        <button id="cancelDeleteBtn" class="secondary">Отмена</button>
+                        <button id="confirmDeleteBtn" style="background: #dc3545;">🗑️ Удалить</button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(confirmModal);
+
+        // Обработчики закрытия
+        const closeBtn = confirmModal.querySelector('.modal-close');
+        closeBtn.onclick = () => confirmModal.remove();
+        
+        confirmModal.onclick = (e) => {
+            if (e.target === confirmModal) confirmModal.remove();
+        };
+
+        document.getElementById('cancelDeleteBtn').onclick = () => confirmModal.remove();
+        
+        // Обработчик подтверждения удаления
+        document.getElementById('confirmDeleteBtn').onclick = async () => {
+            try {
+                // Показываем индикатор загрузки на кнопке
+                const deleteBtn = document.getElementById('confirmDeleteBtn');
+                const originalText = deleteBtn.textContent;
+                deleteBtn.textContent = '⏳ Удаление...';
+                deleteBtn.disabled = true;
+
+                // Логируем удаление перед фактическим удалением
+                if (Logger && Logger.ACTION_TYPES) {
+                    Logger.log(Logger.ACTION_TYPES.PROTOCOL_DELETE || 'protocol_delete', {
+                        protocol_number: protocol.protocol_number,
+                        violator: `${protocol.violator_lastname} ${protocol.violator_firstname}`,
+                        article: `ст.${protocol.offense_article_number} ч.${protocol.offense_article_part}`,
+                        deleted_by: Auth.getCurrentUser()?.nickname
+                    }, 'protocol', protocol.protocol_number);
+                }
+                
+                // Выполняем удаление
+                const { error } = await supabaseClient
+                    .from('protocols')
+                    .delete()
+                    .eq('id', id);
+
+                if (error) {
+                    console.error('Delete error:', error);
+                    if (error.code === '42501') {
+                        UI.showNotification('Ошибка прав доступа: вы не можете удалять протоколы', 'error');
+                    } else {
+                        UI.showNotification('Ошибка при удалении: ' + error.message, 'error');
+                    }
+                    return;
+                }
+
+                UI.showNotification('Протокол удален', 'success');
+                confirmModal.remove();
+                
+                // Обновляем список
+                await loadProtocolsList();
+                filterAndRenderProtocols();
+                
+            } catch (error) {
+                console.error('Error in deleteProtocol:', error);
+                UI.showNotification('Ошибка при удалении: ' + error.message, 'error');
+            }
+        };
+    }
+	
+	// Экспорт протокола в PNG
+async function exportProtocol(id, format = 'png') {
+    Auth.ping();
+    
+    const protocol = protocolsCache.find(p => p.id == id);
+    if (!protocol) {
+        UI.showNotification('Протокол не найден', 'error');
+        return;
+    }
+
+    // Создаем временный контейнер
+    const exportContainer = document.createElement('div');
+    exportContainer.style.position = 'fixed';
+    exportContainer.style.left = '-9999px';
+    exportContainer.style.top = '0';
+    exportContainer.style.width = '800px';
+    exportContainer.style.backgroundColor = 'white';
+    exportContainer.style.padding = '40px';
+    exportContainer.style.zIndex = '9999';
+    exportContainer.style.fontFamily = '"Courier New", monospace';
+    exportContainer.style.fontSize = '14px';
+    exportContainer.style.lineHeight = '1.35';
+    
+    // Копируем основные стили
+    const styles = document.querySelector('link[href*="styles.css"]');
+    if (styles) {
+        const styleLink = document.createElement('link');
+        styleLink.rel = 'stylesheet';
+        styleLink.href = styles.href;
+        exportContainer.appendChild(styleLink);
+    }
+
+    // Добавляем дополнительные стили для экспорта
+    const exportStyles = document.createElement('style');
+    exportStyles.textContent = `
+        * {
+            font-family: "Courier New", monospace !important;
+            box-sizing: border-box;
+        }
+        .protocol-document {
+            font-family: "Courier New", monospace;
+            width: 100%;
+        }
+        .grid td {
+            font-family: "Courier New", monospace !important;
+        }
+        .line, .line-row .line {
+            border-bottom: 1px solid #000 !important;
+        }
+        .note {
+            font-size: 11px !important;
+            color: #666 !important;
+        }
+        .title-line {
+            border-bottom: 1px solid #000 !important;
+        }
+    `;
+    exportContainer.appendChild(exportStyles);
+
+    // Используем ТУ ЖЕ САМУЮ СТРУКТУРУ, что и в режиме просмотра
+    exportContainer.innerHTML += `
+        <div class="protocol-document">
+            <!-- Заголовок -->
+            <div class="center title">
+                <div>ПРОТОКОЛ</div>
+                <div>об административном правонарушении</div>
+                <div class="title-line handwritten" style="font-size: 24px !important;">№ ${escapeHtml(protocol.protocol_number || '_______________')}</div>
+                <div class="note note-center">(регистрационный номер)</div>
+            </div>
+            
+            <!-- Дата / Время / Место -->
+            <div class="date-container">
+                <div class="date-item date-left">
+                    <div class="date-field">
+                        <div class="date-row">
+                            <span>"</span>
+                            <div class="line handwritten" style="width: 26px; text-align:left;">${protocol.protocol_date ? new Date(protocol.protocol_date).getDate().toString().padStart(2,'0') : ''}</div>
+                            <span>"</span>
+                            <div class="line handwritten" style="width: 81px; text-align:left;">
+                              ${protocol.protocol_date ? (() => {
+                                    const date = new Date(protocol.protocol_date);
+                                    const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                                                    'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+                                    return months[date.getMonth()];
+                                  })() : ''}
+                            </div>
+                            <span>20</span>
+                            <div class="line handwritten" style="width: 26px; text-align:left;">${protocol.protocol_date ? new Date(protocol.protocol_date).getFullYear().toString().slice(-2) : ''}</div>
+                            <span>г.</span>
+                        </div>
+                        <div class="note">(дата составления)</div>
+                    </div>
+                </div>
+                
+                <div class="date-item date-center">
+                    <div class="date-field">
+                        <div class="date-row">
+                            <div class="line handwritten" style="width: 26px; text-align:left;">${protocol.protocol_time ? protocol.protocol_time.split(':')[0] : ''}</div>
+                            <span>час. </span>
+                            <div class="line handwritten" style="width: 26px; text-align:left;">${protocol.protocol_time ? protocol.protocol_time.split(':')[1] : ''}</div>
+                            <span>мин.</span>
+                        </div>
+                        <div class="note">(время составления)</div>
+                    </div>
+                </div>
+                
+                <div class="date-item date-right">
+                    <div class="date-field" style="width: 100%;">
+                        <div class="date-row">
+                            <div class="line handwritten">${escapeHtml(protocol.protocol_place || '')}</div>
+                        </div>
+                        <div class="note">(место составления)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Я, ... -->
+            <div class="block block-narrow">
+                <div class="line-row">
+                    <span>Я,</span>
+                    <span class="line handwritten">${escapeHtml(protocol.official_name || '')}</span>
+                </div>
+                <div class="note note-center">
+                    (должность, специальное звание, подразделение, фамилия, инициалы<br>
+                    должностного лица, составившего протокол)
+                </div>
+            </div>
+            
+            <div class="block">
+                в соответствии со статьей 58 Административный регламент ГИБДД составил настоящий протокол о том, что гражданин(ка)
+            </div>
+            
+            <!-- Клетки для ФИО -->
+            ${(() => {
+                const violatorName = [protocol.violator_lastname || '', protocol.violator_firstname || '', protocol.violator_patronymic || ''].join(' ');
+                const truncatedName = violatorName.length > 35 ? violatorName.substring(0, 35) : violatorName;
+                const nameChars = truncatedName.split('');
+                const cells = [];
+                for (let i = 0; i < 35; i++) {
+                    cells.push(nameChars[i] || '');
+                }
+                return `
+                <div class="grid">
+                    <table>
+                        <tr>
+                            ${cells.map(char => `<td class="handwritten">${escapeHtml(char)}</td>`).join('')}
+                        </tr>
+                    </table>
+                    <div class="note note-center">фамилия имя отчество</div>
+                </div>
+                `;
+            })()}
+            
+            <!-- Дата и место рождения / владение русским языком -->
+            <div class="block">
+				<div class="flex-row" style="flex-wrap: wrap; gap: 5px;">
+					<div class="line handwritten" style="flex: 2;">
+						${protocol.violator_birth_date ? new Date(protocol.violator_birth_date).toLocaleDateString('ru-RU') + ', ' : ''}${escapeHtml(protocol.violator_birth_place || '')}
+					</div>
+					<div class="nowrap">, русским языком</div>
+					<div class="line handwritten" style="flex: 1;">${protocol.violator_russian_language_skill || ''}</div>
+				</div>
+				<div class="note flex-space-between">
+					<span>(дата и место рождения)</span>
+					<span>(владеет/не владеет)</span>
+				</div>
+			</div>
+            
+            <!-- Водительское удостоверение и транспорт -->
+            ${(() => {
+                const licenseText = protocol.violator_driver_license || '';
+                const licenseMaxLength = 19;
+                
+                let licenseFirstLine = licenseText;
+                let licenseSecondLine = '';
+                
+                if (licenseText.length > licenseMaxLength) {
+                    let cutIndex = licenseText.lastIndexOf(' ', licenseMaxLength);
+                    if (cutIndex === -1) cutIndex = licenseMaxLength;
+                    
+                    licenseFirstLine = licenseText.substring(0, cutIndex);
+                    licenseSecondLine = licenseText.substring(cutIndex).trim();
+                }
+                
+                const ownerText = protocol.vehicle_owner || '';
+                const ownerMaxLength1 = 68;
+                const ownerMaxLength2 = 83;
+                
+                let ownerFirstLine = ownerText;
+                let ownerSecondLine = '';
+                let ownerThirdLine = '';
+                
+                if (ownerText.length > ownerMaxLength1) {
+                    let cutIndex1 = ownerText.lastIndexOf(' ', ownerMaxLength1);
+                    if (cutIndex1 === -1) cutIndex1 = ownerMaxLength1;
+                    
+                    ownerFirstLine = ownerText.substring(0, cutIndex1);
+                    
+                    const remainingText = ownerText.substring(cutIndex1).trim();
+                    
+                    if (remainingText.length > ownerMaxLength2) {
+                        let cutIndex2 = remainingText.lastIndexOf(' ', ownerMaxLength2);
+                        if (cutIndex2 === -1) cutIndex2 = ownerMaxLength2;
+                        
+                        ownerSecondLine = remainingText.substring(0, cutIndex2);
+                        ownerThirdLine = remainingText.substring(cutIndex2).trim();
+                    } else {
+                        ownerSecondLine = remainingText;
+                    }
+                }
+                
+                return `
+                    <div class="block">
+                        <!-- Водительское удостоверение -->
+                        <div class="flex-row">
+                            <div class="nowrap">водительское удостоверение (документ, удостоверяющий личность)</div>
+                            <div class="line handwritten" style="flex: 3;">${escapeHtml(licenseFirstLine)}</div>
+                        </div>
+                        
+                        ${licenseSecondLine ? `
+                        <div class="line-row" style="margin-top: 5px;">
+                            <div class="line handwritten" style="flex: 1;">${escapeHtml(licenseSecondLine)}</div>
+                        </div>
+                        ` : `
+                        <div class="line-row" style="margin-top: 5px;">
+                            <div class="line handwritten" style="flex: 1;">&nbsp;</div>
+                        </div>
+                        `}
+                        <div class="note note-center">(серия, номер, когда и кем выдан)</div>
+                        
+                        <!-- Управляя транспортным средством -->
+                        <div style="margin-top:15px;">
+                            <div class="flex-row">
+                                <div class="nowrap">управляя транспортным средством</div>
+                                <div class="line handwritten" style="flex: 2;">
+                                    ${escapeHtml(protocol.vehicle_make_model || '')} 
+                                    ${protocol.vehicle_license_plate ? '(' + escapeHtml(protocol.vehicle_license_plate) + ')' : ''}
+                                </div>
+                            </div>
+                            <div class="note note-center">(марка, гос. регистрационный знак)</div>
+                        </div>
+                        
+                        <!-- Принадлежащим -->
+                        <div style="margin-top:15px;">
+                            <div class="flex-row">
+                                <div class="nowrap">принадлежащим</div>
+                                <div class="line handwritten" style="flex: 2; white-space: nowrap; overflow: hidden;">
+                                    ${escapeHtml(ownerFirstLine)}
+                                </div>
+                            </div>
+                            
+                            <div class="note note-center" style="margin-top: 2px;">(фамилия, имя, отчество, организация)</div>
+                            
+                            <div class="line-row" style="margin-top: 8px;">
+                                <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                                    ${ownerSecondLine ? escapeHtml(ownerSecondLine) : '&nbsp;'}
+                                </div>
+                            </div>
+                            
+                            ${ownerThirdLine ? `
+                            <div class="line-row" style="margin-top: 5px;">
+                                <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                                    ${escapeHtml(ownerThirdLine)}
+                                </div>
+                            </div>
+                            ` : ''}
+                        </div>
+                        
+                        <!-- Отступ перед "состоящим на учете" -->
+                        <div style="margin-top: 15px;"></div>
+                        
+                        <!-- Состоящим на учете -->
+                        <div class="flex-row" style="margin-top:5px;">
+                            <div class="nowrap">состоящим на учете</div>
+                            <div class="line handwritten" style="flex: 2;">${escapeHtml(protocol.vehicle_registered_info || '')}</div>
+                        </div>
+                    </div>
+                `;
+            })()}
+            
+            <!-- Дата, время и место правонарушения -->
+            ${(() => {
+                const offenseDateTime = protocol.offense_datetime || '';
+				let offenseDay = '', offenseMonth = '', offenseYear = '', offenseHour = '', offenseMinute = '';
+
+				if (offenseDateTime) {
+					const [datePart, timePart] = offenseDateTime.split('T');
+					if (datePart) {
+						const [year, month, day] = datePart.split('-');
+						offenseDay = day || '';
+						offenseMonth = month ? getMonthGenitive(parseInt(month) - 1) : '';
+						offenseYear = year ? year.slice(-2) : '';
+					}
+					if (timePart) {
+						const [hour, minute] = timePart.split(':');
+						offenseHour = hour || '';
+						offenseMinute = minute || '';
+					}
+				}
+                
+                return `
+                <div class="block" style="width: 100%; margin: 10px 0;">
+                    <div class="flex-row" style="gap: 10px;">
+                        <div class="flex-row" style="flex: 1.7; flex-wrap: wrap;">
+                            <span>"</span>
+                            <div class="line handwritten" style="width: 26px; text-align:left;">${offenseDay}</div>
+                            <span>"</span>
+                            <div class="line handwritten" style="width: 81px; text-align:left;">${offenseMonth}</div>
+                            <span>20</span>
+                            <div class="line handwritten" style="width: 26px; text-align:left;">${offenseYear}</div>
+                            <span> г. в "</span>
+                            <div class="line handwritten" style="width: 26px; text-align:left;">${offenseHour}</div>
+                            <span>" час. "</span>
+                            <div class="line handwritten" style="width: 26px; text-align:left;">${offenseMinute}</div>
+                            <span>" мин.</span>
+                        </div>
+                        
+                        <div class="flex-row" style="flex: 1;">
+                            <span>на</span>
+                            <div class="line handwritten" style="flex: 1;">${escapeHtml(protocol.offense_place || '')}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="offense-note-row">
+                        <div class="offense-note-left">(дата, время совершения административного правонарушения)</div>
+                        <div class="offense-note-right">(место совершения административного правонарушения)</div>
+                    </div>
+                </div>
+                `;
+            })()}
+            
+            <!-- Существо нарушения -->
+            ${(() => {
+                const combinedText = [
+                    protocol.offense_violation_point,
+                    protocol.offense_description,
+                    protocol.offense_special_equipment
+                ]
+                .filter(Boolean)
+                .join(', ');
+
+                const maxLength = 60;
+
+                const part1 = combinedText.substring(0, maxLength);
+                const part2 = combinedText.length > maxLength
+                    ? combinedText.substring(maxLength)
+                    : '';
+
+                return `
+                    <div class="flex-row">
+                        <div class="nowrap">совершил(а) нарушение</div>
+                        <div class="line handwritten" style="flex: 3; white-space: nowrap; overflow: hidden;">
+                            ${escapeHtml(part1)}
+                        </div>
+                    </div>
+
+                    <div class="note note-center">
+                        (пункт нормативного правового акта, существо нарушения,
+                    </div>
+
+                    <div class="line-row" style="height: 1.35em; margin: 5px 0;">
+                        <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                            ${escapeHtml(part2)}
+                        </div>
+                    </div>
+
+                    <div class="note note-center">
+                        при применении спец. тех. средств указываются их показания, наименование, номер)
+                    </div>
+                `;
+            })()}
+            
+            <div class="flex-row" style="gap: 5px; flex-wrap: wrap; width: 100%; margin-top: 10px;">
+                <span>ответственность за которое предусмотрена частью</span>
+                <div class="line handwritten" style="width: 50px; text-align:center;">${escapeHtml(protocol.offense_article_part || '')}</div>
+                <span>статьи</span>
+                <div class="line handwritten" style="width: 50px; text-align:center;">${escapeHtml(protocol.offense_article_number || '')}</div>
+                <span>Кодекса Республики Провинция об административных правонарушениях.</span>
+            </div>
+            
+            <div class="block">
+                Лицу, в отношении которого возбуждено дело об административном
+                правонарушении, разъяснены права, предусмотренные статьей 30 Конституции Республики Провинция.
+            </div>
+            
+            <div class="block">
+                Лицо, в отношении которого возбуждено дело об административном
+                правонарушении, ознакомлено с протоколом.
+            </div>
+            
+            ${(() => {
+                const fullText = protocol.explanatory_note || '';
+
+                const maxLength1 = 35;
+                const maxLength2 = 83; 
+                const maxLength3 = 83; 
+
+                const line1 = fullText.substring(0, maxLength1);
+                const line2 = fullText.length > maxLength1
+                    ? fullText.substring(maxLength1, maxLength1 + maxLength2)
+                    : '';
+                const line3 = fullText.length > (maxLength1 + maxLength2)
+                    ? fullText.substring(maxLength1 + maxLength2, maxLength1 + maxLength2 + maxLength3)
+                    : '';
+
+                return `
+                    <div class="flex-row">
+                        <div class="nowrap">Объяснения и замечания по содержанию протокола:</div>
+                        <div class="line handwritten" style="flex: 2; white-space: nowrap; overflow: hidden;">
+                            ${escapeHtml(line1)}
+                        </div>
+                    </div>
+
+                    <div class="line-row" style="height: 1.35em; margin-top:5px;">
+                        <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                            ${escapeHtml(line2)}
+                        </div>
+                    </div>
+
+                    <div class="line-row" style="height: 1.35em; margin-top:5px;">
+                        <div class="line handwritten" style="flex: 1; white-space: nowrap; overflow: hidden;">
+                            ${escapeHtml(line3)}
+                        </div>
+                    </div>
+                `;
+            })()}
+            
+            <div class="block" style="margin: 15px 0; text-align: center;">
+                Подпись лица, в отношении которого возбуждено дело об административном правонарушении
+            </div>
+            
+            <div class="flex-row" style="justify-content: flex-end; margin-top: 40px;">
+                <div class="line handwritten" style="width: 250px;"></div>
+            </div>
+            
+            <!-- Подпись должностного лица, составившего протокол -->
+			<div class="block" style="margin: 15px 0; margin-top: 40px;">
+				<div style="display: flex; align-items: baseline; justify-content: flex-end; flex-wrap: wrap; gap: 10px;">
+					<span style="white-space: nowrap;">Подпись должностного лица, составившего протокол</span>
+					<div style="position: relative; width: 250px; height: 40px; border-bottom: 1px solid #000;">
+						${protocol?.signature_data ? `
+						<img src="${escapeHtml(protocol.signature_data)}" 
+							style="position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); max-width: 250px; max-height: 70px; display: block;">
+						` : ''}
+					</div>
+				</div>
+			</div>
+            
+            <div class="block" style="margin: 15px 0; margin-top: 40px; text-align: right;">
+                <div class="flex-row" style="justify-content: flex-end;">
+                    <span>Копию протокола получил(а)</span>
+                    <div class="line handwritten" style="width: 300px; margin-left: 10px;"></div>
+                </div>
+                <div class="note" style="text-align: right;">
+                    (подпись лица, в отношении которого<br>
+                    возбуждено дело об адм. правонарушении)
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(exportContainer);
+
+    try {
+        if (format === 'png') {
+            // Даем время на загрузку стилей
+            await new Promise(resolve => setTimeout(resolve, 300));
+            
+            const canvas = await html2canvas(exportContainer, {
+                scale: 2,
+                backgroundColor: '#ffffff',
+                logging: false,
+                allowTaint: false,
+                useCORS: true,
+                windowWidth: 800,
+                onclone: (clonedDoc) => {
+                    // Дополнительные стили для клонированного документа
+                    const style = clonedDoc.createElement('style');
+                    style.textContent = `
+                        * { 
+                            font-family: 'Courier New', monospace !important; 
+                            box-sizing: border-box;
+                        }
+                        .protocol-document, .grid td { 
+                            font-family: 'Courier New', monospace !important; 
+                        }
+                        .line, .line-row .line {
+                            border-bottom: 1px solid #000 !important;
+                        }
+                        .grid td {
+                            border: 1px solid #000 !important;
+                        }
+                    `;
+                    clonedDoc.head.appendChild(style);
+                }
+            });
+            
+            const link = document.createElement('a');
+            link.download = `protocol-${protocol.protocol_number}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            
+            UI.showNotification('Протокол сохранён как PNG', 'success');
+            
+            if (Logger && Logger.ACTION_TYPES) {
+                Logger.log('protocol_export', {
+                    protocol_number: protocol.protocol_number,
+                    format: format,
+                    exported_by: Auth.getCurrentUser()?.nickname
+                }, 'protocol', protocol.protocol_number);
+            }
+        }
+    } catch (error) {
+        console.error('Error exporting protocol:', error);
+        UI.showNotification('Ошибка при экспорте протокола: ' + error.message, 'error');
+    } finally {
+        document.body.removeChild(exportContainer);
+    }
+}
+	
+    return {
+        initProtocolsList,
+        loadProtocolsList,
+        generateProtocolNumber,
+        canEditProtocol,
+        canDeleteProtocol,
+        filterProtocolsList,
+        renderProtocolsList,
+        filterAndRenderProtocols,
+        openProtocolModal,
+        deleteProtocol,
+        exportProtocol,       
+        PROTOCOL_STATUS
+    };
+})();
+
+window.Protocol = Protocol;
