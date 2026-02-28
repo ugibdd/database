@@ -28,6 +28,7 @@
                 <button class="nav-btn" id="navProfile">Профиль</button>
                 <button class="nav-btn" id="navKusp">КУСП</button>
 				<button class="nav-btn" id="navProtocols">Протоколы</button>
+				<button class="nav-btn" id="navTsu">Наводки</button>
                 <button class="nav-btn" id="navAdmin" hidden>Управление</button>
             </div>
             <div class="nav-group">
@@ -40,6 +41,7 @@
             <div class="nav-group">
                 <button class="nav-btn" id="guestNavHome">Главная</button>
                 <button class="nav-btn" id="guestNavAppeals">Мои обращения</button>
+				<button class="nav-btn" id="guestNavDriverLicense">Штрафы</button>
                 <button class="nav-btn" id="guestNavInfo">Информация</button>
             </div>
             <div class="nav-group">
@@ -233,7 +235,8 @@
                 <p>Здесь вы можете:</p>
                 <ul style="margin-top:10px; list-style:disc; padding-left:20px;">
                     <li>Отследить статус обращения по номеру талона-уведомления</li>
-                    <li>Получить информацию о работе ГИБДД</li>
+					<li>Проверить наличие штрафов по номеру водительского удостоверения</li>
+                    <li>Получить информацию о работе УГИБДД</li>
                 </ul>
             </div>
         </div>
@@ -256,18 +259,41 @@
     </template>
 
     <template id="guestAppealsTemplate">
-        <div>
-            <h2>Мои обращения</h2>
-            <div style="background:#f5f9ff; padding:20px; border-radius:20px;">
-                <p>Для отслеживания обращений введите номер талона-уведомления:</p>
-                <div class="form-group">
-                    <input type="text" id="appealNumber" placeholder="Номер талона-уведомления">
-                </div>
-                <button id="findAppealBtn" class="secondary">Найти</button>
-                <div id="appealResult" style="margin-top:20px;"></div>
-            </div>
-        </div>
-    </template>
+		<div style="margin: 0 auto;">
+			<h2>Мои обращения</h2>
+			
+			<!-- Карточка поиска -->
+			<div style="background: #f5f9ff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 12px rgba(0, 20, 40, 0.08);">
+				<p style="font-size: 1.1rem; color: #1e3a5f; margin-bottom: 20px; font-weight: 500;">
+					Для отслеживания статуса обращения введите номер талона-уведомления КУСП
+				</p>
+				
+				<!-- Поле ввода с нормальными отступами -->
+				<div class="form-group" style="margin-bottom: 20px;">
+					<label for="appealNumber" style="display: block; margin-bottom: 8px; font-weight: 500; color: #2d5a7a;">
+						Номер талона-уведомления
+					</label>
+					<input type="text" 
+						   id="appealNumber" 
+						   placeholder="Например: 2026-01-01-123" 
+						   style="width: 100%; padding: 12px 16px; font-size: 1rem; border: 2px solid #d8e2ed; border-radius: 12px; background: white; box-sizing: border-box;">
+					<small style="display: block; margin-top: 6px; color: #6b7f99; font-size: 0.85rem;">
+						Номер указан в талоне-уведомлении, выданном при регистрации обращения
+					</small>
+				</div>
+				
+				<!-- Кнопка поиска -->
+				<div style="display: flex; gap: 12px; align-items: center;">
+					<button id="findAppealBtn" class="secondary" style="padding: 12px 28px; font-size: 1rem; background: #1e3a5f; color: white; border: none;">
+						🔍 Найти обращение
+					</button>
+				</div>
+			</div>
+			
+			<!-- Результат поиска -->
+			<div id="appealResult" style="margin-top: 25px;"></div>
+		</div>
+	</template>
 
     <template id="guestInfoTemplate">
         <div>
@@ -286,6 +312,182 @@
             </div>
         </div>
     </template>
+	
+	<template id="guestDriverLicenseTemplate">
+		<div style="margin: 0 auto;">
+			<h2>Штрафы</h2>
+			
+			<!-- Карточка поиска -->
+			<div style="background: #f5f9ff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 12px rgba(0, 20, 40, 0.08);">
+				
+				<p style="font-size: 1.1rem; color: #1e3a5f; margin-bottom: 20px; font-weight: 500;">
+					Для проверки штрафов введите номер водительского удостоверения
+				</p>
+				
+				<!-- Поле ввода -->
+				<div class="form-group" style="margin-bottom: 20px;">
+					<label for="driverLicenseNumber" style="display: block; margin-bottom: 8px; font-weight: 500; color: #2d5a7a;">
+						Номер водительского удостоверения
+					</label>
+					
+					<input type="text" 
+						   id="driverLicenseNumber" 
+						   placeholder="Например: 123456"
+						   maxlength="20"
+						   style="width: 100%; padding: 12px 16px; font-size: 1rem; border: 2px solid #d8e2ed; border-radius: 12px; background: white; box-sizing: border-box;">
+					
+					<small style="display: block; margin-top: 6px; color: #6b7f99; font-size: 0.85rem;">
+						Введите номер полностью
+					</small>
+				</div>
+				
+				<!-- Кнопка -->
+				<div style="display: flex; gap: 12px; align-items: center;">
+					<button id="findDriverLicenseBtn"
+							style="padding: 12px 28px; font-size: 1rem; background: #1e3a5f; color: white; border: none; border-radius: 12px; cursor: pointer;">
+						🔍 Найти штрафы
+					</button>
+				</div>
+			</div>
+			
+			<!-- Результаты -->
+			<div id="driverLicenseResult" style="margin-top: 25px;">
+				
+				<div id="driverLicenseResults" style="display: none;">
+					<h3 style="margin-bottom: 15px;">Результаты поиска</h3>
+					
+					<div id="violatorInfo" 
+						 style="background:#f0f7ff; padding:20px; border-radius:16px; margin-bottom:20px;">
+					</div>
+					
+					<div id="protocolsList" 
+						 style="display:flex; flex-direction:column; gap:12px;">
+					</div>
+				</div>
+				
+				<div id="noProtocolsMessage"
+					 style="display:none; background:#fff3cd; padding:20px; border-radius:16px; color:#856404;">
+					По указанному водительскому удостоверению штрафы не найдены.
+				</div>
+				
+			</div>
+		</div>
+	</template>
+	
+	<!-- Шаблон для списка наводок TSU -->
+	<template id="tsuListTemplate">
+		<div style="height: 100%; display: flex; flex-direction: column;">
+			<div style="display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-shrink: 0;">
+				<h2 style="margin:0; border:none;">Управление наводками</h2>
+				<input type="text" id="tsuSearch" placeholder="Поиск по нику, причине, инициатору" style="flex:1;">
+				<select id="tsuFilterType" style="width:150px;">
+					<option value="">Все типы</option>
+					<option value="fine">Штрафы</option>
+					<option value="license">Лишение ВУ</option>
+					<option value="wanted_person">Розыск человека</option>
+					<option value="wanted_car">Розыск машины</option>
+					<option value="wanted_car_remove">Снятие машины с розыска</option>
+				</select>
+				<select id="tsuFilterStatus" style="width:150px;">
+					<option value="">Все статусы</option>
+					<option value="active">Активные</option>
+					<option value="completed">Выполненные</option>
+					<option value="expired">Просроченные</option>
+				</select>
+				<button id="tsuCreateOpen" class="secondary">+ Создать наводку</button>
+			</div>
+			<div class="list-panel" id="tsuList" style="flex:1;"></div>
+		</div>
+	</template>
+
+	<!-- Шаблон для создания/редактирования наводки TSU -->
+	<template id="tsuFormTemplate">
+		<div style="height: 100%; display: flex; flex-direction: column;">
+			<div style="display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-shrink: 0;">
+				<h2 style="margin:0; border:none;" id="tsuFormTitle">Новая наводка TSU</h2>
+			</div>
+			
+			<div style="background: #f5f9ff; border-radius: 20px; padding: 24px; margin-bottom: 20px;">
+				<form id="tsuForm">
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+						<div class="form-group">
+							<label for="tsu_type">Тип наводки <span class="required">*</span></label>
+							<select id="tsu_type" required>
+								<option value="fine">Выписать штраф (/tsu)</option>
+								<option value="license">Лишение ВУ (/takecarlic)</option>
+								<option value="wanted_person">Подать в розыск (/su)</option>
+								<option value="wanted_car">Розыск машины (/addwcar)</option>
+								<option value="wanted_car_remove">Снятие розыска с машины (/delwcar)</option>
+							</select>
+						</div>
+						
+						<div class="form-group">
+							<label for="tsu_target_nick">Ник нарушителя <span class="required">*</span></label>
+							<input type="text" id="tsu_target_nick" required placeholder="Введите ник игрока">
+						</div>
+						
+						<div class="form-group" id="tsu_amount_field">
+							<label for="tsu_amount">Сумма штрафа</label>
+							<input type="number" id="tsu_amount" min="1" placeholder="Например: 5000">
+						</div>
+						
+						<div class="form-group" id="tsu_days_field" style="display: none;">
+							<label for="tsu_days">Количество дней лишения</label>
+							<input type="number" id="tsu_days" min="0" max="4" placeholder="0-4">
+						</div>
+						
+						<div class="form-group" id="tsu_stars_field" style="display: none;">
+							<label for="tsu_stars">Количество звёзд</label>
+							<input type="number" id="tsu_stars" min="1" max="6" placeholder="1-6">
+						</div>
+						
+						<div class="form-group" id="tsu_plate_field" style="display: none;">
+							<label for="tsu_car_plate">Госномер</label>
+							<input type="text" id="tsu_car_plate" placeholder="A000AA">
+						</div>
+						
+						<div class="form-group" id="tsu_region_field" style="display: none;">
+							<label for="tsu_car_region">Регион (2 цифры)</label>
+							<input type="text" id="tsu_car_region" maxlength="2" placeholder="77">
+						</div>
+						
+						<div class="form-group" style="grid-column: span 2;">
+							<label for="tsu_reason">Причина <span class="required">*</span></label>
+							<textarea id="tsu_reason" rows="3" required placeholder="Опишите причину"></textarea>
+						</div>
+						
+						<div class="form-group">
+							<label for="tsu_initiator_nick">Инициатор<span class="required">*</span></label>
+							<input type="text" id="tsu_initiator_nick" required placeholder="Ник инициатора">
+						</div>
+						
+						<div class="form-group">
+							<label for="tsu_expires_at">Срок действия до <span class="required">*</span></label>
+							<input type="date" id="tsu_expires_at" required>
+							<small class="field-hint">Укажите дату, до которой действует наводка (не более 14-ти дней)</small>
+						</div>
+					</div>
+					
+					<div class="flex-row" style="justify-content: flex-end; margin-top: 24px; gap: 12px;">
+						<button type="button" id="tsuFormCancel" class="secondary">Отмена</button>
+						<button type="submit" id="tsuFormSubmit" class="primary">➕ Создать наводку</button>
+					</div>
+				</form>
+			</div>
+			
+			<div style="background: #e8f4fd; border-radius: 16px; padding: 16px; border-left: 4px solid #1e3a5f;">
+				<h4 style="margin: 0 0 8px 0; color: #1e3a5f;">📋 Форматы команд:</h4>
+				<ul style="margin: 0; padding-left: 20px; color: #2d5a7a;">
+					<li><strong>/tsu [ник] [сумма] [причина] by [инициатор] (УГИБДД)</strong> - штраф</li>
+					<li><strong>/takecarlic [ник] [дни 0-4] [причина] by [инициатор] (УГИБДД)</strong> - лишение ВУ</li>
+					<li><strong>/su [ник] [звёзды 1-6] [причина] by [инициатор] (УГИБДД)</strong> - розыск человека</li>
+					<li><strong>/addwcar [ГРЗ A000AA] [регион 77] [причина] by [инициатор] (УГИБДД)</strong> - розыск машины</li>
+					<li><strong>/delwcar [ГРЗ A000AA] [регион 77] by [инициатор]</strong> - снятие с розыска</li>
+				</ul>
+				<p style="margin: 8px 0 0 0; font-size: 0.9rem; color: #6b7f99;">Срок действия наводок: 14 дней</p>
+			</div>
+		</div>
+	</template>
 
     <!-- Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -302,6 +504,8 @@
     <script src="js/admin.js"></script>
     <script src="js/kusp.js"></script>
 	<script src="js/protocol.js"></script> 
+	<script src="js/driver-license.js"></script>
+	<script src="js/tsu.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
