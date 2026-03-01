@@ -2,7 +2,7 @@
 const App = (function() {
     const elements = UI.getElements();
 	
-    // Функция экранирования HTML
+    // Функция экранирования HTML.
     function escapeHtml(text) {
         if (!text) return '';
         const div = document.createElement('div');
@@ -492,4 +492,5 @@ const App = (function() {
 // Запуск при загрузке страницы
 
 document.addEventListener('DOMContentLoaded', () => App.init());
+
 
