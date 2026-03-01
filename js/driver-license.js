@@ -1,17 +1,5 @@
 // Модуль для работы с водительскими удостоверениями (гостевой доступ)
 const DriverLicense = (function() {
-
-    const guestSupabaseClient = supabase.createClient(
-        CONFIG.SUPABASE_URL, 
-        CONFIG.SUPABASE_KEY, 
-        {
-            auth: {
-                autoRefreshToken: false,
-                persistSession: false,
-                detectSessionInUrl: false
-            }
-        }
-    );
     
     // Поиск протоколов по точному номеру ВУ (6 цифр)
     async function findProtocolsByLicenseNumber(licenseNumber) {
@@ -29,7 +17,7 @@ const DriverLicense = (function() {
             }
             
             // Ищем протоколы по точному совпадению номера
-            const { data, error } = await guestSupabaseClient
+            const { data, error } = await supabaseClient
                 .from('protocols')
                 .select(`
                     id,
@@ -727,4 +715,5 @@ const DriverLicense = (function() {
 
 
 window.DriverLicense = DriverLicense;
+
 
