@@ -1,18 +1,6 @@
 // Главный модуль приложения
 const App = (function() {
     const elements = UI.getElements();
-
-	const guestSupabaseClient = supabase.createClient(
-        CONFIG.SUPABASE_URL, 
-        CONFIG.SUPABASE_KEY, 
-        {
-            auth: {
-                autoRefreshToken: false,
-                persistSession: false,
-                detectSessionInUrl: false
-            }
-        }
-    );
 	
     // Функция экранирования HTML
     function escapeHtml(text) {
@@ -504,3 +492,4 @@ const App = (function() {
 // Запуск при загрузке страницы
 
 document.addEventListener('DOMContentLoaded', () => App.init());
+
