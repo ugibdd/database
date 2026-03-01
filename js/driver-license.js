@@ -29,7 +29,7 @@ const DriverLicense = (function() {
             }
             
             // Ищем протоколы по точному совпадению номера
-            const { data, error } = await supabaseClient
+            const { data, error } = await guestSupabaseClient
                 .from('protocols')
                 .select(`
                     id,
@@ -727,3 +727,4 @@ const DriverLicense = (function() {
 
 
 window.DriverLicense = DriverLicense;
+
